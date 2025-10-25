@@ -1,0 +1,13 @@
+title: LogicNodes Legal
+description: Legal documentation and policies
+baseurl: ""
+url: "https://legal.logicnodes.ai"
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Exclude files from build
+exclude:
+  - README.md
+  - .gitignore
