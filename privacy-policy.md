@@ -4,6 +4,10 @@ title: Privacy Policy
 last_updated: 2025-10-25
 ---
 
+# Privacy Policy
+
+<p class="last-updated">Last Updated: October 25, 2025</p>
+
 ## 1. Introduction
 
 LogicNodes ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains our practices regarding the collection, use, and disclosure of information when you use our services.
