@@ -417,55 +417,55 @@ LogicNodes kan opdatere denne politik når som helst. Ændringer vil blive poste
 ### 12.1 Generelt
 
 **Q: Har I et bug bounty-program?**
-A: Ikke endnu. Planlagt til Q2 2026 på HackerOne eller Bugcrowd. I øjeblikket tilbyder vi offentlig anerkendelse og taknemmelighed.
+A: Ikke endnu. Planlagt til Q2 2026 på HackerOne eller Bugcrowd. I øjeblikket tilbyder vi offentlig anerkendelse og taknemmelighed.  
 
 **Q: Kan jeg bruge automatiserede scannere?**
-A: Anmod venligst om tilladelse først (security@logicnodes.ai). Automatiserede scannere kan udløse rate limits eller DoS-beskyttelser.
+A: Anmod venligst om tilladelse først (security@logicnodes.ai). Automatiserede scannere kan udløse rate limits eller DoS-beskyttelser.  
 
 **Q: Kan jeg teste på produktionssystemer?**
-A: Ja, men kun på dine egne konti. Anmod om testkonti via security@logicnodes.ai for sikrere test.
+A: Ja, men kun på dine egne konti. Anmod om testkonti via security@logicnodes.ai for sikrere test.  
 
 **Q: Kan jeg offentliggøre før 90 dage?**
-A: Kun med gensidig aftale. Vi foretrækker koordineret offentliggørelse.
+A: Kun med gensidig aftale. Vi foretrækker koordineret offentliggørelse.  
 
 ### 12.2 Anvendelsesområde
 
 **Q: Er subdomain takeover inden for anvendelsesområdet?**
-A: Ja, hvis du kan demonstrere konsekvens (f.eks. phishing, cookie-tyveri).
+A: Ja, hvis du kan demonstrere konsekvens (f.eks. phishing, cookie-tyveri).  
 
 **Q: Er fravær af rate limiting en gyldig rapport?**
-A: Kun hvis det muliggør DoS eller brute force-angreb. Manglende rate limits alene er informative.
+A: Kun hvis det muliggør DoS eller brute force-angreb. Manglende rate limits alene er informative.  
 
 **Q: Er tredjeparts-afhængigheder inden for anvendelsesområdet?**
-A: Ja, hvis sårbarheden påvirker LogicNodes (f.eks. forældet bibliotek med kendt CVE). Rapporter til os og leverandøren.
+A: Ja, hvis sårbarheden påvirker LogicNodes (f.eks. forældet bibliotek med kendt CVE). Rapporter til os og leverandøren.  
 
 **Q: Er social engineering inden for anvendelsesområdet?**
-A: Nej. Phish ikke medarbejdere, partnere eller brugere.
+A: Nej. Phish ikke medarbejdere, partnere eller brugere.  
 
 ### 12.3 Rapportering
 
 **Q: Kan jeg rapportere anonymt?**
-A: Ja. Brug ProtonMail eller Tutanota til anonym email. Vi holder din identitet fortrolig.
+A: Ja. Brug ProtonMail eller Tutanota til anonym email. Vi holder din identitet fortrolig.  
 
 **Q: Kan jeg rapportere via Twitter/LinkedIn?**
-A: Brug venligst security@logicnodes.ai til alle rapporter. Sociale medier overvåges ikke for sikkerhedsrapporter.
+A: Brug venligst security@logicnodes.ai til alle rapporter. Sociale medier overvåges ikke for sikkerhedsrapporter.  
 
 **Q: Hvad hvis min rapport er en duplikat?**
-A: Vi underretter dig hvis problemet tidligere er rapporteret. Duplikater modtager stadig anerkendelse (men ingen yderligere kredit).
+A: Vi underretter dig hvis problemet tidligere er rapporteret. Duplikater modtager stadig anerkendelse (men ingen yderligere kredit).  
 
 **Q: Kan jeg rapportere problemer i tredjepartstjenester?**
-A: Rapporter til tredjeparten (Supabase, AWS, Mailgun) direkte. Hvis problemet påvirker LogicNodes' konfiguration, rapporter også til os.
+A: Rapporter til tredjeparten (Supabase, AWS, Mailgun) direkte. Hvis problemet påvirker LogicNodes' konfiguration, rapporter også til os.  
 
 ### 12.4 Belønninger
 
 **Q: Får jeg betaling for min rapport?**
-A: Ikke i øjeblikket (intet bug bounty-program). Du modtager offentlig anerkendelse og vores taknemmelighed.
+A: Ikke i øjeblikket (intet bug bounty-program). Du modtager offentlig anerkendelse og vores taknemmelighed.  
 
 **Q: Hvornår lanceres bug bounty?**
-A: Estimeret Q2 2026, afventende indtægtsmilepæle.
+A: Estimeret Q2 2026, afventende indtægtsmilepæle.  
 
 **Q: Kan jeg forhandle en belønning?**
-A: For ekstraordinære fund (0-day, kritisk sværhedsgrad), kontakt security@logicnodes.ai for diskussion.
+A: For ekstraordinære fund (0-day, kritisk sværhedsgrad), kontakt security@logicnodes.ai for diskussion.  
 
 ---
 

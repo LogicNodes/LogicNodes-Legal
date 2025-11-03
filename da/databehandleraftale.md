@@ -449,17 +449,17 @@ I tilfælde af konflikt:
 
 **Partner (Dataansvarlig):**
 
-Underskrift: _______________________________
-Navn: [PARTNER AUTORISERET UNDERSKRIVER]
-Titel: _______________________________
-Dato: _______________________________
+Underskrift: _______________________________  
+Navn: [PARTNER AUTORISERET UNDERSKRIVER]  
+Titel: _______________________________  
+Dato: _______________________________  
 
 **LogicNodes Inc. (Databehandler):**
 
-Underskrift: _______________________________
-Navn: [LOGICNODES AUTORISERET UNDERSKRIVER]
-Titel: _______________________________
-Dato: _______________________________
+Underskrift: _______________________________  
+Navn: [LOGICNODES AUTORISERET UNDERSKRIVER]  
+Titel: _______________________________  
+Dato: _______________________________  
 
 ---
 

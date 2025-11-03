@@ -420,35 +420,35 @@ LogicNodes may update this policy at any time. Changes will be posted at:
 A: Not yet. Planned for Q2 2026 on HackerOne or Bugcrowd. Currently, we offer public acknowledgment and gratitude.
 
 **Q: Can I use automated scanners?**
-A: Please request permission first (security@logicnodes.ai). Automated scanners may trigger rate limits or DoS protections.
+A: Please request permission first (security@logicnodes.ai). Automated scanners may trigger rate limits or DoS protections.  
 
 **Q: Can I test on production systems?**
-A: Yes, but only on your own accounts. Request test accounts via security@logicnodes.ai for safer testing.
+A: Yes, but only on your own accounts. Request test accounts via security@logicnodes.ai for safer testing.  
 
 **Q: Can I disclose before 90 days?**
-A: Only with mutual agreement. We prefer coordinated disclosure.
+A: Only with mutual agreement. We prefer coordinated disclosure.  
 
 ### 12.2 Scope
 
 **Q: Is subdomain takeover in scope?**
-A: Yes, if you can demonstrate impact (e.g., phishing, cookie theft).
+A: Yes, if you can demonstrate impact (e.g., phishing, cookie theft).  
 
 **Q: Is rate limiting absence a valid report?**
-A: Only if it enables DoS or brute force attacks. Missing rate limits alone are informational.
+A: Only if it enables DoS or brute force attacks. Missing rate limits alone are informational.  
 
 **Q: Are third-party dependencies in scope?**
-A: Yes, if the vulnerability affects LogicNodes (e.g., outdated library with known CVE). Report to us and the vendor.
+A: Yes, if the vulnerability affects LogicNodes (e.g., outdated library with known CVE). Report to us and the vendor.  
 
 **Q: Is social engineering in scope?**
-A: No. Do not phish employees, partners, or users.
+A: No. Do not phish employees, partners, or users.  
 
 ### 12.3 Reporting
 
 **Q: Can I report anonymously?**
-A: Yes. Use ProtonMail or Tutanota for anonymous email. We will keep your identity confidential.
+A: Yes. Use ProtonMail or Tutanota for anonymous email. We will keep your identity confidential.  
 
 **Q: Can I report via Twitter/LinkedIn?**
-A: Please use security@logicnodes.ai for all reports. Social media is not monitored for security reports.
+A: Please use security@logicnodes.ai for all reports. Social media is not monitored for security reports.  
 
 **Q: What if my report is a duplicate?**
 A: We will notify you if the issue was previously reported. Duplicates still receive acknowledgment (but no additional credit).
@@ -462,7 +462,7 @@ A: Report to the third party (Supabase, AWS, Mailgun) directly. If the issue aff
 A: Not currently (no bug bounty program). You will receive public acknowledgment and our gratitude.
 
 **Q: When will bug bounty launch?**
-A: Estimated Q2 2026, pending revenue milestones.
+A: Estimated Q2 2026, pending revenue milestones.  
 
 **Q: Can I negotiate a reward?**
 A: For exceptional findings (0-day, critical severity), contact security@logicnodes.ai to discuss.

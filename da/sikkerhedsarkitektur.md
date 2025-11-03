@@ -618,63 +618,63 @@ Fuld politik: [RESPONSIBLE_DISCLOSURE_POLICY.md](./RESPONSIBLE_DISCLOSURE_POLICY
 ### 11.1 Generel Sikkerhed
 
 **Q: Hvor gemmes data?**
-A: Den Europæiske Union (AWS EU-North-1, Stockholm). US data residency tilgængelig efter anmodning.
+A: Den Europæiske Union (AWS EU-North-1, Stockholm). US data residency tilgængelig efter anmodning.  
 
 **Q: Er data krypteret?**
-A: Ja. Krypteret i hvile (database, secrets, lager) og under transport (TLS 1.2+).
+A: Ja. Krypteret i hvile (database, secrets, lager) og under transport (TLS 1.2+).  
 
 **Q: Har I SOC 2?**
-A: Ikke endnu. Vi er SOC 2-klar (bygget på SOC 2-principper). Formel audit planlagt når vi når $1M ARR (estimeret 2026).
+A: Ikke endnu. Vi er SOC 2-klar (bygget på SOC 2-principper). Formel audit planlagt når vi når $1M ARR (estimeret 2026).  
 
 **Q: Kan I signere tilpassede sikkerhedsspørgeskemaer?**
-A: Ja. Send til security@logicnodes.ai. Svartid: 5-10 arbejdsdage.
+A: Ja. Send til security@logicnodes.ai. Svartid: 5-10 arbejdsdage.  
 
 ### 11.2 Autentificering
 
 **Q: Kan brugere logge direkte ind på LogicNodes?**
-A: Brugere autentificeret via din JWT kan ikke (by design). De kan kun tilgå gennem din platform.
+A: Brugere autentificeret via din JWT kan ikke (by design). De kan kun tilgå gennem din platform.  
 
 **Q: Hvordan tilbagekalder jeg adgang for en bruger?**
-A: Stop med at udstede JWTs til den bruger. Eksisterende sessioner udløber inden for 1 time.
+A: Stop med at udstede JWTs til den bruger. Eksisterende sessioner udløber inden for 1 time.  
 
 **Q: Hvad hvis mit signeringssecret kompromitteres?**
-A: Kontakt security@logicnodes.ai øjeblikkeligt. Vi roterer dit secret og invaliderer alle sessioner.
+A: Kontakt security@logicnodes.ai øjeblikkeligt. Vi roterer dit secret og invaliderer alle sessioner.  
 
 ### 11.3 Data & Privatliv
 
 **Q: Logger I API-forespørgsler til min platform?**
-A: Ja, i agent eksekveringslogs (til debugging og samtalekontinuitet). Opbevaring: 1-90 dage (du konfigurerer).
+A: Ja, i agent eksekveringslogs (til debugging og samtalekontinuitet). Opbevaring: 1-90 dage (du konfigurerer).  
 
 **Q: Hvordan overholder jeg GDPR-sletteanmodninger?**
-A: Brug vores DELETE APIs. Cascading deletes sikrer komplet datafjernelse inden for 24 timer (produktion) + 30 dage (backups).
+A: Brug vores DELETE APIs. Cascading deletes sikrer komplet datafjernelse inden for 24 timer (produktion) + 30 dage (backups).  
 
 **Q: Slettes audit logs ved brugersletning?**
-A: Nej. Audit logs bevaret i 1 år for compliance. De indeholder kun bruger-IDs (ingen PII).
+A: Nej. Audit logs bevaret i 1 år for compliance. De indeholder kun bruger-IDs (ingen PII).  
 
 **Q: Kan jeg eksportere alle data for en bruger?**
-A: Brugere kan se og eksportere deres data via dashboard. API-adgang til agent-kørsler tilgængelig via GET endpoints.
+A: Brugere kan se og eksportere deres data via dashboard. API-adgang til agent-kørsler tilgængelig via GET endpoints.  
 
 ### 11.4 Secrets
 
 **Q: Hvad hvis jeg mister min API-nøgle?**
-A: Generer en ny (POST /api/v1/partner/api-key/generate). Gammel nøgle automatisk invalideret.
+A: Generer en ny (POST /api/v1/partner/api-key/generate). Gammel nøgle automatisk invalideret.  
 
 **Q: Kan LogicNodes-medarbejdere se mine secrets?**
-A: Secrets er krypteret. Service role kan dekryptere (logget og begrænset til on-call engineers til support), men adgang er sjælden og logget.
+A: Secrets er krypteret. Service role kan dekryptere (logget og begrænset til on-call engineers til support), men adgang er sjælden og logget.  
 
 **Q: Er secrets synlige for mine brugere?**
-A: Nej. Secrets er backend-only. Aldrig eksponeret til frontend-kode.
+A: Nej. Secrets er backend-only. Aldrig eksponeret til frontend-kode.  
 
 ### 11.5 Compliance
 
 **Q: Har I en DPA?**
-A: Ja. Skabelon tilgængelig på [DATA_PROCESSING_AGREEMENT.md](./DATA_PROCESSING_AGREEMENT.md).
+A: Ja. Skabelon tilgængelig på [DATA_PROCESSING_AGREEMENT.md](./DATA_PROCESSING_AGREEMENT.md).  
 
 **Q: Er I HIPAA-compliant?**
-A: Infrastruktur er HIPAA-capable (Supabase Business plan). Applikationsniveau BAA tilgængelig for healthcare-kunder.
+A: Infrastruktur er HIPAA-capable (Supabase Business plan). Applikationsniveau BAA tilgængelig for healthcare-kunder.  
 
 **Q: Kan I levere en sub-processor liste?**
-A: Ja. Se Sektion 8.5 (Supabase, AWS, Mailgun). Fuld liste i DPA-skabelon.
+A: Ja. Se Sektion 8.5 (Supabase, AWS, Mailgun). Fuld liste i DPA-skabelon.  
 
 ---
 

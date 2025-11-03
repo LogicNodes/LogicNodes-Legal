@@ -449,17 +449,17 @@ In the event of conflict:
 
 **Partner (Data Controller):**
 
-Signature: _______________________________
-Name: [PARTNER AUTHORIZED SIGNATORY]
-Title: _______________________________
-Date: _______________________________
+Signature: _______________________________  
+Name: [PARTNER AUTHORIZED SIGNATORY]  
+Title: _______________________________  
+Date: _______________________________  
 
 **LogicNodes Inc. (Data Processor):**
 
-Signature: _______________________________
-Name: [LOGICNODES AUTHORIZED SIGNATORY]
-Title: _______________________________
-Date: _______________________________
+Signature: _______________________________  
+Name: [LOGICNODES AUTHORIZED SIGNATORY]  
+Title: _______________________________  
+Date: _______________________________  
 
 ---
 
