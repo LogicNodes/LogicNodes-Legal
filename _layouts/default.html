@@ -9,13 +9,43 @@
 <body>
     <header>
         <div class="container">
-            <h1>{{ site.title }}</h1>
-            <p>{{ site.description }}</p>
-            {% if page.layout != 'home' %}
-            <nav>
-                <a href="{{ '/' | relative_url }}">Home</a>
-            </nav>
-            {% endif %}
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>{{ site.title }}</h1>
+                    <p>{{ site.description }}</p>
+                </div>
+                <div class="header-nav">
+                    {% if page.url != "/" %}
+                    <nav class="breadcrumb">
+                        {% if page.lang == "da" %}
+                        <a href="{{ '/da/' | relative_url }}">Hjem</a>
+                        {% elsif page.lang == "en" %}
+                        <a href="{{ '/en/' | relative_url }}">Home</a>
+                        {% else %}
+                        <a href="{{ '/' | relative_url }}">Home</a>
+                        {% endif %}
+                    </nav>
+                    {% endif %}
+                    {% if page.url != "/" %}
+                    <div class="language-selector">
+                        {% assign current_file = page.url | split: "/" | last %}
+                        {% if page.lang == "da" %}
+                        <a href="{{ '/en/' | append: current_file | relative_url }}" class="lang-link">EN</a>
+                        <span class="separator">|</span>
+                        <a href="{{ '/da/' | append: current_file | relative_url }}" class="lang-link active">DA</a>
+                        {% elsif page.lang == "en" %}
+                        <a href="{{ '/en/' | append: current_file | relative_url }}" class="lang-link active">EN</a>
+                        <span class="separator">|</span>
+                        <a href="{{ '/da/' | append: current_file | relative_url }}" class="lang-link">DA</a>
+                        {% else %}
+                        <a href="{{ '/en/' | relative_url }}" class="lang-link">EN</a>
+                        <span class="separator">|</span>
+                        <a href="{{ '/da/' | relative_url }}" class="lang-link">DA</a>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </header>
 

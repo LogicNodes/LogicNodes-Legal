@@ -8,6 +8,16 @@ last_updated: 2025-10-25
 
 <p class="last-updated">Last Updated: October 25, 2025</p>
 
+<div class="policy-notice">
+<strong>📋 Which Privacy Policy Applies to You?</strong>
+<ul>
+<li><strong>This policy:</strong> If you <strong>signed up directly</strong> at app.logicnodes.ai</li>
+<li><strong><a href="{{ '/en/partner-privacy-policy.html' | relative_url }}">Partner Embedded Users Privacy Policy</a>:</strong> If you access LogicNodes <strong>through a partner's product</strong> (e.g., embedded AI in Rackbeat, Shopify, etc.)</li>
+</ul>
+</div>
+
+---
+
 ## 1. Introduction
 
 LogicNodes ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains our practices regarding the collection, use, and disclosure of information when you use our services.

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(for file in support.md security-architecture.md data-processing-agreement.md responsible-disclosure.md partner-docs.md)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(cp:*)",
+      "Bash(for:*)",
+      "Bash(en/privacy-policy.md)",
+      "Bash(awk:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

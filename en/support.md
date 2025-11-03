@@ -2,6 +2,7 @@
 layout: legal
 title: Support
 ---
+lang: en
 
 ## Get Support
 

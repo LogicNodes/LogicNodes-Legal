@@ -7,7 +7,16 @@ url: "https://legal.logicnodes.ai"
 markdown: kramdown
 theme: null
 
+# Language settings
+languages: ["en", "da"]
+default_lang: "en"
+
 # Exclude files from build
 exclude:
   - README.md
+  - SECURITY_ARCHITECTURE.md
+  - PRIVACY_POLICY.md
+  - DATA_PROCESSING_AGREEMENT.md
+  - RESPONSIBLE_DISCLOSURE_POLICY.md
   - .gitignore
+  - .claude

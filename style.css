@@ -27,6 +27,18 @@ header {
     margin-bottom: 3rem;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-text {
+    flex: 1;
+}
+
 header h1 {
     color: #2c3e50;
     font-size: 2rem;
@@ -38,23 +50,130 @@ header p {
     font-size: 1.1rem;
 }
 
-header nav {
-    margin-top: 1rem;
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
 }
 
-header nav a {
+.breadcrumb {
+    margin: 0;
+}
+
+.breadcrumb a {
     color: #007bff;
     text-decoration: none;
     font-weight: 500;
 }
 
-header nav a:hover {
+.breadcrumb a:hover {
     text-decoration: underline;
+}
+
+/* Language Selector in Header */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.language-selector .lang-link {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.language-selector .lang-link:hover {
+    background-color: #e9ecef;
+    color: #2c3e50;
+}
+
+.language-selector .lang-link.active {
+    background-color: #667eea;
+    color: white;
+    font-weight: 600;
+}
+
+.language-selector .separator {
+    color: #dee2e6;
 }
 
 /* Main Content */
 main {
     min-height: calc(100vh - 300px);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-bottom: 1.5rem;
+}
+
+/* Language Switcher */
+.language-switch {
+    margin-top: 1.5rem;
+}
+
+.language-switch a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.language-switch a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-switch a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+}
+
+.language-switch .separator {
+    margin: 0 0.5rem;
+    opacity: 0.7;
+}
+
+/* Document Sections */
+.docs-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
 }
 
 /* Legal Documents Grid */
@@ -87,6 +206,24 @@ main {
 .doc-card p {
     color: #6c757d;
     margin-bottom: 1.5rem;
+}
+
+.doc-card.highlight {
+    border-left: 4px solid #667eea;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #667eea;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
 }
 
 /* Button */
@@ -178,8 +315,78 @@ footer p {
     color: #ecf0f1;
 }
 
+/* Quick Links Section */
+.quick-links {
+    background-color: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+}
+
+.quick-links h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.role-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.role-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.role-card h4 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.role-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role-card li {
+    margin-bottom: 0.75rem;
+}
+
+.role-card a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.role-card a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
     .legal-document {
         padding: 2rem 1.5rem;
     }
@@ -190,5 +397,9 @@ footer p {
 
     .legal-document h2 {
         font-size: 1.5rem;
+    }
+
+    .role-cards {
+        grid-template-columns: 1fr;
     }
 }
