@@ -12,6 +12,7 @@ lang: da
 - **Databehandler** ("LogicNodes Inc.", "LogicNodes", "vi", "os")
 
 **Ikrafttrædelsesdato:** [DATO]
+
 **Version:** 1.0
 
 ---

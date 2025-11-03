@@ -18,7 +18,9 @@ lang: en
 # LogicNodes Platform - Privacy Policy
 
 **Effective Date:** November 3, 2025
+
 **Last Updated:** November 3, 2025
+
 **Version:** 1.0
 
 ---

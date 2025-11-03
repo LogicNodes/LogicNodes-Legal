@@ -8,8 +8,11 @@ lang: en
 # LogicNodes Platform - Security Architecture
 
 **For Partner Technical Evaluation**
+
 **Version:** 2.1
+
 **Last Updated:** 2025-11-03
+
 **Audience:** Technical decision-makers, security teams, compliance officers
 
 ---

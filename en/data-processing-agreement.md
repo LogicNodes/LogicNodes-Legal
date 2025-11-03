@@ -12,6 +12,7 @@ lang: en
 - **Data Processor** ("LogicNodes Inc.", "LogicNodes", "we", "us")
 
 **Effective Date:** [DATE]
+
 **Version:** 1.0
 
 ---

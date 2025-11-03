@@ -18,7 +18,9 @@ lang: da
 # LogicNodes Platform - Privatlivspolitik
 
 **Ikrafttrædelsesdato:** 3. november 2025
+
 **Senest Opdateret:** 3. november 2025
+
 **Version:** 1.0
 
 ---
