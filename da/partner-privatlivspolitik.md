@@ -122,7 +122,7 @@ Når du bruger AI-agenter gennem vores platform:
 
 ## 4. Hvordan Vi Bruger Data
 
-### 4.1 Servicelever ing
+### 4.1 Servicelevering
 
 Vi bruger dine data til:
 - ✅ Autentificere dig via Partner JWT

@@ -281,7 +281,7 @@ LogicNodes bruger følgende sværhedsgrads-niveauer:
 **Lav (P3):**
 - Konsekvens: Minimal sikkerhedsrisiko, defense-in-depth
 - Afhjælpning: Inden for 90 dage
-- Eksempler: Manglende sikkerhedshea ders, verbøse fejl
+- Eksempler: Manglende sikkerhedsheaders, verbøse fejl
 
 **Informativ:**
 - Konsekvens: Ingen umiddelbar sikkerhedsrisiko
@@ -476,7 +476,7 @@ A: For ekstraordinære fund (0-day, kritisk sværhedsgrad), kontakt security@log
 
 ### Generelle Henvendelser
 **Email:** support@logicnodes.ai
-**Formål:** Ikke-sikkerhedssp ørgsmål, produktsupport
+**Formål:** Ikke-sikkerhedsspørgsmål, produktsupport
 
 ### Juridisk Afdeling
 **Email:** legal@logicnodes.ai
