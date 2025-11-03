@@ -20,13 +20,13 @@ The LogicNodes embeddable AI agent platform is designed with **enterprise-grade 
 
 ### Security Guarantees
 
-✅ **Complete Data Isolation** - Your organizations' data is cryptographically isolated
-✅ **Encrypted Secrets** - API keys and credentials encrypted at rest, never exposed to frontend
-✅ **Automated Data Retention** - You control retention (1-90 days), we handle automatic cleanup
-✅ **Comprehensive Audit Logging** - 1-year audit trail of all security events
-✅ **Secure API Keys** - Industry-standard hashing, show-once workflow
-✅ **Rate Limiting** - Protection against abuse and brute force attacks
-✅ **GDPR Ready** - Right to deletion, data export, cascading deletes
+✅ **Complete Data Isolation** - Your organizations' data is cryptographically isolated  
+✅ **Encrypted Secrets** - API keys and credentials encrypted at rest, never exposed to frontend  
+✅ **Automated Data Retention** - You control retention (1-90 days), we handle automatic cleanup  
+✅ **Comprehensive Audit Logging** - 1-year audit trail of all security events  
+✅ **Secure API Keys** - Industry-standard hashing, show-once workflow  
+✅ **Rate Limiting** - Protection against abuse and brute force attacks  
+✅ **GDPR Ready** - Right to deletion, data export, cascading deletes  
 
 ---
 
@@ -614,63 +614,63 @@ Full policy: [RESPONSIBLE_DISCLOSURE_POLICY.md](./RESPONSIBLE_DISCLOSURE_POLICY.
 
 ### 11.1 General Security
 
-**Q: Where is data stored?**
+**Q: Where is data stored?**  
 A: European Union (AWS EU-North-1, Stockholm). US data residency available upon request.
 
-**Q: Is data encrypted?**
+**Q: Is data encrypted?**  
 A: Yes. Encrypted at rest (database, secrets, storage) and in transit (TLS 1.2+).
 
-**Q: Do you have SOC 2?**
+**Q: Do you have SOC 2?**  
 A: Not yet. We're SOC 2 ready (built on SOC 2 principles). Formal audit planned when we reach $1M ARR (estimated 2026).
 
-**Q: Can you sign custom security questionnaires?**
+**Q: Can you sign custom security questionnaires?**  
 A: Yes. Send to security@logicnodes.ai. Response time: 5-10 business days.
 
 ### 11.2 Authentication
 
-**Q: Can users login directly to LogicNodes?**
+**Q: Can users login directly to LogicNodes?**  
 A: Users authenticated via your JWT cannot (by design). They can only access through your platform.
 
-**Q: How do I revoke access for a user?**
+**Q: How do I revoke access for a user?**  
 A: Stop issuing JWTs for that user. Existing sessions expire within 1 hour.
 
-**Q: What if my signing secret is compromised?**
+**Q: What if my signing secret is compromised?**  
 A: Contact security@logicnodes.ai immediately. We'll rotate your secret and invalidate all sessions.
 
 ### 11.3 Data & Privacy
 
-**Q: Do you log API requests to my platform?**
+**Q: Do you log API requests to my platform?**  
 A: Yes, in agent execution logs (for debugging and conversation continuity). Retention: 1-90 days (you configure).
 
-**Q: How do I comply with GDPR deletion requests?**
+**Q: How do I comply with GDPR deletion requests?**  
 A: Use our DELETE APIs. Cascading deletes ensure complete data removal within 24 hours (production) + 30 days (backups).
 
-**Q: Are audit logs deleted on user deletion?**
+**Q: Are audit logs deleted on user deletion?**  
 A: No. Audit logs retained for 1 year for compliance. They contain only user IDs (no PII).
 
-**Q: Can I export all data for a user?**
+**Q: Can I export all data for a user?**  
 A: Users can view and export their data via the dashboard. API access to agent runs available via GET endpoints.
 
 ### 11.4 Secrets
 
-**Q: What if I lose my API key?**
+**Q: What if I lose my API key?**  
 A: Generate a new one (POST /api/v1/partner/api-key/generate). Old key automatically invalidated.
 
-**Q: Can LogicNodes employees see my secrets?**
+**Q: Can LogicNodes employees see my secrets?**  
 A: Secrets are encrypted. Service role can decrypt (logged and restricted to on-call engineers for support), but access is rare and logged.
 
-**Q: Are secrets visible to my users?**
+**Q: Are secrets visible to my users?**  
 A: No. Secrets are backend-only. Never exposed to frontend code.
 
 ### 11.5 Compliance
 
-**Q: Do you have a DPA?**
+**Q: Do you have a DPA?**  
 A: Yes. Template available at [DATA_PROCESSING_AGREEMENT.md](./DATA_PROCESSING_AGREEMENT.md).
 
-**Q: Are you HIPAA compliant?**
+**Q: Are you HIPAA compliant?**  
 A: Infrastructure is HIPAA-capable (Supabase Business plan). Application-level BAA available for healthcare customers.
 
-**Q: Can you provide a sub-processor list?**
+**Q: Can you provide a sub-processor list?**  
 A: Yes. See Section 8.5 (Supabase, AWS, Mailgun). Full list in DPA template.
 
 ---
@@ -678,19 +678,19 @@ A: Yes. See Section 8.5 (Supabase, AWS, Mailgun). Full list in DPA template.
 ## 12. Contact & Support
 
 ### Security Team
-**Email:** security@logicnodes.ai
+**Email:** security@logicnodes.ai  
 **Response Time:** 24 hours for critical issues
 
 ### Privacy & Compliance
-**Email:** privacy@logicnodes.ai
+**Email:** privacy@logicnodes.ai  
 **Response Time:** 5 business days
 
 ### Sales & Partnerships
-**Email:** sales@logicnodes.ai
+**Email:** sales@logicnodes.ai  
 **Purpose:** DPA execution, custom agreements, security questionnaires
 
 ### Technical Support
-**Email:** support@logicnodes.ai
+**Email:** support@logicnodes.ai  
 **Response Time:** 4 business hours
 
 ---

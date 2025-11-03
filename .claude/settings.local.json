@@ -13,7 +13,15 @@
       "Bash(cp:*)",
       "Bash(for:*)",
       "Bash(en/privacy-policy.md)",
-      "Bash(awk:*)"
+      "Bash(awk:*)",
+      "Bash(security-architecture.md.tmp)",
+      "Bash(responsible-disclosure.md.tmp)",
+      "Bash(partner-privacy-policy.md.tmp)",
+      "Bash(data-processing-agreement.md.tmp)",
+      "Bash(sikkerhedsarkitektur.md.tmp)",
+      "Bash(ansvarlig-offentliggorelse.md.tmp)",
+      "Bash(partner-privatlivspolitik.md.tmp)",
+      "Bash(databehandleraftale.md.tmp)"
     ],
     "deny": [],
     "ask": []

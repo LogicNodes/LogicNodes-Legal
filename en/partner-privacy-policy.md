@@ -467,9 +467,9 @@ California residents can designate an authorized agent to make requests on their
 **Purpose:** Security incidents, data breaches
 
 ### Mailing Address
-LogicNodes Inc.
-[Company Address]
-[City, State, ZIP]
+LogicNodes Inc.  
+[Company Address]  
+[City, State, ZIP]  
 United States
 
 ---
@@ -482,10 +482,10 @@ If you are located in the EU/EEA and believe we have violated GDPR, you have the
 https://edpb.europa.eu/about-edpb/board/members_en
 
 **Example (Denmark):**
-Datatilsynet
-Carl Jacobsens Vej 35
-2500 Valby
-Denmark
+Datatilsynet  
+Carl Jacobsens Vej 35  
+2500 Valby  
+Denmark  
 Email: dt@datatilsynet.dk
 
 ---
@@ -500,11 +500,11 @@ Email: dt@datatilsynet.dk
 
 **Shadow User:** Synthetic user account created during Partner authentication (no password, email is `{platform_user_id}@{partner_id}.embed.logicnodes.internal`).
 
-**JWT (JSON Web Token):** Signed token used for authentication, containing user identity claims.
+**JWT (JSON Web Token):** Signed token used for authentication, containing user identity claims.  
 
 **Vault:** Supabase encrypted secrets storage (for API keys, credentials).
 
-**RLS (Row-Level Security):** Database security policies that enforce multi-tenant isolation.
+**RLS (Row-Level Security):** Database security policies that enforce multi-tenant isolation.  
 
 **Cascading Delete:** Automatic deletion of related records when parent record is deleted.
 

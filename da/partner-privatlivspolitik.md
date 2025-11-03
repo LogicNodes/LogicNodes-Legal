@@ -467,8 +467,8 @@ Californiens bosiddende kan udpege en autoriseret agent til at fremsætte anmodn
 **Formål:** Sikkerhedshændelser, databrud
 
 ### Postadresse
-LogicNodes Inc.
-[Firmaadresse]
+LogicNodes Inc.  
+[Firmaadresse]  
 [By, Stat, Postnummer]
 USA
 
@@ -482,10 +482,10 @@ Hvis du er beliggende i EU/EØS og mener vi har overtrådt GDPR, har du ret til 
 https://edpb.europa.eu/about-edpb/board/members_en
 
 **Eksempel (Danmark):**
-Datatilsynet
-Carl Jacobsens Vej 35
-2500 Valby
-Danmark
+Datatilsynet  
+Carl Jacobsens Vej 35  
+2500 Valby  
+Danmark  
 Email: dt@datatilsynet.dk
 
 ---
