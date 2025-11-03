@@ -472,14 +472,14 @@ Fuld tekst tilgængelig på: https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj
 **Part-detaljer:**
 
 **Dataeksportør (Dataansvarlig):**
-- Navn: [PARTNER NAVN]
-- Adresse: [PARTNER ADRESSE]
-- Kontakt: [PARTNER SIKKERHEDSKONTAKT]
+- Navn: [PARTNER NAVN]  
+- Adresse: [PARTNER ADRESSE]  
+- Kontakt: [PARTNER SIKKERHEDSKONTAKT]  
 
 **Dataimportør (Databehandler):**
-- Navn: LogicNodes Inc.
-- Adresse: [LOGICNODES ADRESSE]
-- Kontakt: security@logicnodes.ai
+- Navn: LogicNodes Inc.  
+- Adresse: [LOGICNODES ADRESSE]  
+- Kontakt: security@logicnodes.ai  
 
 **Kompetent Tilsynsmyndighed:**
 [Partners lokale databeskyttelsesmyndighed, f.eks. Datatilsynet for Danmark]

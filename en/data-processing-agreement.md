@@ -472,14 +472,14 @@ Full text available at: https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj
 **Party Details:**
 
 **Data Exporter (Controller):**
-- Name: [PARTNER NAME]
-- Address: [PARTNER ADDRESS]
-- Contact: [PARTNER SECURITY CONTACT]
+- Name: [PARTNER NAME]  
+- Address: [PARTNER ADDRESS]  
+- Contact: [PARTNER SECURITY CONTACT]  
 
 **Data Importer (Processor):**
-- Name: LogicNodes Inc.
-- Address: [LOGICNODES ADDRESS]
-- Contact: security@logicnodes.ai
+- Name: LogicNodes Inc.  
+- Address: [LOGICNODES ADDRESS]  
+- Contact: security@logicnodes.ai  
 
 **Competent Supervisory Authority:**
 [Partner's local data protection authority, e.g., Datatilsynet for Denmark]
