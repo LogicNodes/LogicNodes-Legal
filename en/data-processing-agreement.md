@@ -11,9 +11,9 @@ lang: en
 - **Data Controller** ("[PARTNER NAME]", "Partner", "you")
 - **Data Processor** ("LogicNodes Inc.", "LogicNodes", "we", "us")
 
-**Effective Date:** [DATE]
+**Effective Date:** [DATE]  
 
-**Version:** 1.0
+**Version:** 1.0  
 
 ---
 

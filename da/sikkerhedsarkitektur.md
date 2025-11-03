@@ -7,11 +7,11 @@ lang: da
 
 # LogicNodes Platform - Sikkerhedsarkitektur
 
-**Til Partner Teknisk Evaluering**
+**Til Partner Teknisk Evaluering**  
 
-**Version:** 2.1
+**Version:** 2.1  
 
-**Senest Opdateret:** 2025-11-03
+**Senest Opdateret:** 2025-11-03  
 
 **Målgruppe:** Tekniske beslutningstagere, sikkerhedsteams, compliance-ansvarlige
 

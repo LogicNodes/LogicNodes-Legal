@@ -7,11 +7,11 @@ lang: da
 
 # LogicNodes - Politik for Ansvarlig Offentliggørelse
 
-**Ikrafttrædelsesdato:** 3. november 2025
+**Ikrafttrædelsesdato:** 3. november 2025  
 
-**Senest Opdateret:** 3. november 2025
+**Senest Opdateret:** 3. november 2025  
 
-**Version:** 1.0
+**Version:** 1.0  
 
 ---
 

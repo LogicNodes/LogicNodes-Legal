@@ -17,11 +17,11 @@ lang: en
 
 # LogicNodes Platform - Privacy Policy
 
-**Effective Date:** November 3, 2025
+**Effective Date:** November 3, 2025  
 
-**Last Updated:** November 3, 2025
+**Last Updated:** November 3, 2025  
 
-**Version:** 1.0
+**Version:** 1.0  
 
 ---
 
@@ -531,7 +531,7 @@ Email: dt@datatilsynet.dk
 | Amazon Web Services (AWS) | Cloud infrastructure | All data (via Supabase) | EU (Stockholm) | ✅ Yes (via Supabase) |
 | Mailgun | Transactional email | Email, name | USA/EU | ✅ Yes |
 
-**Last Updated:** November 3, 2025
+**Last Updated:** November 3, 2025  
 
 **Changes Notification:** Partners notified 30 days before adding new sub-processors.
 

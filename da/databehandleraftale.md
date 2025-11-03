@@ -11,9 +11,9 @@ lang: da
 - **Dataansvarlig** ("[PARTNER NAVN]", "Partner", "du")
 - **Databehandler** ("LogicNodes Inc.", "LogicNodes", "vi", "os")
 
-**Ikrafttrædelsesdato:** [DATO]
+**Ikrafttrædelsesdato:** [DATO]  
 
-**Version:** 1.0
+**Version:** 1.0  
 
 ---
 

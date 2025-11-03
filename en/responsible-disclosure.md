@@ -7,11 +7,11 @@ lang: en
 
 # LogicNodes - Responsible Disclosure Policy
 
-**Effective Date:** November 3, 2025
+**Effective Date:** November 3, 2025  
 
-**Last Updated:** November 3, 2025
+**Last Updated:** November 3, 2025  
 
-**Version:** 1.0
+**Version:** 1.0  
 
 ---
 
