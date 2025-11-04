@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Partner Embedded Users Privacy Policy
-last_updated: 2025-11-03
+last_updated: 2025-11-04
 lang: en
 ---
 
@@ -13,25 +13,17 @@ lang: en
 </ul>
 </div>
 
----
-
 # LogicNodes Platform - Privacy Policy
 
-**Effective Date:** November 3, 2025  
+**Effective Date:** November 3, 2025
 
-**Last Updated:** November 3, 2025  
-
-**Version:** 1.0  
-
----
+**Last Updated:** November 4, 2025  
 
 ## 1. Introduction
 
 LogicNodes ("we," "our," or "us") provides an embeddable AI agent platform that enables businesses ("Partners") to integrate AI-powered automation into their products. This Privacy Policy explains how we collect, use, store, and protect personal data when Partners integrate our platform into their products.
 
 **Important:** If you are an end-user accessing LogicNodes through a Partner's product (e.g., Rackbeat, Shopify), your personal data is primarily controlled by the Partner. This policy explains LogicNodes' role as a **data processor** on behalf of the Partner (who is the **data controller**).
-
----
 
 ## 2. Roles & Responsibilities
 
@@ -52,14 +44,12 @@ LogicNodes ("we," "our," or "us") provides an embeddable AI agent platform that 
 ### 2.2 Your Rights (End-Users)
 
 If you are an end-user accessing LogicNodes through a Partner's product:
-- ✅ **Right to access:** Request copy of your data
-- ✅ **Right to deletion:** Request deletion of your data
-- ✅ **Right to portability:** Export your data in machine-readable format
-- ✅ **Right to rectification:** Correct inaccurate data
+-  **Right to access:** Request copy of your data
+-  **Right to deletion:** Request deletion of your data
+-  **Right to portability:** Export your data in machine-readable format
+-  **Right to rectification:** Correct inaccurate data
 
 **How to exercise rights:** Contact the Partner directly. They will instruct us to fulfill your request.
-
----
 
 ## 3. Data We Collect
 
@@ -83,11 +73,11 @@ When you use AI agents through our platform:
 
 | Data | Purpose | Retention | Can Delete? |
 |------|---------|-----------|-------------|
-| Agent run history | Conversation continuity, debugging | 1-90 days (configurable) | ✅ Yes (automatic) |
-| API requests/responses | Agent execution context | 1-90 days (configurable) | ✅ Yes (automatic) |
-| Tool execution logs | Debugging, transparency | 1-90 days (configurable) | ✅ Yes (automatic) |
-| Voice transcriptions | Process voice input | 1-90 days (configurable) | ✅ Yes (automatic) |
-| Uploaded files | Agent input data | 1-90 days (configurable) | ✅ Yes (automatic) |
+| Agent run history | Conversation continuity, debugging | 1-90 days (configurable) |  Yes (automatic) |
+| API requests/responses | Agent execution context | 1-90 days (configurable) |  Yes (automatic) |
+| Tool execution logs | Debugging, transparency | 1-90 days (configurable) |  Yes (automatic) |
+| Voice transcriptions | Process voice input | 1-90 days (configurable) |  Yes (automatic) |
+| Uploaded files | Agent input data | 1-90 days (configurable) |  Yes (automatic) |
 
 **Legal Basis (GDPR):** Legitimate interest (service functionality), Contractual necessity
 
@@ -95,10 +85,12 @@ When you use AI agents through our platform:
 
 | Data | Purpose | Retention | Can Delete? |
 |------|--------|-----------|-------------|
-| Session tokens | Authenticate API requests | 1 hour (auto-expires) | ⚠️ No (security) |
-| Audit logs (auth events) | Security monitoring, compliance | 1 year | ⚠️ No (compliance) |
-| IP address | Security monitoring, fraud prevention | 1 year (audit logs) | ⚠️ No (compliance) |
-| User agent | Security monitoring | 1 year (audit logs) | ⚠️ No (compliance) |
+| Session tokens | Authenticate API requests | 1 hour (auto-expires) |  No (security) |
+| Audit logs (auth events) | Security monitoring, compliance | 1 year |  No (compliance) |
+| IP address | Security monitoring, fraud prevention | 1 year (audit logs) |  No (compliance) |
+| User agent | Security monitoring | 1 year (audit logs) |  No (compliance) |
+
+**Note:** Audit logs contain minimal personal data (e.g., user ID, IP address, user-agent) necessary for security monitoring and compliance.
 
 **Legal Basis (GDPR):** Legitimate interest (security), Legal obligation (audit requirements)
 
@@ -114,87 +106,97 @@ When you use AI agents through our platform:
 
 ### 3.5 Data We Do NOT Collect
 
-- ❌ Payment information (Partners handle billing)
-- ❌ Passwords (shadow users use synthetic passwords managed by us)
-- ❌ Social security numbers or government IDs
-- ❌ Health information (unless Partner explicitly provides it)
-- ❌ Financial account numbers
-
----
+-  Payment information (Partners handle billing)
+-  Passwords (shadow users use synthetic passwords managed by us)
+-  Social security numbers or government IDs
+-  Health information (unless Partner explicitly provides it)
+-  Financial account numbers
 
 ## 4. How We Use Data
 
 ### 4.1 Service Provision
 
 We use your data to:
-- ✅ Authenticate you via Partner JWT
-- ✅ Execute AI agents on your behalf
-- ✅ Display conversation history
-- ✅ Process voice input (transcription)
-- ✅ Store execution context for multi-turn conversations
+-  Authenticate you via Partner JWT
+-  Execute AI agents on your behalf
+-  Display conversation history
+-  Process voice input (transcription)
+-  Store execution context for multi-turn conversations
 
 ### 4.2 Security & Fraud Prevention
 
 We use your data to:
-- ✅ Detect unauthorized access attempts
-- ✅ Monitor for API abuse
-- ✅ Investigate security incidents
-- ✅ Comply with security audit requirements
+-  Detect unauthorized access attempts
+-  Monitor for API abuse
+-  Investigate security incidents
+-  Comply with security audit requirements
 
 ### 4.3 Service Improvement
 
 We use aggregated, anonymized data to:
-- ✅ Analyze feature usage
-- ✅ Optimize performance
-- ✅ Improve AI agent accuracy
+-  Analyze feature usage
+-  Optimize performance
+-  Improve AI agent accuracy
 
 **Note:** We do NOT use your personal data for AI model training (LLM providers you configure may have their own policies).
 
 ### 4.4 Legal Compliance
 
 We may use/disclose data to:
-- ✅ Comply with legal obligations (subpoenas, court orders)
-- ✅ Enforce our Terms of Service
-- ✅ Protect our rights and safety
-- ✅ Respond to lawful government requests
-
----
+-  Comply with legal obligations (subpoenas, court orders)
+-  Enforce our Terms of Service
+-  Protect our rights and safety
+-  Respond to lawful government requests
 
 ## 5. Data Sharing & Disclosure
 
 ### 5.1 With Partners
 
 **Your data belongs to the Partner.** We share:
-- ✅ Agent execution results (via API responses)
-- ✅ Usage metrics (run counts, error rates)
-- ⚠️ We do NOT share data across different Partners
+-  Agent execution results (via API responses)
+-  Usage metrics (run counts, error rates)
+-  We do NOT share data across different Partners
 
 ### 5.2 With Sub-Processors
 
-We use trusted third-party services:
+We use trusted third-party services. **Complete list:** /en/subprocessors
+
+**Summary:**
 
 | Sub-Processor | Service | Data Shared | Location | Safeguards |
 |---------------|---------|-------------|----------|------------|
-| **Supabase** | Database, Auth, Storage | All data | EU (AWS EU-North-1, Stockholm) | SOC 2, ISO 27001, GDPR DPA |
-| **AWS** | Hosting infrastructure | All data (via Supabase) | EU (Stockholm) | SOC 1/2/3, ISO 27001 |
-| **Mailgun** | Transactional emails | Email, name | USA/EU | GDPR DPA available |
+| **Supabase Inc.** | Database, Auth, Storage | All data | EU data hosting (AWS EU-North-1, Stockholm); entity domicile outside the EEA may apply | GDPR DPA, SCC (relies on SOC 2/ISO 27001 certified infrastructure: AWS) |
+| **Vercel Inc.** | Web & Edge Hosting | Technical data, session data | EU (Frankfurt) | GDPR DPA, SCC |
+| **Render Inc.** | Backend Hosting & APIs | All data | EU (Frankfurt) | EU-US DPF, GDPR DPA, SCC |
+| **Mailgun Technologies Inc. (Sinch)** | Transactional emails | Email, name | USA/EU (routing-dependent) | SOC 2 Type I & II, ISO 27001, GDPR DPA, SCC |
+| **OpenAI LLC** | AI Model Inference (LLM) | Agent prompts, responses | Global / USA | SOC 2 Type II, GDPR DPA, SCC |
+| **Anthropic PBC** | AI Model Inference (LLM) | Agent prompts, responses | Global / USA | SOC 2, GDPR DPA, SCC |
+| **Google Cloud Platform** | AI Model Inference (Gemini) | Agent prompts, responses | EU / Global | SOC 2, ISO 27001, GDPR DPA, SCC |
+| **xAI Corp.** | AI Model Inference (Grok) | Agent prompts, responses | Global / USA | GDPR DPA, SCC |
 
 **Sub-Processor Agreements:** All sub-processors have signed Data Processing Agreements (DPAs) with adequate GDPR safeguards.
 
-### 5.3 With LLM Providers (Partner-Configured)
+**Sub-Processors of Sub-Processors:** Each sub-processor may engage their own sub-processors (e.g., Supabase uses AWS; Vercel and Render use AWS/Google Cloud). These are covered under respective vendor DPAs.
 
-If Partners configure their own LLM API keys (OpenAI, Anthropic, Google, Grok):
-- ✅ Agent prompts/responses sent to LLM provider
-- ✅ Data subject to LLM provider's privacy policy
-- ⚠️ LogicNodes is NOT responsible for LLM provider data handling
+### 5.3 With LLM Providers
 
-**Recommendation:** Partners should review LLM provider privacy policies and configure data retention settings.
+**Default Configuration:**
+By default, LogicNodes provides API keys for LLM services (OpenAI, Anthropic, Google, xAI). In this configuration:
+- LLM providers are our sub-processors (listed above)
+- We maintain DPAs with all LLM providers
+- We disable provider-side training and retention where configurable
+- All data processing is covered under our DPA with the Partner
+
+**Optional: Partner-Provided API Keys**
+Partners may provide their own LLM API keys. In this configuration:
+- Partner contracts directly with the LLM provider
+- LLM provider becomes Partner's direct processor (not our sub-processor)
+- Partner is responsible for their own DPA with the LLM provider
+- Partners should review LLM provider privacy policies and enforce no-training, no-retention settings
 
 ### 5.4 No Sale of Personal Data
 
 We do NOT sell, rent, or trade personal data to third parties. Ever.
-
----
 
 ## 6. Data Retention & Deletion
 
@@ -216,19 +218,19 @@ We do NOT sell, rent, or trade personal data to third parties. Ever.
 1. Contact the Partner (data controller)
 2. Partner sends deletion request via API
 3. We cascade-delete all associated data:
-   - ✅ User account
-   - ✅ Organization membership
-   - ✅ Agent runs, events, transcriptions
-   - ✅ Agent execution context (checkpoints)
-   - ✅ Vault secrets (encrypted credentials)
+   -  User account
+   -  Organization membership
+   -  Agent runs, events, transcriptions
+   -  Agent execution context (checkpoints)
+   -  Vault secrets (encrypted credentials)
 
 **Deletion Timeline:**
 - Immediate: All data deleted from production database (synchronous CASCADE)
 - Within 30 days: All data purged from encrypted backups
 
 **Cannot Delete:**
-- ⚠️ Audit logs (retained 1 year for compliance)
-- ⚠️ Aggregated, anonymized analytics
+-  Audit logs (retained 1 year for compliance). Audit logs contain minimal personal data (e.g., user ID, IP address, user-agent) necessary for security monitoring and compliance.
+-  Aggregated, anonymized analytics
 
 ### 6.3 Partner-Initiated Deletion
 
@@ -238,47 +240,43 @@ Partners can delete organizations/users via:
 
 Same cascading deletion applies.
 
----
-
 ## 7. Data Security
 
 ### 7.1 Encryption
 
 **At Rest:**
-- ✅ Database encryption (Supabase default)
-- ✅ Secrets encryption (Supabase Vault)
-- ✅ Storage bucket encryption (AWS S3)
+-  Database encryption (Supabase default)
+-  Secrets encryption (Supabase Vault)
+-  Storage bucket encryption (AWS S3)
 
 **In Transit:**
-- ✅ TLS 1.2+ for all API communication
-- ✅ HTTPS enforcement
-- ✅ HSTS headers
+-  TLS 1.2+ for all API communication
+-  HTTPS enforcement
+-  HSTS headers
 
 ### 7.2 Access Controls
 
 **Multi-Tenant Isolation:**
-- ✅ Row-Level Security (RLS) policies
-- ✅ Application-layer access controls
-- ✅ JWT-based session scoping
+-  Row-Level Security (RLS) policies
+-  Application-layer access controls
+-  JWT-based session scoping
 
 **Employee Access:**
-- ✅ Least-privilege principle
-- ✅ Service role access logged to audit logs
-- ✅ Background checks for employees with production access
+-  Least-privilege principle
+-  Service role access logged to audit logs
+-  Background checks for employees with production access
 
 ### 7.3 Security Monitoring
 
 **Real-Time Monitoring:**
-- ✅ Failed authentication attempts
-- ✅ Unusual API access patterns
-- ✅ Secret access/deletion events
+-  Failed authentication attempts
+-  Unusual API access patterns
+-  Secret access/deletion events
 
 **Incident Response:**
-- ✅ 24-hour response time for critical issues
-- ✅ Security contact: security@logicnodes.ai
-- ✅ Post-incident reports (within 5 business days)
-
----
+-  24-hour response time for critical issues
+-  Security contact: security@logicnodes.ai
+-  Post-incident reports (within 5 business days)
 
 ## 8. International Data Transfers
 
@@ -287,9 +285,9 @@ Same cascading deletion applies.
 **Primary Storage:** European Union (AWS EU-North-1, Stockholm via Supabase)
 
 **Data Location:**
-- ✅ EU data residency by default (Sweden)
-- ✅ GDPR-compliant data hosting
-- ✅ US data residency available upon Partner request
+-  EU data residency by default (Sweden)
+-  GDPR-compliant data hosting
+-  US data residency available upon Partner request
 
 **International Transfers:**
 - Standard Contractual Clauses (SCCs) available for US transfers
@@ -298,11 +296,9 @@ Same cascading deletion applies.
 ### 8.2 Adequacy Decisions
 
 We rely on:
-- ✅ Standard Contractual Clauses (SCCs) - EU Commission approved
-- ✅ Supabase compliance (SOC 2, ISO 27001)
-- ✅ AWS compliance (SOC 1/2/3, ISO 27001)
-
----
+-  Standard Contractual Clauses (SCCs) - EU Commission approved
+-  Supabase relies on AWS infrastructure (SOC 2, ISO 27001)
+-  AWS compliance (SOC 1/2/3, ISO 27001)
 
 ## 9. Your Rights (GDPR)
 
@@ -336,12 +332,12 @@ We rely on:
 **How to exercise:**
 1. Contact Partner
 2. Partner sends deletion request via API
-3. We delete within 24 hours (see section 6.2)
+3. We delete immediately from production; purged from backups within 30 days (see section 6.2)
 
 **Exceptions (we can refuse deletion):**
-- ⚠️ Legal obligation to retain (audit logs - 1 year)
-- ⚠️ Public interest (security investigation)
-- ⚠️ Legal claims (ongoing litigation)
+-  Legal obligation to retain (audit logs - 1 year)
+-  Public interest (security investigation)
+-  Legal claims (ongoing litigation)
 
 ### 9.4 Right to Data Portability (Article 20)
 
@@ -383,8 +379,6 @@ We rely on:
 1. Stop using Partner's product (no new data sent to LogicNodes)
 2. Request deletion (see section 9.3)
 
----
-
 ## 10. Children's Privacy
 
 **Age Restriction:** LogicNodes is NOT intended for children under 16.
@@ -392,8 +386,6 @@ We rely on:
 **No Knowingly Collection:** We do not knowingly collect personal data from children under 16.
 
 **Parental Notice:** If you believe we have collected data from a child under 16, contact us immediately at privacy@logicnodes.ai. We will delete the data within 24 hours.
-
----
 
 ## 11. California Privacy Rights (CCPA)
 
@@ -430,8 +422,6 @@ California residents can designate an authorized agent to make requests on their
 2. Verify identity (government-issued ID)
 3. Submit request to privacy@logicnodes.ai
 
----
-
 ## 12. Changes to This Policy
 
 **Notification Method:**
@@ -450,29 +440,23 @@ California residents can designate an authorized agent to make requests on their
 - Updates to contact information
 - Correction of typos
 
----
-
 ## 13. Contact Us
 
 ### Privacy Team
 **Email:** privacy@logicnodes.ai
 **Response Time:** 5 business days
-
-### Data Protection Officer (DPO)
-**Email:** dpo@logicnodes.ai
-**Purpose:** GDPR/CCPA requests, privacy concerns
+**Purpose:** GDPR/CCPA requests, privacy concerns, DPA questions
 
 ### Security Team
 **Email:** security@logicnodes.ai
 **Purpose:** Security incidents, data breaches
 
 ### Mailing Address
-LogicNodes Inc.  
-[Company Address]  
-[City, State, ZIP]  
-United States
-
----
+LogicNodes ApS
+Sletvej 2D
+8310 Tranbjerg
+Denmark
+CVR: DK45318362
 
 ## 14. Supervisory Authority (EU)
 
@@ -487,8 +471,6 @@ Carl Jacobsens Vej 35
 2500 Valby  
 Denmark  
 Email: dt@datatilsynet.dk
-
----
 
 ## 15. Glossary
 
@@ -508,8 +490,6 @@ Email: dt@datatilsynet.dk
 
 **Cascading Delete:** Automatic deletion of related records when parent record is deleted.
 
----
-
 ## Appendix A: Data Processing Activities
 
 | Processing Activity | Purpose | Legal Basis (GDPR) | Retention |
@@ -521,22 +501,33 @@ Email: dt@datatilsynet.dk
 | File storage | Process uploaded documents | Contract | 1-90 days |
 | Email notifications | Send transactional emails | Contract | Session |
 
----
-
 ## Appendix B: Sub-Processor List
+
+**Authoritative List:** /en/subprocessors
+
+**Summary:**
 
 | Sub-Processor | Service | Data Shared | Location | DPA Signed |
 |---------------|---------|-------------|----------|------------|
-| Supabase | Database, Auth, Storage | All data | EU (AWS EU-North-1, Stockholm) | ✅ Yes |
-| Amazon Web Services (AWS) | Cloud infrastructure | All data (via Supabase) | EU (Stockholm) | ✅ Yes (via Supabase) |
-| Mailgun | Transactional email | Email, name | USA/EU | ✅ Yes |
+| Supabase Inc. | Database, Auth, Storage | All data | EU data hosting (AWS EU-North-1, Stockholm); entity domicile outside the EEA may apply |  Yes |
+| Vercel Inc. | Web & Edge Hosting | Technical data, session data | EU (Frankfurt) |  Yes |
+| Render Inc. | Backend Hosting & APIs | All data | EU (Frankfurt) |  Yes |
+| Mailgun Technologies Inc. (Sinch) | Transactional email | Email, name | USA/EU (routing-dependent) |  Yes |
+| OpenAI LLC | AI Model Inference (LLM) | Agent prompts, responses | Global / USA |  Yes |
+| Anthropic PBC | AI Model Inference (LLM) | Agent prompts, responses | Global / USA |  Yes |
+| Google Cloud Platform | AI Model Inference (Gemini) | Agent prompts, responses | EU / Global |  Yes |
+| xAI Corp. | AI Model Inference (Grok) | Agent prompts, responses | Global / USA |  Yes |
 
-**Last Updated:** November 3, 2025  
+**LLM Providers:** By default, LogicNodes provides API keys for LLM services. Partners may optionally provide their own API keys, in which case the LLM provider becomes Partner's direct processor.
+
+**Last Updated:** November 4, 2025
 
 **Changes Notification:** Partners notified 30 days before adding new sub-processors.
 
----
+**© 2025 LogicNodes ApS. All rights reserved.**
 
-**© 2025 LogicNodes Inc. All rights reserved.**
+LogicNodes ApS
+Sletvej 2D, 8310 Tranbjerg, Denmark
+CVR: DK45318362
 
 This privacy policy is effective as of November 3, 2025. By using LogicNodes through a Partner's product, you acknowledge you have read and understood this policy.
