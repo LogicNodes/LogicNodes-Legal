@@ -119,7 +119,10 @@ Your data is completely isolated from other organizations through multiple secur
 
 **Exception:** Audit logs retained for 1 year for compliance (contain only user IDs, no PII)
 
-All audit logs are immutable and tamper-resistant by design.
+**Audit Log Protection:**
+- Tamper-resistant and write-protected via Row-Level Security
+- Only authorized operations can modify logs (requires elevated privileges)
+- Organization deletion preserves audit trail (logs retained for compliance)
 
 ## Compliance & Certifications
 
