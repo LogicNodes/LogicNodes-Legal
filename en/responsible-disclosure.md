@@ -31,7 +31,7 @@ Security researchers are authorized to test the following systems:
 -  **Organization APIs:** /api/organizations/*
 
 **Testing Environment:**
--  **Staging:** https://staging.logicnodes.ai (if available)
+-  **Staging:** https://staging.logicnodes.ai (on request)
 -  **Demo accounts:** Request via security@logicnodes.ai
 
 ### 2.2 Out-of-Scope Systems
