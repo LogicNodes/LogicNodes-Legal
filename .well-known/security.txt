@@ -1,0 +1,11 @@
+Contact: mailto:security@logicnodes.ai
+Encryption: https://legal.logicnodes.ai/en/pgp
+Expires: 2026-11-04T00:00:00.000Z
+Preferred-Languages: en, da
+Canonical: https://legal.logicnodes.ai/.well-known/security.txt
+Policy: https://legal.logicnodes.ai/en/responsible-disclosure
+Acknowledgments: https://logicnodes.ai/security/hall-of-fame
+
+# LogicNodes ApS Security Contact
+# Last Updated: 2025-11-04
+# For vulnerability reports, see our responsible disclosure policy.
