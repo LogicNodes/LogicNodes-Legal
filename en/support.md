@@ -27,10 +27,22 @@ To help us assist you more efficiently, please include:
 
 ### Privacy and Legal Inquiries
 
-For privacy-related questions or legal matters, please contact:
+For privacy-related questions, please contact:
 
-**Email:** [legal@logicnodes.ai](mailto:legal@logicnodes.ai)
+**Privacy Team:** [privacy@logicnodes.ai](mailto:privacy@logicnodes.ai)
+
+For security issues, please contact:
+
+**Security Team:** [security@logicnodes.ai](mailto:security@logicnodes.ai)
 
 ---
+
+### Company Information
+
+**LogicNodes ApS**
+Sletvej 2D
+8310 Tranbjerg
+Denmark
+CVR: DK45318362
 
 *We value your feedback and are committed to providing excellent support.*

@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Responsible Disclosure Policy
-last_updated: 2025-11-03
+last_updated: 2025-11-04
 lang: en
 ---
 
@@ -11,17 +11,11 @@ lang: en
 
 **Last Updated:** November 3, 2025  
 
-**Version:** 1.0  
-
----
-
 ## 1. Introduction
 
 LogicNodes is committed to protecting the security and privacy of our partners and their users. We welcome and appreciate responsible disclosure of security vulnerabilities from the security research community.
 
 This policy provides guidelines for security researchers to report vulnerabilities responsibly and outlines how LogicNodes will respond.
-
----
 
 ## 2. Scope
 
@@ -30,28 +24,26 @@ This policy provides guidelines for security researchers to report vulnerabiliti
 Security researchers are authorized to test the following systems:
 
 **Production Environment:**
-- ✅ **Web Application:** https://app.logicnodes.ai
-- ✅ **API Endpoints:** https://api.logicnodes.ai/api/v1/*
-- ✅ **Embed Authentication:** POST /api/v1/embed/auth
-- ✅ **Partner APIs:** /api/v1/partner/*
-- ✅ **Organization APIs:** /api/organizations/*
+-  **Web Application:** https://app.logicnodes.ai
+-  **API Endpoints:** https://api.logicnodes.ai/api/v1/*
+-  **Embed Authentication:** POST /api/v1/embed/auth
+-  **Partner APIs:** /api/v1/partner/*
+-  **Organization APIs:** /api/organizations/*
 
 **Testing Environment:**
-- ✅ **Staging:** https://staging.logicnodes.ai (if available)
-- ✅ **Demo accounts:** Request via security@logicnodes.ai
+-  **Staging:** https://staging.logicnodes.ai (if available)
+-  **Demo accounts:** Request via security@logicnodes.ai
 
 ### 2.2 Out-of-Scope Systems
 
 The following are **NOT authorized** for testing:
 
-- ❌ Third-party services (Supabase, AWS, Mailgun - report to them directly)
-- ❌ Physical security (offices, data centers)
-- ❌ Social engineering (phishing, vishing)
-- ❌ Denial of Service (DoS/DDoS attacks)
-- ❌ Spam or bulk email testing
-- ❌ Other customers' accounts or data (unless you own them)
-
----
+-  Third-party services (Supabase, AWS, Mailgun - report to them directly)
+-  Physical security (offices, data centers)
+-  Social engineering (phishing, vishing)
+-  Denial of Service (DoS/DDoS attacks)
+-  Spam or bulk email testing
+-  Other customers' accounts or data (unless you own them)
 
 ## 3. In-Scope Vulnerabilities
 
@@ -107,31 +99,27 @@ We are interested in reports of the following vulnerability types:
 
 **Note:** Low severity issues are still valuable reports and will be addressed.
 
----
-
 ## 4. Out-of-Scope Vulnerabilities
 
 The following are **NOT eligible** for acknowledgment or rewards:
 
 ### 4.1 Excluded Vulnerability Types
 
-- ❌ **Denial of Service (DoS/DDoS)** - Overwhelming systems with traffic
-- ❌ **Brute Force Attacks** - Attempting many passwords/API keys
-- ❌ **Social Engineering** - Phishing, pretexting, vishing
-- ❌ **Physical Attacks** - Office intrusion, dumpster diving
-- ❌ **Email Spoofing** - SPF/DKIM/DMARC misconfigurations (unless leads to account compromise)
-- ❌ **Rate Limiting** - Absence of rate limiting (unless causes DoS)
-- ❌ **Version Disclosure** - Software version in headers (informational only)
+-  **Denial of Service (DoS/DDoS)** - Overwhelming systems with traffic
+-  **Brute Force Attacks** - Attempting many passwords/API keys
+-  **Social Engineering** - Phishing, pretexting, vishing
+-  **Physical Attacks** - Office intrusion, dumpster diving
+-  **Email Spoofing** - SPF/DKIM/DMARC misconfigurations (unless leads to account compromise)
+-  **Rate Limiting** - Absence of rate limiting (unless causes DoS)
+-  **Version Disclosure** - Software version in headers (informational only)
 
 ### 4.2 Known Issues
 
 The following are known and will not be addressed immediately:
 
-- ⚠️ **Bug Bounty Program:** Not yet implemented (planned for 2026)
-- ⚠️ **SOC 2 Certification:** In progress (estimated 2026)
-- ⚠️ **Forced Logout:** Not yet available (sessions expire in 1 hour)
-
----
+-  **Bug Bounty Program:** Not yet implemented (planned for 2026)
+-  **SOC 2 Certification:** In progress (estimated 2026)
+-  **Forced Logout:** Not yet available (sessions expire in 1 hour)
 
 ## 5. Responsible Disclosure Guidelines
 
@@ -140,29 +128,29 @@ The following are known and will not be addressed immediately:
 When testing for vulnerabilities, researchers must:
 
 **DO:**
-- ✅ Test only on your own accounts or with explicit permission
-- ✅ Use test/demo accounts (request via security@logicnodes.ai)
-- ✅ Limit testing to non-destructive methods
-- ✅ Respect rate limits (stay below 100 requests/minute)
-- ✅ Stop testing immediately if you discover user data
-- ✅ Report findings promptly (within 24 hours of discovery)
+-  Test only on your own accounts or with explicit permission
+-  Use test/demo accounts (request via security@logicnodes.ai)
+-  Limit testing to non-destructive methods
+-  Respect rate limits (stay below 100 requests/minute)
+-  Stop testing immediately if you discover user data
+-  Report findings promptly (within 24 hours of discovery)
 
 **DON'T:**
-- ❌ Access, modify, or delete other users' data
-- ❌ Perform DoS/DDoS attacks or load testing
-- ❌ Use automated scanners without prior approval (email security@logicnodes.ai)
-- ❌ Exploit vulnerabilities beyond proof-of-concept
-- ❌ Publicly disclose vulnerabilities before remediation (90-day embargo)
-- ❌ Demand payment or ransom for vulnerability disclosure
+-  Access, modify, or delete other users' data
+-  Perform DoS/DDoS attacks or load testing
+-  Use automated scanners without prior approval (email security@logicnodes.ai)
+-  Exploit vulnerabilities beyond proof-of-concept
+-  Publicly disclose vulnerabilities before remediation (90-day embargo)
+-  Demand payment or ransom for vulnerability disclosure
 
 ### 5.2 Safe Harbor
 
 LogicNodes commits to:
 
-- ✅ **Not pursue legal action** against researchers who comply with this policy
-- ✅ **Work with you** to understand and resolve the issue
-- ✅ **Recognize your contribution** (with your permission)
-- ✅ **Keep your identity confidential** (if requested)
+-  **Not pursue legal action** against researchers who comply with this policy
+-  **Work with you** to understand and resolve the issue
+-  **Recognize your contribution** (with your permission)
+-  **Keep your identity confidential** (if requested)
 
 **Conditions:**
 - You must comply with this policy (testing rules, disclosure timeline)
@@ -171,15 +159,13 @@ LogicNodes commits to:
 
 **Disclaimer:** This safe harbor does not grant permission to violate third-party terms of service (e.g., Supabase, AWS). You are responsible for compliance with all applicable laws and terms.
 
----
-
 ## 6. Reporting a Vulnerability
 
 ### 6.1 How to Report
 
 **Primary Contact:**
 - **Email:** security@logicnodes.ai
-- **PGP Key:** Available upon request (email security@logicnodes.ai to request)
+- **PGP Key:** /en/pgp
 - **Response Time:** Within 24 hours (acknowledgment), 72 hours (initial assessment)
 
 ### 6.2 Report Format
@@ -234,32 +220,30 @@ Disclosure: 90 days (standard)
 
 For sensitive vulnerabilities, you may encrypt your report using PGP:
 
-1. Request PGP key: security@logicnodes.ai
+1. Download PGP key: /en/pgp
 2. Encrypt report with our public key
 3. Send encrypted email to security@logicnodes.ai
 
 **Note:** PGP is optional. Unencrypted email to security@logicnodes.ai is acceptable.
-
----
 
 ## 7. Response Process
 
 ### 7.1 Timeline
 
 **Within 24 Hours:**
-- ✅ Acknowledgment email (confirming receipt)
-- ✅ Ticket number assigned (for tracking)
-- ✅ Initial questions (if clarification needed)
+-  Acknowledgment email (confirming receipt)
+-  Ticket number assigned (for tracking)
+-  Initial questions (if clarification needed)
 
 **Within 72 Hours:**
-- ✅ Severity assessment (our internal classification)
-- ✅ Validation (confirm vulnerability is reproducible)
-- ✅ Remediation timeline (estimated fix date)
+-  Severity assessment (our internal classification)
+-  Validation (confirm vulnerability is reproducible)
+-  Remediation timeline (estimated fix date)
 
 **Within 90 Days:**
-- ✅ Remediation deployed (critical/high issues prioritized)
-- ✅ Verification testing (confirm fix works)
-- ✅ Public disclosure (if agreed upon)
+-  Remediation deployed (critical/high issues prioritized)
+-  Verification testing (confirm fix works)
+-  Public disclosure (if agreed upon)
 
 ### 7.2 Severity Classification
 
@@ -305,8 +289,6 @@ LogicNodes uses the following severity levels:
 - We will coordinate disclosure with you (blog post, CVE, advisory)
 - With your permission, we will credit you (name, handle, company)
 
----
-
 ## 8. Recognition & Rewards
 
 ### 8.1 Public Acknowledgment
@@ -336,8 +318,6 @@ Researchers who report valid vulnerabilities will be credited on our Security Ha
 - Public acknowledgment (with permission)
 - Direct communication with engineering team
 - Priority support channel (for severe issues)
-
----
 
 ## 9. Legal & Compliance
 
@@ -384,18 +364,14 @@ For vulnerabilities meeting CVE criteria:
 - CVE will credit reporter (with permission)
 - LogicNodes will publish advisory on https://logicnodes.ai/security/advisories
 
----
-
 ## 10. Excluded Parties
 
 The following parties are **NOT eligible** to participate:
 
-- ❌ LogicNodes employees, contractors, or immediate family members
-- ❌ Individuals in countries subject to U.S. sanctions (Iran, North Korea, Syria, Cuba, Crimea)
-- ❌ Individuals on U.S. denied persons lists (OFAC SDN, BIS Denied Persons List)
-- ❌ Minors under 18 years old (without parental consent)
-
----
+-  LogicNodes employees, contractors, or immediate family members
+-  Individuals in countries subject to U.S. sanctions (Iran, North Korea, Syria, Cuba, Crimea)
+-  Individuals on U.S. denied persons lists (OFAC SDN, BIS Denied Persons List)
+-  Minors under 18 years old (without parental consent)
 
 ## 11. Modifications to This Policy
 
@@ -410,90 +386,79 @@ LogicNodes may update this policy at any time. Changes will be posted at:
 - Policy changes effective immediately upon posting
 - Existing vulnerability reports governed by policy version at time of report
 
----
-
 ## 12. Frequently Asked Questions
 
 ### 12.1 General
 
-**Q: Do you have a bug bounty program?**
+**Q: Do you have a bug bounty program?**  
 A: Not yet. Planned for Q2 2026 on HackerOne or Bugcrowd. Currently, we offer public acknowledgment and gratitude.
 
-**Q: Can I use automated scanners?**
+**Q: Can I use automated scanners?**  
 A: Please request permission first (security@logicnodes.ai). Automated scanners may trigger rate limits or DoS protections.  
 
-**Q: Can I test on production systems?**
+**Q: Can I test on production systems?**  
 A: Yes, but only on your own accounts. Request test accounts via security@logicnodes.ai for safer testing.  
 
-**Q: Can I disclose before 90 days?**
+**Q: Can I disclose before 90 days?**  
 A: Only with mutual agreement. We prefer coordinated disclosure.  
 
 ### 12.2 Scope
 
-**Q: Is subdomain takeover in scope?**
+**Q: Is subdomain takeover in scope?**  
 A: Yes, if you can demonstrate impact (e.g., phishing, cookie theft).  
 
-**Q: Is rate limiting absence a valid report?**
+**Q: Is rate limiting absence a valid report?**  
 A: Only if it enables DoS or brute force attacks. Missing rate limits alone are informational.  
 
-**Q: Are third-party dependencies in scope?**
+**Q: Are third-party dependencies in scope?**  
 A: Yes, if the vulnerability affects LogicNodes (e.g., outdated library with known CVE). Report to us and the vendor.  
 
-**Q: Is social engineering in scope?**
+**Q: Is social engineering in scope?**  
 A: No. Do not phish employees, partners, or users.  
 
 ### 12.3 Reporting
 
-**Q: Can I report anonymously?**
+**Q: Can I report anonymously?**  
 A: Yes. Use ProtonMail or Tutanota for anonymous email. We will keep your identity confidential.  
 
-**Q: Can I report via Twitter/LinkedIn?**
+**Q: Can I report via Twitter/LinkedIn?**  
 A: Please use security@logicnodes.ai for all reports. Social media is not monitored for security reports.  
 
-**Q: What if my report is a duplicate?**
+**Q: What if my report is a duplicate?**  
 A: We will notify you if the issue was previously reported. Duplicates still receive acknowledgment (but no additional credit).
 
-**Q: Can I report issues in third-party services?**
+**Q: Can I report issues in third-party services?**  
 A: Report to the third party (Supabase, AWS, Mailgun) directly. If the issue affects LogicNodes' configuration, report to us as well.
 
 ### 12.4 Rewards
 
-**Q: Will I be paid for my report?**
+**Q: Will I be paid for my report?**  
 A: Not currently (no bug bounty program). You will receive public acknowledgment and our gratitude.
 
-**Q: When will bug bounty launch?**
+**Q: When will bug bounty launch?**  
 A: Estimated Q2 2026, pending revenue milestones.  
 
-**Q: Can I negotiate a reward?**
+**Q: Can I negotiate a reward?**  
 A: For exceptional findings (0-day, critical severity), contact security@logicnodes.ai to discuss.
-
----
 
 ## 13. Contact Information
 
 ### Security Team
 **Email:** security@logicnodes.ai
-**PGP Key:** Request via email
+**PGP Key:** /en/pgp
 **Response Time:** Within 24 hours
 
 ### General Inquiries
-**Email:** support@logicnodes.ai
+**Email:** support@logicnodes.ai  
 **Purpose:** Non-security questions, product support
 
 ### Legal Department
-**Email:** legal@logicnodes.ai
+**Email:** legal@logicnodes.ai  
 **Purpose:** Safe harbor questions, legal concerns
-
----
 
 ## 14. Acknowledgments
 
 LogicNodes thanks the security research community for helping us protect our partners and their users. We are grateful for your responsible disclosure and collaboration.
-
-**Special Thanks:**
-- [Future: List of acknowledged researchers]
-
----
 
 ## 15. References
 
@@ -511,8 +476,10 @@ LogicNodes thanks the security research community for helping us protect our par
 - **ISO 29147:** Vulnerability disclosure
 - **ISO 30111:** Vulnerability handling processes
 
----
+**© 2025 LogicNodes ApS. All rights reserved.**
 
-**© 2025 LogicNodes Inc. All rights reserved.**
+LogicNodes ApS
+Sletvej 2D, 8310 Tranbjerg, Denmark
+CVR: DK45318362
 
 This Responsible Disclosure Policy is effective November 3, 2025. By submitting a vulnerability report, you agree to the terms of this policy.

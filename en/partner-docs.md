@@ -11,13 +11,9 @@ lang: en
 
 **Comprehensive Security, Privacy & Integration Resources**
 
----
-
 ## Welcome Partners!
 
 This documentation hub provides everything you need to evaluate, integrate, and maintain LogicNodes in your environment. Whether you're conducting security due diligence, integrating our API, or ensuring compliance, you'll find the resources here.
-
----
 
 ## 📋 Documentation Index
 
@@ -42,8 +38,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - Integration planning
 - Security team evaluation
 
----
-
 ### 🛡️ Privacy & Compliance
 
 #### [Privacy Policy]({{ '/en/privacy-policy.html' | relative_url }})
@@ -64,8 +58,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - End-user privacy disclosures
 - Legal team evaluation
 
----
-
 #### [Data Processing Agreement]({{ '/en/data-processing-agreement.html' | relative_url }})
 **Target Audience:** Legal teams, procurement
 
@@ -83,8 +75,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - GDPR compliance (required for EU data)
 - Legal review before integration
 - Procurement process
-
----
 
 ### 🐛 Security Reporting
 
@@ -105,8 +95,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - Penetration testing scope definition
 - Bug bounty reference (when launched)
 
----
-
 ## 🎯 Quick Start by Role
 
 ### For Security Teams
@@ -121,8 +109,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - What's your GDPR compliance status? → Privacy Policy + Security Architecture (Section 9)
 - Do you have SOC 2? → Security Architecture (Section 8)
 
----
-
 ### For Legal/Compliance Teams
 **Start Here:**
 1. [Privacy Policy]({{ '/en/privacy-policy.html' | relative_url }}) - GDPR/CCPA compliance
@@ -134,8 +120,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - Can we sign a DPA? → Yes (see DPA template)
 - Where is data stored? → EU (AWS EU-North-1, Stockholm)
 - How long is data retained? → 1-90 days (configurable), audit logs 1 year
-
----
 
 ### For Developers
 **Start Here:**
@@ -149,8 +133,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - How do I generate JWTs? → Widget Integration Guide
 - What are security best practices? → Security Architecture (Section 10)
 
----
-
 ### For Executives/Decision Makers
 **Start Here:**
 1. [Security Architecture]({{ '/en/security-architecture.html' | relative_url }}) - Executive Summary
@@ -161,8 +143,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - Are we GDPR compliant if we use LogicNodes? → Yes (DPA available)
 - What certifications do you have? → SOC 2 ready, pen test planned Q2 2026
 - Can we delete user data on demand? → Yes (API-driven deletion, 24hr timeline)
-
----
 
 ## 📞 Contact Information
 
@@ -185,8 +165,6 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 **Email:** [support@logicnodes.ai](mailto:support@logicnodes.ai)
 **Purpose:** Integration help, API questions, troubleshooting
 **Response Time:** 4 business hours
-
----
 
 ## 🛠️ Using These Documents
 
@@ -223,8 +201,6 @@ Most security questionnaires can be answered using these documents:
 - Custom questionnaires: Use all documents as reference
 - Contact security@logicnodes.ai for assistance
 
----
-
 ## 🔄 Document Updates
 
 All documents are version-controlled and updated regularly:
@@ -241,8 +217,6 @@ Partners will be notified via email of material changes to:
 - DPA (30 days advance notice)
 - Sub-processor list (30 days advance notice)
 
----
-
 ## 📚 Additional Resources
 
 ### External Links
@@ -258,8 +232,6 @@ Partners will be notified via email of material changes to:
 **Security Standards:**
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [CWE Top 25](https://cwe.mitre.org/top25/)
-
----
 
 ## 🎓 Glossary
 
@@ -281,21 +253,17 @@ Partners will be notified via email of material changes to:
 
 **Data Processor:** Entity that processes data on behalf of controller (LogicNodes)
 
----
-
 ## 📄 License & Usage
 
-**Copyright:** © 2025 LogicNodes Inc. All rights reserved.
+**Copyright:** © 2025 LogicNodes ApS. All rights reserved.
 
 **Usage Rights:**
-- ✅ Share with internal teams (legal, security, engineering)
-- ✅ Reference in security questionnaires (with proper attribution)
-- ✅ Include in internal compliance documentation
-- ❌ Publicly distribute without permission
-- ❌ Modify or create derivative works
+-  Share with internal teams (legal, security, engineering)
+-  Reference in security questionnaires (with proper attribution)
+-  Include in internal compliance documentation
+-  Publicly distribute without permission
+-  Modify or create derivative works
 
 **Questions:** Contact [legal@logicnodes.ai](mailto:legal@logicnodes.ai) for usage permissions.
-
----
 
 **For the complete partner documentation repository, contact [sales@logicnodes.ai](mailto:sales@logicnodes.ai)**
