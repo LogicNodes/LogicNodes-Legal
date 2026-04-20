@@ -2,6 +2,7 @@
 layout: legal
 title: Support
 lang: da
+lang_equivalent: /en/support.html
 ---
 
 # Få Support

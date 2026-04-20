@@ -4,6 +4,7 @@ title: Security Overview
 description: "LogicNodes Platform – Enterprise security overview, data protection, and compliance commitments."
 last_updated: 2025-11-03
 lang: en
+lang_equivalent: /da/sikkerhedsarkitektur.html
 ---
 
 # LogicNodes Platform - Security Overview

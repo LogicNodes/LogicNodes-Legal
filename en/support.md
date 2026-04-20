@@ -1,8 +1,9 @@
 ---
 layout: legal
 title: Support
----
 lang: en
+lang_equivalent: /da/support.html
+---
 
 ## Get Support
 

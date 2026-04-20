@@ -3,6 +3,7 @@ layout: legal
 title: Responsible Disclosure Policy
 last_updated: 2025-11-04
 lang: en
+lang_equivalent: /da/ansvarlig-offentliggorelse.html
 ---
 
 # LogicNodes - Responsible Disclosure Policy

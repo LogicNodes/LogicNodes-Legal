@@ -3,6 +3,7 @@ layout: legal
 title: Partner Embedded Users Privacy Policy
 last_updated: 2025-11-04
 lang: en
+lang_equivalent: /da/partner-privatlivspolitik.html
 ---
 
 <div class="policy-notice">

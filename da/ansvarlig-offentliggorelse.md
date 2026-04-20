@@ -3,6 +3,7 @@ layout: legal
 title: Ansvarlig Offentliggørelse
 last_updated: 2025-11-03
 lang: da
+lang_equivalent: /en/responsible-disclosure.html
 ---
 
 # LogicNodes - Politik for Ansvarlig Offentliggørelse

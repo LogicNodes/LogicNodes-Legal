@@ -3,6 +3,7 @@ layout: legal
 title: Data Processing Agreement
 last_updated: 2025-11-04
 lang: en
+lang_equivalent: /da/databehandleraftale.html
 description: "Data Processing Agreement between LogicNodes ApS (Processor) and Partner (Controller). GDPR Art. 28 compliant."
 ---
 

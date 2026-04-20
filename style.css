@@ -1,29 +1,58 @@
-/* Reset and Base Styles */
-* {
+/* ============================================================
+   LogicNodes Legal — Brand-aligned document stylesheet
+   Brand source: logiai.dk
+   Fonts: Plus Jakarta Sans (headings), DM Sans (body)
+   Header bg: #50349b (purple) | CTA only: #e86235 (orange)
+   ============================================================ */
+
+:root {
+    --color-purple:       #50349b;
+    --color-purple-dark:  #3d2778;
+    --color-orange:       #e86235;
+    --color-orange-dark:  #c9522a;
+
+    --color-text:         #191919;
+    --color-text-body:    #3f495d;
+    --color-text-muted:   #6b6b6b;
+    --color-border:       #e0e0e0;
+    --color-bg:           #f9f9f9;
+    --color-white:        #ffffff;
+    --color-footer-bg:    #111111;
+
+    --font-heading: 'Plus Jakarta Sans', Helvetica, Arial, sans-serif;
+    --font-body:    'DM Sans', Helvetica, Arial, sans-serif;
+
+    --radius: 6px;
+    --shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-body);
+    background-color: var(--color-bg);
 }
 
-/* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
-/* Header */
+/* ============================================================
+   Header — dark purple, white text (matches logiai.dk navbar)
+   ============================================================ */
 header {
-    background-color: #fff;
-    border-bottom: 1px solid #e9ecef;
-    padding: 2rem 0;
+    background: linear-gradient(1deg, #523f9e 0%, rgba(17, 21, 36, 1) 100%);
+    padding: 1.5rem 0;
     margin-bottom: 3rem;
 }
 
@@ -35,19 +64,20 @@ header {
     gap: 1rem;
 }
 
-.header-text {
-    flex: 1;
-}
+.header-text { flex: 1; }
 
 header h1 {
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    letter-spacing: -0.3px;
 }
 
 header p {
-    color: #6c757d;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 2px;
 }
 
 .header-nav {
@@ -57,212 +87,222 @@ header p {
     gap: 0.5rem;
 }
 
-.breadcrumb {
-    margin: 0;
-}
-
 .breadcrumb a {
-    color: #007bff;
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
+    font-size: 0.875rem;
     font-weight: 500;
 }
 
 .breadcrumb a:hover {
+    color: var(--color-white);
     text-decoration: underline;
 }
 
-/* Language Selector in Header */
+/* Language Selector */
 .language-selector {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #f8f9fa;
-    border-radius: 6px;
+    gap: 0.25rem;
 }
 
 .language-selector .lang-link {
-    color: #6c757d;
+    color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.9rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    transition: all 0.2s;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius);
 }
 
 .language-selector .lang-link:hover {
-    background-color: #e9ecef;
-    color: #2c3e50;
+    color: var(--color-white);
 }
 
 .language-selector .lang-link.active {
-    background-color: #667eea;
-    color: white;
-    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
 }
 
 .language-selector .separator {
-    color: #dee2e6;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
 }
 
-/* Main Content */
+/* ============================================================
+   Main
+   ============================================================ */
 main {
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 240px);
+    padding-bottom: 4rem;
 }
 
-/* Hero Section */
+/* ============================================================
+   Hero / Index page
+   ============================================================ */
 .hero {
     text-align: center;
-    padding: 3rem 0;
+    padding: 3rem 2rem;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    border-top: 3px solid var(--color-purple);
+    box-shadow: var(--shadow);
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    opacity: 0.95;
-    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
 }
 
-/* Language Switcher */
 .language-switch {
     margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .language-switch a {
-    color: white;
+    color: var(--color-purple);
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
     font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-purple);
+    font-size: 0.9rem;
 }
 
-.language-switch a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
+.language-switch a:hover,
 .language-switch a.active {
-    background-color: rgba(255, 255, 255, 0.3);
-    font-weight: 600;
+    background-color: var(--color-purple);
+    color: var(--color-white);
 }
 
 .language-switch .separator {
-    margin: 0 0.5rem;
-    opacity: 0.7;
+    color: var(--color-border);
 }
 
-/* Document Sections */
+/* ============================================================
+   Document Index
+   ============================================================ */
 .docs-section {
     margin-bottom: 4rem;
 }
 
 .section-title {
-    font-size: 1.8rem;
-    color: #2c3e50;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text);
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 2px solid var(--color-purple);
     display: inline-block;
+    letter-spacing: -0.2px;
 }
 
-/* Legal Documents Grid */
 .legal-docs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
 .doc-card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.doc-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.doc-card h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.doc-card p {
-    color: #6c757d;
-    margin-bottom: 1.5rem;
+    background: var(--color-white);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
 }
 
 .doc-card.highlight {
-    border-left: 4px solid #667eea;
+    border-left: 4px solid var(--color-purple);
+}
+
+.doc-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+}
+
+.doc-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
 }
 
 /* Badge */
 .badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background-color: #667eea;
-    color: white;
-    font-size: 0.75rem;
+    padding: 0.2rem 0.65rem;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    border-radius: 12px;
+    border-radius: 20px;
     margin-bottom: 0.75rem;
     letter-spacing: 0.5px;
 }
 
-/* Button */
+/* Primary CTA button — orange gradient used ONLY here */
 .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #007bff;
-    color: #fff;
+    padding: 0.55rem 1.25rem;
+    background: linear-gradient(180deg, #e68135 0%, #e86235 52%, #ea4535 100%);
+    color: var(--color-white);
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.2s;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(180deg, #e68135 0%, #ea4535 100%);
 }
 
-/* Legal Document */
+/* ============================================================
+   Legal Document (individual pages)
+   ============================================================ */
 .legal-document {
-    background: #fff;
-    border-radius: 8px;
-    padding: 3rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--color-white);
+    border-radius: var(--radius);
+    padding: 3rem 3.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
     margin-bottom: 3rem;
 }
 
 .legal-document h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: var(--color-text);
     margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
 }
 
 .last-updated {
-    color: #6c757d;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
     font-style: italic;
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .legal-document section {
@@ -270,85 +310,127 @@ main {
 }
 
 .legal-document h2 {
-    color: #2c3e50;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    margin-top: 2.25rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--color-purple);
+    letter-spacing: -0.2px;
 }
 
 .legal-document h3 {
-    color: #2c3e50;
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
     margin-top: 1.5rem;
 }
 
 .legal-document p {
     margin-bottom: 1rem;
-    color: #495057;
+    color: var(--color-text-body);
 }
 
-.legal-document ul, .legal-document ol {
-    margin-left: 2rem;
+.legal-document ul,
+.legal-document ol {
+    margin-left: 1.75rem;
     margin-bottom: 1rem;
 }
 
 .legal-document li {
-    margin-bottom: 0.5rem;
-    color: #495057;
+    margin-bottom: 0.4rem;
+    color: var(--color-text-body);
 }
 
 .legal-document strong {
-    color: #2c3e50;
+    color: var(--color-text);
+    font-weight: 600;
 }
 
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 2rem 0;
-    margin-top: 4rem;
+.legal-document a {
+    color: var(--color-purple);
+    text-decoration: none;
 }
 
-footer p {
-    text-align: center;
-    color: #ecf0f1;
+.legal-document a:hover {
+    text-decoration: underline;
 }
 
-/* Quick Links Section */
+/* Policy Notice Box */
+.policy-notice {
+    background-color: #f5f2fc;
+    border: 1px solid #d4c8f0;
+    border-left: 4px solid var(--color-purple);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.policy-notice strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.policy-notice ul {
+    margin-left: 1.25rem;
+}
+
+.policy-notice a {
+    color: var(--color-purple);
+    text-decoration: none;
+}
+
+.policy-notice a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   Quick Links / Role Cards
+   ============================================================ */
 .quick-links {
-    background-color: #f8f9fa;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
     padding: 2.5rem;
-    border-radius: 12px;
     margin-top: 3rem;
 }
 
 .quick-links h3 {
-    color: #2c3e50;
-    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--color-text);
     margin-bottom: 2rem;
     text-align: center;
 }
 
 .role-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
 .role-card {
-    background: white;
+    background: var(--color-bg);
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
 }
 
 .role-card h4 {
-    color: #2c3e50;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e9ecef;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .role-card ul {
@@ -358,48 +440,73 @@ footer p {
 }
 
 .role-card li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
 }
 
 .role-card a {
-    color: #667eea;
+    color: var(--color-purple);
     text-decoration: none;
-    transition: color 0.2s;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .role-card a:hover {
-    color: #764ba2;
+    color: var(--color-purple-dark);
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+    background: linear-gradient(1deg, #523f9e 0%, rgba(17, 21, 36, 1) 100%);
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.footer-col--left { justify-self: start; }
+.footer-col--center { justify-self: center; }
+.footer-col--right { justify-self: end; }
+
+.footer-logo {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.footer-copy {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.825rem;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
-    .hero h2 {
-        font-size: 1.8rem;
+    .footer-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
     }
+}
 
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 768px) {
+    .hero h2 { font-size: 1.65rem; }
 
     .legal-document {
         padding: 2rem 1.5rem;
     }
 
-    .legal-document h1 {
-        font-size: 2rem;
-    }
+    .legal-document h1 { font-size: 1.7rem; }
+    .legal-document h2 { font-size: 1.2rem; }
 
-    .legal-document h2 {
-        font-size: 1.5rem;
-    }
-
-    .role-cards {
-        grid-template-columns: 1fr;
-    }
+    .role-cards { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.2rem; }
 }

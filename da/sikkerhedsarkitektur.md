@@ -3,6 +3,7 @@ layout: legal
 title: Sikkerhedsarkitektur
 last_updated: 2025-11-03
 lang: da
+lang_equivalent: /en/security-architecture.html
 ---
 
 # LogicNodes Platform - Sikkerhedsarkitektur

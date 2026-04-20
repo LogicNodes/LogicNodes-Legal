@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 <body>
@@ -14,37 +17,38 @@
                     <h1>{{ site.title }}</h1>
                     <p>{{ site.description }}</p>
                 </div>
+                {% if page.lang == "en" or page.lang == "da" %}
                 <div class="header-nav">
-                    {% if page.url != "/" %}
+                    {% unless page.url == "/en/" or page.url == "/da/" %}
                     <nav class="breadcrumb">
                         {% if page.lang == "da" %}
                         <a href="{{ '/da/' | relative_url }}">Hjem</a>
-                        {% elsif page.lang == "en" %}
-                        <a href="{{ '/en/' | relative_url }}">Home</a>
                         {% else %}
-                        <a href="{{ '/' | relative_url }}">Home</a>
+                        <a href="{{ '/en/' | relative_url }}">Home</a>
                         {% endif %}
                     </nav>
-                    {% endif %}
-                    {% if page.url != "/" %}
+                    {% endunless %}
                     <div class="language-selector">
-                        {% assign current_file = page.url | split: "/" | last %}
-                        {% if page.lang == "da" %}
-                        <a href="{{ '/en/' | append: current_file | relative_url }}" class="lang-link">EN</a>
+                        {% if page.lang == "en" %}
+                        <span class="lang-link active">EN</span>
                         <span class="separator">|</span>
-                        <a href="{{ '/da/' | append: current_file | relative_url }}" class="lang-link active">DA</a>
-                        {% elsif page.lang == "en" %}
-                        <a href="{{ '/en/' | append: current_file | relative_url }}" class="lang-link active">EN</a>
-                        <span class="separator">|</span>
-                        <a href="{{ '/da/' | append: current_file | relative_url }}" class="lang-link">DA</a>
+                        {% if page.lang_equivalent %}
+                        <a href="{{ page.lang_equivalent | relative_url }}" class="lang-link">DA</a>
                         {% else %}
-                        <a href="{{ '/en/' | relative_url }}" class="lang-link">EN</a>
-                        <span class="separator">|</span>
                         <a href="{{ '/da/' | relative_url }}" class="lang-link">DA</a>
                         {% endif %}
+                        {% elsif page.lang == "da" %}
+                        {% if page.lang_equivalent %}
+                        <a href="{{ page.lang_equivalent | relative_url }}" class="lang-link">EN</a>
+                        {% else %}
+                        <a href="{{ '/en/' | relative_url }}" class="lang-link">EN</a>
+                        {% endif %}
+                        <span class="separator">|</span>
+                        <span class="lang-link active">DA</span>
+                        {% endif %}
                     </div>
-                    {% endif %}
                 </div>
+                {% endif %}
             </div>
         </div>
     </header>
@@ -55,7 +59,15 @@
 
     <footer>
         <div class="container">
-            <p>&copy; {{ 'now' | date: "%Y" }} LogicNodes. All rights reserved.</p>
+            <div class="footer-inner">
+                <div class="footer-col footer-col--left">
+                    <a href="https://logiai.dk"><img src="https://logiai.dk/wp-content/uploads/2026/02/LOGI_Hvid.png" alt="Logi" class="footer-logo"></a>
+                </div>
+                <div class="footer-col footer-col--center">
+                    <p class="footer-copy">Copyright &copy; {{ 'now' | date: "%Y" }} &ndash; Logi. Alle rettigheder reserveret</p>
+                </div>
+                <div class="footer-col footer-col--right"></div>
+            </div>
         </div>
     </footer>
 </body>

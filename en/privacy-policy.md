@@ -2,6 +2,8 @@
 layout: legal
 title: Privacy Policy
 last_updated: 2025-11-04
+lang: en
+lang_equivalent: /da/privatlivspolitik.html
 ---
 
 # Privacy Policy

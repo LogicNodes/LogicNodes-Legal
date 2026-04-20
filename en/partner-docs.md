@@ -3,6 +3,7 @@ layout: legal
 title: Partner Documentation Hub
 last_updated: 2025-11-03
 lang: en
+lang_equivalent: /da/partner-dokumentation.html
 ---
 
 # Partner Documentation Hub
