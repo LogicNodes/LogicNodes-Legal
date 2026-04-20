@@ -2,8 +2,13 @@
 layout: legal
 title: Support
 lang: en
-lang_equivalent: /da/support.html
+lang_equivalent: /da/support/
+last_updated: 2025-11-04
 ---
+
+# Support
+
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 ## Get Support
 
@@ -13,7 +18,7 @@ Need help with LogicNodes? We're here to assist you.
 
 For technical support, account issues, or general inquiries, please contact our support team:
 
-**Email:** [support@logicnodes.ai](mailto:support@logicnodes.ai)
+**Email:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 
 **Response Time:** We aim to respond to all support requests within 24-48 hours during business days.
 
@@ -30,11 +35,11 @@ To help us assist you more efficiently, please include:
 
 For privacy-related questions, please contact:
 
-**Privacy Team:** [privacy@logicnodes.ai](mailto:privacy@logicnodes.ai)
+**Privacy Team:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 
 For security issues, please contact:
 
-**Security Team:** [security@logicnodes.ai](mailto:security@logicnodes.ai)
+**Security Team:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 
 ---
 

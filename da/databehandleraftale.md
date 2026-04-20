@@ -3,7 +3,7 @@ layout: legal
 title: Databehandleraftale
 last_updated: 2025-11-03
 lang: da
-lang_equivalent: /en/data-processing-agreement.html
+lang_equivalent: /en/data-processing-agreement/
 ---
 
 # Databehandleraftale (DPA)
@@ -480,7 +480,7 @@ Fuld tekst tilgængelig på: https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj
 **Dataimportør (Databehandler):**
 - Navn: LogicNodes Inc.  
 - Adresse: [LOGICNODES ADRESSE]  
-- Kontakt: security@logicnodes.ai  
+- Kontakt: kontakt@logicnodes.ai  
 
 **Kompetent Tilsynsmyndighed:**
 [Partners lokale databeskyttelsesmyndighed, f.eks. Datatilsynet for Danmark]

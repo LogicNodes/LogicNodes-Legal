@@ -3,14 +3,14 @@ layout: legal
 title: Privatlivspolitik (Partner Embedded Brugere)
 last_updated: 2025-11-03
 lang: da
-lang_equivalent: /en/partner-privacy-policy.html
+lang_equivalent: /en/partner-privacy-policy/
 ---
 
 <div class="policy-notice">
 <strong>📋 Hvilken Privatlivspolitik Gælder for Dig?</strong>
 <ul>
 <li><strong>Denne politik:</strong> Hvis du tilgår LogicNodes <strong>gennem en partners produkt</strong> (f.eks. indlejrede AI-funktioner i Rackbeat, Shopify, osv.)</li>
-<li><strong><a href="{{ '/da/privatlivspolitik.html' | relative_url }}">Standard Privatlivspolitik</a>:</strong> Hvis du <strong>tilmeldte dig direkte</strong> på app.logicnodes.ai</li>
+<li><strong><a href="{{ '/da/privatlivspolitik/' | relative_url }}">Standard Privatlivspolitik</a>:</strong> Hvis du <strong>tilmeldte dig direkte</strong> på app.logicnodes.ai</li>
 </ul>
 </div>
 
@@ -20,7 +20,7 @@ lang_equivalent: /en/partner-privacy-policy.html
 
 **Ikrafttrædelsesdato:** 3. november 2025  
 
-**Senest Opdateret:** 3. november 2025  
+<p class="last-updated">Senest opdateret: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 **Version:** 1.0  
 
@@ -276,7 +276,7 @@ Samme cascading-sletning gælder.
 
 **Incident Response:**
 - ✅ 24-timers svartid for kritiske problemer
-- ✅ Sikkerhedskontakt: security@logicnodes.ai
+- ✅ Sikkerhedskontakt: kontakt@logicnodes.ai
 - ✅ Post-incident rapporter (inden for 5 arbejdsdage)
 
 ---
@@ -392,7 +392,7 @@ Vi stoler på:
 
 **Ingen Bevidst Indsamling:** Vi indsamler ikke bevidst persondata fra børn under 16 år.
 
-**Forældrevarsel:** Hvis du mener vi har indsamlet data fra et barn under 16 år, kontakt os øjeblikkeligt på privacy@logicnodes.ai. Vi sletter dataene inden for 24 timer.
+**Forældrevarsel:** Hvis du mener vi har indsamlet data fra et barn under 16 år, kontakt os øjeblikkeligt på kontakt@logicnodes.ai. Vi sletter dataene inden for 24 timer.
 
 ---
 
@@ -429,7 +429,7 @@ Vi vil IKKE diskriminere mod dig for at udøve CCPA-rettigheder.
 Californiens bosiddende kan udpege en autoriseret agent til at fremsætte anmodninger på deres vegne:
 1. Lever skriftlig autorisation
 2. Verificer identitet (offentligt udstedt ID)
-3. Indsend anmodning til privacy@logicnodes.ai
+3. Indsend anmodning til kontakt@logicnodes.ai
 
 ---
 
@@ -456,15 +456,15 @@ Californiens bosiddende kan udpege en autoriseret agent til at fremsætte anmodn
 ## 13. Kontakt Os
 
 ### Privatlivsteam
-**Email:** privacy@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Svartid:** 5 arbejdsdage
 
 ### Databeskyttelsesrådgiver (DPO)
-**Email:** dpo@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Formål:** GDPR/CCPA-anmodninger, privatlivsbekymringer
 
 ### Sikkerhedsteam
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Formål:** Sikkerhedshændelser, databrud
 
 ### Postadresse

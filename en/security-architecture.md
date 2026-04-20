@@ -4,17 +4,17 @@ title: Security Overview
 description: "LogicNodes Platform – Enterprise security overview, data protection, and compliance commitments."
 last_updated: 2025-11-03
 lang: en
-lang_equivalent: /da/sikkerhedsarkitektur.html
+lang_equivalent: /da/sikkerhedsarkitektur/
 ---
 
 # LogicNodes Platform - Security Overview
 
-**Last Updated:** 2025-11-03  
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 **Audience:** Prospective partners, security teams, compliance officers
 
 **Distribution:** This is a high-level security overview for public evaluation. Our detailed Security Architecture document (including implementation specifics, API endpoints, and operational parameters) is available upon request for qualified partners under NDA.
 
-**Request Full Documentation:** Contact [security@logicnodes.ai](mailto:security@logicnodes.ai)
+**Request Full Documentation:** Contact [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 
 ## Executive Summary
 
@@ -203,7 +203,7 @@ The authoritative, current list of sub-processors is maintained below. We provid
 
 ### Security Contact
 
-**Email:** security@logicnodes.ai  
+**Email:** kontakt@logicnodes.ai  
 **PGP Fingerprint:** Published at [https://logicnodes.ai/.well-known/security.txt](https://logicnodes.ai/.well-known/security.txt)  
 **Response Time:** Within 24 hours for critical issues
 
@@ -229,7 +229,7 @@ If we detect unauthorized access to your data:
 ### Responsible Disclosure
 
 Security researchers can report vulnerabilities:
-- **Email:** security@logicnodes.ai
+- **Email:** kontakt@logicnodes.ai
 - **Safe Harbor:** We will not pursue legal action for good-faith research
 - **90-Day Embargo:** Allow us 90 days to fix before public disclosure
 - **Recognition:** Public acknowledgment in our Security Hall of Fame
@@ -252,7 +252,7 @@ A: Yes. Encrypted at rest (database, secrets, storage) and in transit (TLS 1.2+)
 A: We're SOC 2 Aligned (built on SOC 2 Trust Service Principles). Formal audit planned as part of our 2026 compliance milestone.
 
 **Q: Can you sign custom security questionnaires?**
-A: Yes. Send to security@logicnodes.ai. Response time: 5-10 business days.
+A: Yes. Send to kontakt@logicnodes.ai. Response time: 5-10 business days.
 
 **Q: How is access to production systems controlled?**
 A: Access to production data and infrastructure requires backend access, protected by MFA and fully audit-logged. All backend access is restricted to authorized engineers.
@@ -266,7 +266,7 @@ A: Users authenticated via your JWT cannot (by design). They can only access thr
 A: Stop issuing JWTs for that user. Existing sessions expire automatically.
 
 **Q: What if my signing secret is compromised?**  
-A: Contact security@logicnodes.ai immediately. We'll rotate your secret and invalidate all sessions.
+A: Contact kontakt@logicnodes.ai immediately. We'll rotate your secret and invalidate all sessions.
 
 ### Data & Privacy
 
@@ -288,7 +288,7 @@ A: Yes. All data is stored in AWS EU-North-1 (Stockholm) by default, and no data
 A: Yes. Template available at [data-processing-agreement.md](./data-processing-agreement.md).
 
 **Q: Are you HIPAA compliant?**
-A: Infrastructure is HIPAA-capable (Supabase Business plan). HIPAA compliance available upon request for healthcare customers. Additional security controls, legal consultation, and fees required. Contact sales@logicnodes.ai for details.
+A: Infrastructure is HIPAA-capable (Supabase Business plan). HIPAA compliance available upon request for healthcare customers. Additional security controls, legal consultation, and fees required. Contact kontakt@logicnodes.ai for details.
 
 **Q: Can you provide a sub-processor list?**  
 A: Yes. See the Sub-Processors section above. Full list in DPA template.
@@ -304,28 +304,28 @@ For detailed technical specifications including:
 - Partner API capabilities
 - Security best practices and recommendations
 
-**Contact:** [security@logicnodes.ai](mailto:security@logicnodes.ai)
+**Contact:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 
 Our full Security Architecture document is available to qualified partners under NDA for security evaluation and compliance review.
 
 ## Contact & Support
 
 ### Security Team
-**Email:** security@logicnodes.ai  
+**Email:** kontakt@logicnodes.ai  
 **PGP Fingerprint:** Published at [https://logicnodes.ai/.well-known/security.txt](https://logicnodes.ai/.well-known/security.txt)  
 **Response Time:** 24 hours for critical issues  
 **Full Security Architecture:** Available under NDA or by request  
 
 ### Privacy & Compliance
-**Email:** privacy@logicnodes.ai  
+**Email:** kontakt@logicnodes.ai  
 **Response Time:** 5 business days  
 
 ### Sales & Partnerships
-**Email:** sales@logicnodes.ai  
+**Email:** kontakt@logicnodes.ai  
 **Purpose:** DPA execution, custom agreements, security questionnaires  
 
 ### Technical Support
-**Email:** support@logicnodes.ai  
+**Email:** kontakt@logicnodes.ai  
 **Response Time:** 4 business hours  
 
 ## Document Information

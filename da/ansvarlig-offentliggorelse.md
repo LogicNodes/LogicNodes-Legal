@@ -3,14 +3,14 @@ layout: legal
 title: Ansvarlig Offentliggørelse
 last_updated: 2025-11-03
 lang: da
-lang_equivalent: /en/responsible-disclosure.html
+lang_equivalent: /en/responsible-disclosure/
 ---
 
 # LogicNodes - Politik for Ansvarlig Offentliggørelse
 
 **Ikrafttrædelsesdato:** 3. november 2025  
 
-**Senest Opdateret:** 3. november 2025  
+<p class="last-updated">Senest opdateret: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 **Version:** 1.0  
 
@@ -39,7 +39,7 @@ Sikkerhedsforskere er autoriseret til at teste følgende systemer:
 
 **Testmiljø:**
 - ✅ **Staging:** https://staging.logicnodes.ai (hvis tilgængeligt)
-- ✅ **Demo-konti:** Anmod via security@logicnodes.ai
+- ✅ **Demo-konti:** Anmod via kontakt@logicnodes.ai
 
 ### 2.2 Systemer Uden for Anvendelsesområdet
 
@@ -142,7 +142,7 @@ Ved test for sårbarheder skal forskere:
 
 **GØR:**
 - ✅ Test kun på dine egne konti eller med udtrykkelig tilladelse
-- ✅ Brug test/demo-konti (anmod via security@logicnodes.ai)
+- ✅ Brug test/demo-konti (anmod via kontakt@logicnodes.ai)
 - ✅ Begræns test til ikke-destruktive metoder
 - ✅ Respekter rate limits (hold dig under 100 forespørgsler/minut)
 - ✅ Stop test øjeblikkeligt hvis du opdager brugerdata
@@ -151,7 +151,7 @@ Ved test for sårbarheder skal forskere:
 **GØR IKKE:**
 - ❌ Få adgang til, ændre eller slette andre brugeres data
 - ❌ Udfør DoS/DDoS-angreb eller belastningstest
-- ❌ Brug automatiserede scannere uden forudgående godkendelse (email security@logicnodes.ai)
+- ❌ Brug automatiserede scannere uden forudgående godkendelse (email kontakt@logicnodes.ai)
 - ❌ Udnyt sårbarheder ud over proof-of-concept
 - ❌ Offentliggør sårbarheder før afhjælpning (90-dages embargo)
 - ❌ Kræv betaling eller løsesum for sårbarheds-offentliggørelse
@@ -179,8 +179,8 @@ LogicNodes forpligter sig til:
 ### 6.1 Hvordan Man Rapporterer
 
 **Primær Kontakt:**
-- **Email:** security@logicnodes.ai
-- **PGP-nøgle:** Tilgængelig efter anmodning (email security@logicnodes.ai for at anmode)
+- **Email:** kontakt@logicnodes.ai
+- **PGP-nøgle:** Tilgængelig efter anmodning (email kontakt@logicnodes.ai for at anmode)
 - **Svartid:** Inden for 24 timer (bekræftelse), 72 timer (indledende vurdering)
 
 ### 6.2 Rapportformat
@@ -235,11 +235,11 @@ Offentliggørelse: 90 dage (standard)
 
 For følsomme sårbarheder kan du kryptere din rapport med PGP:
 
-1. Anmod om PGP-nøgle: security@logicnodes.ai
+1. Anmod om PGP-nøgle: kontakt@logicnodes.ai
 2. Krypter rapport med vores public key
-3. Send krypteret email til security@logicnodes.ai
+3. Send krypteret email til kontakt@logicnodes.ai
 
-**Bemærk:** PGP er valgfrit. Ukrypteret email til security@logicnodes.ai er acceptabel.
+**Bemærk:** PGP er valgfrit. Ukrypteret email til kontakt@logicnodes.ai er acceptabel.
 
 ---
 
@@ -421,10 +421,10 @@ LogicNodes kan opdatere denne politik når som helst. Ændringer vil blive poste
 A: Ikke endnu. Planlagt til Q2 2026 på HackerOne eller Bugcrowd. I øjeblikket tilbyder vi offentlig anerkendelse og taknemmelighed.  
 
 **Q: Kan jeg bruge automatiserede scannere?**
-A: Anmod venligst om tilladelse først (security@logicnodes.ai). Automatiserede scannere kan udløse rate limits eller DoS-beskyttelser.  
+A: Anmod venligst om tilladelse først (kontakt@logicnodes.ai). Automatiserede scannere kan udløse rate limits eller DoS-beskyttelser.  
 
 **Q: Kan jeg teste på produktionssystemer?**
-A: Ja, men kun på dine egne konti. Anmod om testkonti via security@logicnodes.ai for sikrere test.  
+A: Ja, men kun på dine egne konti. Anmod om testkonti via kontakt@logicnodes.ai for sikrere test.  
 
 **Q: Kan jeg offentliggøre før 90 dage?**
 A: Kun med gensidig aftale. Vi foretrækker koordineret offentliggørelse.  
@@ -449,7 +449,7 @@ A: Nej. Phish ikke medarbejdere, partnere eller brugere.
 A: Ja. Brug ProtonMail eller Tutanota til anonym email. Vi holder din identitet fortrolig.  
 
 **Q: Kan jeg rapportere via Twitter/LinkedIn?**
-A: Brug venligst security@logicnodes.ai til alle rapporter. Sociale medier overvåges ikke for sikkerhedsrapporter.  
+A: Brug venligst kontakt@logicnodes.ai til alle rapporter. Sociale medier overvåges ikke for sikkerhedsrapporter.  
 
 **Q: Hvad hvis min rapport er en duplikat?**
 A: Vi underretter dig hvis problemet tidligere er rapporteret. Duplikater modtager stadig anerkendelse (men ingen yderligere kredit).  
@@ -466,23 +466,23 @@ A: Ikke i øjeblikket (intet bug bounty-program). Du modtager offentlig anerkend
 A: Estimeret Q2 2026, afventende indtægtsmilepæle.  
 
 **Q: Kan jeg forhandle en belønning?**
-A: For ekstraordinære fund (0-day, kritisk sværhedsgrad), kontakt security@logicnodes.ai for diskussion.  
+A: For ekstraordinære fund (0-day, kritisk sværhedsgrad), kontakt kontakt@logicnodes.ai for diskussion.  
 
 ---
 
 ## 13. Kontaktoplysninger
 
 ### Sikkerhedsteam
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **PGP-nøgle:** Anmod via email
 **Svartid:** Inden for 24 timer
 
 ### Generelle Henvendelser
-**Email:** support@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Formål:** Ikke-sikkerhedsspørgsmål, produktsupport
 
 ### Juridisk Afdeling
-**Email:** legal@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Formål:** Safe harbor-spørgsmål, juridiske bekymringer
 
 ---

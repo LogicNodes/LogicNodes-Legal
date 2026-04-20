@@ -3,18 +3,18 @@ layout: legal
 title: Privacy Policy
 last_updated: 2025-11-04
 lang: en
-lang_equivalent: /da/privatlivspolitik.html
+lang_equivalent: /da/privatlivspolitik/
 ---
 
 # Privacy Policy
 
-<p class="last-updated">Last Updated: November 4, 2025</p>
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 <div class="policy-notice">
 <strong>📋 Which Privacy Policy Applies to You?</strong>
 <ul>
 <li><strong>This policy:</strong> If you <strong>signed up directly</strong> at app.logicnodes.ai</li>
-<li><strong><a href="{{ '/en/partner-privacy-policy.html' | relative_url }}">Partner Embedded Users Privacy Policy</a>:</strong> If you access LogicNodes <strong>through a partner's product</strong> (e.g., embedded AI in Rackbeat, Shopify, etc.)</li>
+<li><strong><a href="{{ '/en/partner-privacy-policy/' | relative_url }}">Partner Embedded Users Privacy Policy</a>:</strong> If you access LogicNodes <strong>through a partner's product</strong> (e.g., embedded AI in Rackbeat, Shopify, etc.)</li>
 </ul>
 </div>
 
@@ -65,7 +65,7 @@ We practice aggressive data minimization with the following retention policies:
 - **Authentication data** - Retained only while your account is active
 - **Account deletion** - Upon account deletion, all associated data is immediately removed from production systems and purged from backups within 30 days
 
-You may request deletion of your account and all associated data at any time by contacting us at privacy@logicnodes.ai.
+You may request deletion of your account and all associated data at any time by contacting us at kontakt@logicnodes.ai.
 
 ## 5. Information Sharing and Disclosure
 
@@ -162,7 +162,7 @@ If you are a California resident, you have additional rights under the Californi
 If you are located in the European Economic Area (EEA), you have rights under the General Data Protection Regulation:
 
 - **Legal basis for processing** - We process your data based on contractual necessity (to provide our services)
-- **Data protection officer** - For privacy inquiries, contact privacy@logicnodes.ai
+- **Data protection officer** - For privacy inquiries, contact kontakt@logicnodes.ai
 - **Right to lodge a complaint** - You may file a complaint with your local data protection authority
 - **Data transfers** - We ensure adequate safeguards for any data transfers outside the EEA
 
@@ -170,7 +170,7 @@ If you are located in the European Economic Area (EEA), you have rights under th
 
 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
 
-**Email:** privacy@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Response time:** We aim to respond to all privacy inquiries within 5 business days.
 
 **Company Information:**

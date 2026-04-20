@@ -3,7 +3,7 @@ layout: legal
 title: Sikkerhedsarkitektur
 last_updated: 2025-11-03
 lang: da
-lang_equivalent: /en/security-architecture.html
+lang_equivalent: /en/security-architecture/
 ---
 
 # LogicNodes Platform - Sikkerhedsarkitektur
@@ -12,7 +12,7 @@ lang_equivalent: /en/security-architecture.html
 
 **Version:** 2.1  
 
-**Senest Opdateret:** 2025-11-03  
+<p class="last-updated">Senest opdateret: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 **Målgruppe:** Tekniske beslutningstagere, sikkerhedsteams, compliance-ansvarlige
 
@@ -510,7 +510,7 @@ DELETE /api/v1/partner/organizations/{org_id}/users/{user_id}
 
 ### 9.1 Sikkerhedskontakt
 
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **PGP-nøgle:** Tilgængelig efter anmodning
 **Svartid:** Inden for 24 timer for kritiske problemer
 
@@ -535,7 +535,7 @@ Hvis vi opdager uautoriseret adgang til dine data:
 ### 9.3 Ansvarlig Offentliggørelse
 
 Sikkerhedsforskere kan rapportere sårbarheder:
-- **Email:** security@logicnodes.ai
+- **Email:** kontakt@logicnodes.ai
 - **Safe Harbor:** Vi vil ikke forfølge retssager for god-faith forskning
 - **90-dages Embargo:** Giv os 90 dage til at fixe før offentlig offentliggørelse
 - **Anerkendelse:** Offentlig anerkendelse i vores Security Hall of Fame
@@ -628,7 +628,7 @@ A: Ja. Krypteret i hvile (database, secrets, lager) og under transport (TLS 1.2+
 A: Ikke endnu. Vi er SOC 2-klar (bygget på SOC 2-principper). Formel audit planlagt når vi når $1M ARR (estimeret 2026).  
 
 **Q: Kan I signere tilpassede sikkerhedsspørgeskemaer?**
-A: Ja. Send til security@logicnodes.ai. Svartid: 5-10 arbejdsdage.  
+A: Ja. Send til kontakt@logicnodes.ai. Svartid: 5-10 arbejdsdage.  
 
 ### 11.2 Autentificering
 
@@ -639,7 +639,7 @@ A: Brugere autentificeret via din JWT kan ikke (by design). De kan kun tilgå ge
 A: Stop med at udstede JWTs til den bruger. Eksisterende sessioner udløber inden for 1 time.  
 
 **Q: Hvad hvis mit signeringssecret kompromitteres?**
-A: Kontakt security@logicnodes.ai øjeblikkeligt. Vi roterer dit secret og invaliderer alle sessioner.  
+A: Kontakt kontakt@logicnodes.ai øjeblikkeligt. Vi roterer dit secret og invaliderer alle sessioner.  
 
 ### 11.3 Data & Privatliv
 
@@ -682,19 +682,19 @@ A: Ja. Se Sektion 8.5 (Supabase, AWS, Mailgun). Fuld liste i DPA-skabelon.
 ## 12. Kontakt & Support
 
 ### Sikkerhedsteam
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Svartid:** 24 timer for kritiske problemer
 
 ### Privatliv & Compliance
-**Email:** privacy@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Svartid:** 5 arbejdsdage
 
 ### Salg & Partnerskaber
-**Email:** sales@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Formål:** DPA-eksekvering, tilpassede aftaler, sikkerhedsspørgeskemaer
 
 ### Teknisk Support
-**Email:** support@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Svartid:** 4 arbejdstimer
 
 ---

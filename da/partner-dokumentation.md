@@ -3,12 +3,12 @@ layout: legal
 title: Partner Dokumentationshub
 last_updated: 2025-11-03
 lang: da
-lang_equivalent: /en/partner-docs.html
+lang_equivalent: /en/partner-docs/
 ---
 
 # Partner Dokumentationshub
 
-<p class="last-updated">Sidst opdateret: 3. november 2025</p>
+<p class="last-updated">Senest opdateret: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 **Omfattende sikkerheds-, privatlivs- og integrationsressourcer**
 
@@ -24,7 +24,7 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 
 ### 🔒 Sikkerhedsdokumentation
 
-#### [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur.html' | relative_url }})
+#### [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur/' | relative_url }})
 **Målgruppe:** Tekniske beslutningstagere, sikkerhedsteams, compliance-ansvarlige
 
 **Nøgleemner:**
@@ -41,7 +41,7 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 
 ### 🛡️ Privatliv & Compliance
 
-#### [Privatlivspolitik]({{ '/da/privatlivspolitik.html' | relative_url }})
+#### [Privatlivspolitik]({{ '/da/privatlivspolitik/' | relative_url }})
 **Målgruppe:** Juridiske teams, compliance-ansvarlige, slutbrugere
 
 **Nøgleemner:**
@@ -55,7 +55,7 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 
 ---
 
-#### [Databehandleraftale]({{ '/da/databehandleraftale.html' | relative_url }})
+#### [Databehandleraftale]({{ '/da/databehandleraftale/' | relative_url }})
 **Målgruppe:** Juridiske teams, indkøb
 
 **Nøgleemner:**
@@ -71,7 +71,7 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 
 ### 🐛 Sikkerhedsrapportering
 
-#### [Ansvarlig Offentliggørelsespolitik]({{ '/da/ansvarlig-offentliggorelse.html' | relative_url }})
+#### [Ansvarlig Offentliggørelsespolitik]({{ '/da/ansvarlig-offentliggorelse/' | relative_url }})
 **Målgruppe:** Sikkerhedsforskere, penetrationstestere
 
 **Nøgleemner:**
@@ -88,17 +88,17 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 
 ### For sikkerhedsteams
 **Begynd her:**
-1. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur.html' | relative_url }}) - Fuld teknisk sikkerhedsoversigt
-2. [Privatlivspolitik]({{ '/da/privatlivspolitik.html' | relative_url }}) - Datahåndtering & privatliv
-3. [Ansvarlig offentliggørelsespolitik]({{ '/da/ansvarlig-offentliggorelse.html' | relative_url }}) - Sikkerhedsrapportering
+1. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur/' | relative_url }}) - Fuld teknisk sikkerhedsoversigt
+2. [Privatlivspolitik]({{ '/da/privatlivspolitik/' | relative_url }}) - Datahåndtering & privatliv
+3. [Ansvarlig offentliggørelsespolitik]({{ '/da/ansvarlig-offentliggorelse/' | relative_url }}) - Sikkerhedsrapportering
 
 ---
 
 ### For juridiske/compliance-teams
 **Begynd her:**
-1. [Privatlivspolitik]({{ '/da/privatlivspolitik.html' | relative_url }}) - GDPR/CCPA-overholdelse
-2. [Databehandleraftale]({{ '/da/databehandleraftale.html' | relative_url }}) - DPA-skabelon
-3. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur.html' | relative_url }}) - Tekniske sikkerhedsforanstaltninger
+1. [Privatlivspolitik]({{ '/da/privatlivspolitik/' | relative_url }}) - GDPR/CCPA-overholdelse
+2. [Databehandleraftale]({{ '/da/databehandleraftale/' | relative_url }}) - DPA-skabelon
+3. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur/' | relative_url }}) - Tekniske sikkerhedsforanstaltninger
 
 **Vigtige spørgsmål besvaret:**
 - Er I GDPR-kompatible? → Ja (se Privatlivspolitik)
@@ -112,14 +112,14 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 **Begynd her:**
 1. Widget-integrationsguide - Frontend-integration (Kommer snart)
 2. Secret Management API - Backend-integration (Kommer snart)
-3. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur.html' | relative_url }}) - Bedste praksis
+3. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur/' | relative_url }}) - Bedste praksis
 
 ---
 
 ### For direktører/beslutningstagere
 **Begynd her:**
-1. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur.html' | relative_url }}) - Resumé
-2. [Privatlivspolitik]({{ '/da/privatlivspolitik.html' | relative_url }}) - Introduktion
+1. [Sikkerhedsarkitektur]({{ '/da/sikkerhedsarkitektur/' | relative_url }}) - Resumé
+2. [Privatlivspolitik]({{ '/da/privatlivspolitik/' | relative_url }}) - Introduktion
 
 **Vigtige spørgsmål besvaret:**
 - Er LogicNodes sikkert? → Ja (arkitektur af virksomhedsklasse)
@@ -132,22 +132,22 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 ## 📞 Kontaktinformation
 
 ### Sikkerhedsteam
-**E-mail:** [security@logicnodes.ai](mailto:security@logicnodes.ai)
+**E-mail:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Formål:** Sikkerhedsspørgsmål, sårbarhedsrapporter, hændelsesrespons
 **Svartid:** 24 timer
 
 ### Privatlivs-/Compliance-team
-**E-mail:** [privacy@logicnodes.ai](mailto:privacy@logicnodes.ai)
+**E-mail:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Formål:** GDPR/CCPA-anmodninger, DPA-udførelse, privatlivsspørgsmål
 **Svartid:** 5 hverdage
 
 ### Salg & Partnerskaber
-**E-mail:** [sales@logicnodes.ai](mailto:sales@logicnodes.ai)
+**E-mail:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Formål:** Kontraktspørgsmål, tilpassede aftaler, sikkerhedsspørgeskemaer
 **Svartid:** 2 hverdage
 
 ### Teknisk support
-**E-mail:** [support@logicnodes.ai](mailto:support@logicnodes.ai)
+**E-mail:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Formål:** Integrationshjælp, API-spørgsmål, fejlfinding
 **Svartid:** 4 timer
 
@@ -193,4 +193,4 @@ Dette dokumentationshub giver dig alt, hvad du har brug for til at evaluere, int
 
 ---
 
-**For det komplette partnerdokumentationsrepository, kontakt [sales@logicnodes.ai](mailto:sales@logicnodes.ai)**
+**For det komplette partnerdokumentationsrepository, kontakt [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)**

@@ -134,6 +134,7 @@ header p {
    ============================================================ */
 main {
     min-height: calc(100vh - 240px);
+    padding-top: 0.5rem;
     padding-bottom: 4rem;
 }
 

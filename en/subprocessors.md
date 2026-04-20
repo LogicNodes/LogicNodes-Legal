@@ -3,13 +3,14 @@ layout: legal
 title: Sub-Processor List
 last_updated: 2025-11-04
 lang: en
+lang_equivalent: /da/underbehandlere
 description: "Complete list of third-party sub-processors engaged by LogicNodes ApS for service delivery. GDPR-compliant notification page."
 ---
 
 # LogicNodes – Authorized Sub-Processors
 
 **Effective Date:** November 4, 2025
-**Last Updated:** November 4, 2025
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 This page lists all third-party sub-processors engaged by **LogicNodes ApS** (CVR: DK45318362) in connection with providing the LogicNodes platform and related services.
 
@@ -91,7 +92,7 @@ LogicNodes ApS monitors these relationships and maintains archived copies of all
 
 **DPA Availability:**
 Partners may request copies of archived DPAs by contacting:
-- **Email:** privacy@logicnodes.ai
+- **Email:** kontakt@logicnodes.ai
 - **Response Time:** 5 business days
 
 **What We Provide:**
@@ -110,7 +111,7 @@ Partners may request copies of archived DPAs by contacting:
 - Email delivery: **EU/USA routing-dependent (via Mailgun)**
 
 **US Data Residency:**
-Available upon Partner request. Additional fees may apply. Contact sales@logicnodes.ai.
+Available upon Partner request. Additional fees may apply. Contact kontakt@logicnodes.ai.
 
 **LLM Processing:**
 When partners configure LLM providers, data processing may occur in the provider's global infrastructure (typically USA for OpenAI, Anthropic, xAI; EU/Global for Google). Partners should review each provider's data residency options.
@@ -178,30 +179,30 @@ Partners may object to new sub-processors on reasonable data protection grounds 
 ## Related Documentation
 
 **Core Legal Documents:**
-- [Data Processing Agreement (DPA)](/en/data-processing-agreement.html) – GDPR Art. 28 compliant processor agreement
-- [Privacy Policy (Partner Embedded)](/en/partner-privacy-policy.html) – Privacy policy for partner-embedded users
-- [Responsible Disclosure Policy](/en/responsible-disclosure.html) – Security vulnerability reporting
-- **Security Architecture** – Available on request (contact security@logicnodes.ai)
+- [Data Processing Agreement (DPA)](/en/data-processing-agreement/) – GDPR Art. 28 compliant processor agreement
+- [Privacy Policy (Partner Embedded)](/en/partner-privacy-policy/) – Privacy policy for partner-embedded users
+- [Responsible Disclosure Policy](/en/responsible-disclosure/) – Security vulnerability reporting
+- **Security Architecture** – Available on request (contact kontakt@logicnodes.ai)
 
 **Partner Resources:**
 - [Partner Documentation](https://docs.logicnodes.ai/partners) – Integration guides and API documentation
-- [Security Questionnaires](mailto:security@logicnodes.ai) – Request completed security assessments
+- [Security Questionnaires](mailto:kontakt@logicnodes.ai) – Request completed security assessments
 
 ---
 
 ## Contact Information
 
 **Privacy & Compliance:**
-- **Email:** privacy@logicnodes.ai
+- **Email:** kontakt@logicnodes.ai
 - **Response Time:** 5 business days
 
 **Security Team:**
-- **Email:** security@logicnodes.ai
+- **Email:** kontakt@logicnodes.ai
 - **PGP Key:** /en/pgp
 - **Response Time:** 24 hours for critical issues
 
 **Sales & Partnerships:**
-- **Email:** sales@logicnodes.ai
+- **Email:** kontakt@logicnodes.ai
 - **Purpose:** DPA execution, custom agreements, US data residency requests
 
 **Mailing Address:**
@@ -228,7 +229,7 @@ For direct inquiries to sub-processors regarding their data processing practices
 | Google Cloud | cloud-privacy@google.com | [Google Cloud Privacy](https://cloud.google.com/privacy) |
 | xAI Corp. | privacy@x.ai | [xAI Privacy](https://x.ai/privacy/) |
 
-**Note:** Contact information is provided for reference only. All sub-processor relationships are managed by LogicNodes ApS. Partners should direct all inquiries to privacy@logicnodes.ai.
+**Note:** Contact information is provided for reference only. All sub-processor relationships are managed by LogicNodes ApS. Partners should direct all inquiries to kontakt@logicnodes.ai.
 
 ---
 

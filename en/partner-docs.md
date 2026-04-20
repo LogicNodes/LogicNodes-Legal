@@ -3,12 +3,12 @@ layout: legal
 title: Partner Documentation Hub
 last_updated: 2025-11-03
 lang: en
-lang_equivalent: /da/partner-dokumentation.html
+lang_equivalent: /da/partner-dokumentation/
 ---
 
 # Partner Documentation Hub
 
-<p class="last-updated">Last Updated: November 3, 2025</p>
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 **Comprehensive Security, Privacy & Integration Resources**
 
@@ -20,7 +20,7 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 
 ### 🔒 Security Documentation
 
-#### [Security Architecture]({{ '/en/security-architecture.html' | relative_url }})
+#### [Security Architecture]({{ '/en/security-architecture/' | relative_url }})
 **Target Audience:** Technical decision-makers, security teams, compliance officers
 
 **Key Topics:**
@@ -41,7 +41,7 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 
 ### 🛡️ Privacy & Compliance
 
-#### [Privacy Policy]({{ '/en/privacy-policy.html' | relative_url }})
+#### [Privacy Policy]({{ '/en/privacy-policy/' | relative_url }})
 **Target Audience:** Legal teams, compliance officers, end-users
 
 **Key Topics:**
@@ -59,7 +59,7 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 - End-user privacy disclosures
 - Legal team evaluation
 
-#### [Data Processing Agreement]({{ '/en/data-processing-agreement.html' | relative_url }})
+#### [Data Processing Agreement]({{ '/en/data-processing-agreement/' | relative_url }})
 **Target Audience:** Legal teams, procurement
 
 **Key Topics:**
@@ -79,7 +79,7 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 
 ### 🐛 Security Reporting
 
-#### [Responsible Disclosure Policy]({{ '/en/responsible-disclosure.html' | relative_url }})
+#### [Responsible Disclosure Policy]({{ '/en/responsible-disclosure/' | relative_url }})
 **Target Audience:** Security researchers, penetration testers
 
 **Key Topics:**
@@ -100,9 +100,9 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 
 ### For Security Teams
 **Start Here:**
-1. [Security Architecture]({{ '/en/security-architecture.html' | relative_url }}) - Full technical security overview
-2. [Privacy Policy]({{ '/en/privacy-policy.html' | relative_url }}) - Data handling & privacy
-3. [Responsible Disclosure Policy]({{ '/en/responsible-disclosure.html' | relative_url }}) - Security reporting
+1. [Security Architecture]({{ '/en/security-architecture/' | relative_url }}) - Full technical security overview
+2. [Privacy Policy]({{ '/en/privacy-policy/' | relative_url }}) - Data handling & privacy
+3. [Responsible Disclosure Policy]({{ '/en/responsible-disclosure/' | relative_url }}) - Security reporting
 
 **Key Questions Answered:**
 - How is multi-tenant isolation enforced? → Security Architecture (Section 2)
@@ -112,9 +112,9 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 
 ### For Legal/Compliance Teams
 **Start Here:**
-1. [Privacy Policy]({{ '/en/privacy-policy.html' | relative_url }}) - GDPR/CCPA compliance
-2. [Data Processing Agreement]({{ '/en/data-processing-agreement.html' | relative_url }}) - DPA template
-3. [Security Architecture]({{ '/en/security-architecture.html' | relative_url }}) - Technical safeguards
+1. [Privacy Policy]({{ '/en/privacy-policy/' | relative_url }}) - GDPR/CCPA compliance
+2. [Data Processing Agreement]({{ '/en/data-processing-agreement/' | relative_url }}) - DPA template
+3. [Security Architecture]({{ '/en/security-architecture/' | relative_url }}) - Technical safeguards
 
 **Key Questions Answered:**
 - Are you GDPR compliant? → Yes (see Privacy Policy)
@@ -126,7 +126,7 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 **Start Here:**
 1. Widget Integration Guide - Frontend integration (Coming soon)
 2. Secret Management API - Backend integration (Coming soon)
-3. [Security Architecture]({{ '/en/security-architecture.html' | relative_url }}) - Best practices
+3. [Security Architecture]({{ '/en/security-architecture/' | relative_url }}) - Best practices
 
 **Key Questions Answered:**
 - How do I integrate the widget? → Widget Integration Guide
@@ -136,8 +136,8 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 
 ### For Executives/Decision Makers
 **Start Here:**
-1. [Security Architecture]({{ '/en/security-architecture.html' | relative_url }}) - Executive Summary
-2. [Privacy Policy]({{ '/en/privacy-policy.html' | relative_url }}) - Introduction
+1. [Security Architecture]({{ '/en/security-architecture/' | relative_url }}) - Executive Summary
+2. [Privacy Policy]({{ '/en/privacy-policy/' | relative_url }}) - Introduction
 
 **Key Questions Answered:**
 - Is LogicNodes secure? → Yes (enterprise-grade architecture)
@@ -148,22 +148,22 @@ This documentation hub provides everything you need to evaluate, integrate, and 
 ## 📞 Contact Information
 
 ### Security Team
-**Email:** [security@logicnodes.ai](mailto:security@logicnodes.ai)
+**Email:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Purpose:** Security questions, vulnerability reports, incident response
 **Response Time:** 24 hours
 
 ### Privacy/Compliance Team
-**Email:** [privacy@logicnodes.ai](mailto:privacy@logicnodes.ai)
+**Email:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Purpose:** GDPR/CCPA requests, DPA execution, privacy questions
 **Response Time:** 5 business days
 
 ### Sales & Partnerships
-**Email:** [sales@logicnodes.ai](mailto:sales@logicnodes.ai)
+**Email:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Purpose:** Contract questions, custom agreements, security questionnaires
 **Response Time:** 2 business days
 
 ### Technical Support
-**Email:** [support@logicnodes.ai](mailto:support@logicnodes.ai)
+**Email:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 **Purpose:** Integration help, API questions, troubleshooting
 **Response Time:** 4 business hours
 
@@ -200,7 +200,7 @@ Most security questionnaires can be answered using these documents:
 
 **VSA (Vendor Security Assessment):**
 - Custom questionnaires: Use all documents as reference
-- Contact security@logicnodes.ai for assistance
+- Contact kontakt@logicnodes.ai for assistance
 
 ## 🔄 Document Updates
 
@@ -265,6 +265,6 @@ Partners will be notified via email of material changes to:
 -  Publicly distribute without permission
 -  Modify or create derivative works
 
-**Questions:** Contact [legal@logicnodes.ai](mailto:legal@logicnodes.ai) for usage permissions.
+**Questions:** Contact [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai) for usage permissions.
 
-**For the complete partner documentation repository, contact [sales@logicnodes.ai](mailto:sales@logicnodes.ai)**
+**For the complete partner documentation repository, contact [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)**

@@ -3,7 +3,7 @@ layout: legal
 title: Data Processing Agreement
 last_updated: 2025-11-04
 lang: en
-lang_equivalent: /da/databehandleraftale.html
+lang_equivalent: /da/databehandleraftale/
 description: "Data Processing Agreement between LogicNodes ApS (Processor) and Partner (Controller). GDPR Art. 28 compliant."
 ---
 
@@ -516,7 +516,7 @@ Full text available at: https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj
 - Name: LogicNodes ApS
 - Address: Sletvej 2D, 8310 Tranbjerg, Denmark
 - CVR: DK45318362
-- Contact: security@logicnodes.ai  
+- Contact: kontakt@logicnodes.ai  
 
 **Competent Supervisory Authority:**  
 [Partner's local data protection authority, e.g., Datatilsynet for Denmark]
@@ -650,7 +650,7 @@ For Swiss FADP transfers, references in the SCCs to the GDPR and EU law shall be
 **Escalation:**
 - Technical team notification (critical issues)
 - CTO/technical lead oversight
-- Partner communication via security contact (security@logicnodes.ai)
+- Partner communication via security contact (kontakt@logicnodes.ai)
 
 ### 9. Data Portability & Deletion
 

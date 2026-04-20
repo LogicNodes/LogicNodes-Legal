@@ -3,14 +3,14 @@ layout: legal
 title: Partner Embedded Users Privacy Policy
 last_updated: 2025-11-04
 lang: en
-lang_equivalent: /da/partner-privatlivspolitik.html
+lang_equivalent: /da/partner-privatlivspolitik/
 ---
 
 <div class="policy-notice">
 <strong>📋 Which Privacy Policy Applies to You?</strong>
 <ul>
 <li><strong>This policy:</strong> If you access LogicNodes <strong>through a partner's product</strong> (e.g., embedded AI features in Rackbeat, Shopify, etc.)</li>
-<li><strong><a href="{{ '/en/privacy-policy.html' | relative_url }}">Standard Privacy Policy</a>:</strong> If you <strong>signed up directly</strong> at app.logicnodes.ai</li>
+<li><strong><a href="{{ '/en/privacy-policy/' | relative_url }}">Standard Privacy Policy</a>:</strong> If you <strong>signed up directly</strong> at app.logicnodes.ai</li>
 </ul>
 </div>
 
@@ -18,7 +18,7 @@ lang_equivalent: /da/partner-privatlivspolitik.html
 
 **Effective Date:** November 3, 2025
 
-**Last Updated:** November 4, 2025  
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 ## 1. Introduction
 
@@ -276,7 +276,7 @@ Same cascading deletion applies.
 
 **Incident Response:**
 -  24-hour response time for critical issues
--  Security contact: security@logicnodes.ai
+-  Security contact: kontakt@logicnodes.ai
 -  Post-incident reports (within 5 business days)
 
 ## 8. International Data Transfers
@@ -386,7 +386,7 @@ We rely on:
 
 **No Knowingly Collection:** We do not knowingly collect personal data from children under 16.
 
-**Parental Notice:** If you believe we have collected data from a child under 16, contact us immediately at privacy@logicnodes.ai. We will delete the data within 24 hours.
+**Parental Notice:** If you believe we have collected data from a child under 16, contact us immediately at kontakt@logicnodes.ai. We will delete the data within 24 hours.
 
 ## 11. California Privacy Rights (CCPA)
 
@@ -421,7 +421,7 @@ We will NOT discriminate against you for exercising CCPA rights.
 California residents can designate an authorized agent to make requests on their behalf:
 1. Provide written authorization
 2. Verify identity (government-issued ID)
-3. Submit request to privacy@logicnodes.ai
+3. Submit request to kontakt@logicnodes.ai
 
 ## 12. Changes to This Policy
 
@@ -444,12 +444,12 @@ California residents can designate an authorized agent to make requests on their
 ## 13. Contact Us
 
 ### Privacy Team
-**Email:** privacy@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Response Time:** 5 business days
 **Purpose:** GDPR/CCPA requests, privacy concerns, DPA questions
 
 ### Security Team
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Purpose:** Security incidents, data breaches
 
 ### Mailing Address

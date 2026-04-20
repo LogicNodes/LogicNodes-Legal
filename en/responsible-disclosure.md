@@ -3,14 +3,14 @@ layout: legal
 title: Responsible Disclosure Policy
 last_updated: 2025-11-04
 lang: en
-lang_equivalent: /da/ansvarlig-offentliggorelse.html
+lang_equivalent: /da/ansvarlig-offentliggorelse/
 ---
 
 # LogicNodes - Responsible Disclosure Policy
 
 **Effective Date:** November 3, 2025  
 
-**Last Updated:** November 3, 2025  
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 ## 1. Introduction
 
@@ -33,7 +33,7 @@ Security researchers are authorized to test the following systems:
 
 **Testing Environment:**
 -  **Staging:** https://staging.logicnodes.ai (on request)
--  **Demo accounts:** Request via security@logicnodes.ai
+-  **Demo accounts:** Request via kontakt@logicnodes.ai
 
 ### 2.2 Out-of-Scope Systems
 
@@ -130,7 +130,7 @@ When testing for vulnerabilities, researchers must:
 
 **DO:**
 -  Test only on your own accounts or with explicit permission
--  Use test/demo accounts (request via security@logicnodes.ai)
+-  Use test/demo accounts (request via kontakt@logicnodes.ai)
 -  Limit testing to non-destructive methods
 -  Respect rate limits (stay below 100 requests/minute)
 -  Stop testing immediately if you discover user data
@@ -139,7 +139,7 @@ When testing for vulnerabilities, researchers must:
 **DON'T:**
 -  Access, modify, or delete other users' data
 -  Perform DoS/DDoS attacks or load testing
--  Use automated scanners without prior approval (email security@logicnodes.ai)
+-  Use automated scanners without prior approval (email kontakt@logicnodes.ai)
 -  Exploit vulnerabilities beyond proof-of-concept
 -  Publicly disclose vulnerabilities before remediation (90-day embargo)
 -  Demand payment or ransom for vulnerability disclosure
@@ -165,7 +165,7 @@ LogicNodes commits to:
 ### 6.1 How to Report
 
 **Primary Contact:**
-- **Email:** security@logicnodes.ai
+- **Email:** kontakt@logicnodes.ai
 - **PGP Key:** /en/pgp
 - **Response Time:** Within 24 hours (acknowledgment), 72 hours (initial assessment)
 
@@ -223,9 +223,9 @@ For sensitive vulnerabilities, you may encrypt your report using PGP:
 
 1. Download PGP key: /en/pgp
 2. Encrypt report with our public key
-3. Send encrypted email to security@logicnodes.ai
+3. Send encrypted email to kontakt@logicnodes.ai
 
-**Note:** PGP is optional. Unencrypted email to security@logicnodes.ai is acceptable.
+**Note:** PGP is optional. Unencrypted email to kontakt@logicnodes.ai is acceptable.
 
 ## 7. Response Process
 
@@ -395,10 +395,10 @@ LogicNodes may update this policy at any time. Changes will be posted at:
 A: Not yet. Planned for Q2 2026 on HackerOne or Bugcrowd. Currently, we offer public acknowledgment and gratitude.
 
 **Q: Can I use automated scanners?**  
-A: Please request permission first (security@logicnodes.ai). Automated scanners may trigger rate limits or DoS protections.  
+A: Please request permission first (kontakt@logicnodes.ai). Automated scanners may trigger rate limits or DoS protections.  
 
 **Q: Can I test on production systems?**  
-A: Yes, but only on your own accounts. Request test accounts via security@logicnodes.ai for safer testing.  
+A: Yes, but only on your own accounts. Request test accounts via kontakt@logicnodes.ai for safer testing.  
 
 **Q: Can I disclose before 90 days?**  
 A: Only with mutual agreement. We prefer coordinated disclosure.  
@@ -423,7 +423,7 @@ A: No. Do not phish employees, partners, or users.
 A: Yes. Use ProtonMail or Tutanota for anonymous email. We will keep your identity confidential.  
 
 **Q: Can I report via Twitter/LinkedIn?**  
-A: Please use security@logicnodes.ai for all reports. Social media is not monitored for security reports.  
+A: Please use kontakt@logicnodes.ai for all reports. Social media is not monitored for security reports.  
 
 **Q: What if my report is a duplicate?**  
 A: We will notify you if the issue was previously reported. Duplicates still receive acknowledgment (but no additional credit).
@@ -440,21 +440,21 @@ A: Not currently (no bug bounty program). You will receive public acknowledgment
 A: Estimated Q2 2026, pending revenue milestones.  
 
 **Q: Can I negotiate a reward?**  
-A: For exceptional findings (0-day, critical severity), contact security@logicnodes.ai to discuss.
+A: For exceptional findings (0-day, critical severity), contact kontakt@logicnodes.ai to discuss.
 
 ## 13. Contact Information
 
 ### Security Team
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **PGP Key:** /en/pgp
 **Response Time:** Within 24 hours
 
 ### General Inquiries
-**Email:** support@logicnodes.ai  
+**Email:** kontakt@logicnodes.ai  
 **Purpose:** Non-security questions, product support
 
 ### Legal Department
-**Email:** legal@logicnodes.ai  
+**Email:** kontakt@logicnodes.ai  
 **Purpose:** Safe harbor questions, legal concerns
 
 ## 14. Acknowledgments

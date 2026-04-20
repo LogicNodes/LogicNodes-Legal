@@ -10,7 +10,7 @@ description: "LogicNodes Security Team PGP/GPG public key for encrypted communic
 
 **Purpose:** This page provides the PGP/GPG public key for encrypted communication with the LogicNodes security team.
 
-**Last Updated:** November 4, 2025
+<p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 ---
 
@@ -18,18 +18,18 @@ description: "LogicNodes Security Team PGP/GPG public key for encrypted communic
 
 Use this PGP key to encrypt sensitive security reports or communications to the LogicNodes security team, including:
 
-- **Security vulnerability reports** (see [Responsible Disclosure Policy](/en/responsible-disclosure.html))
+- **Security vulnerability reports** (see [Responsible Disclosure Policy](/en/responsible-disclosure/))
 - **Data breach notifications**
 - **Confidential security inquiries**
 - **Sensitive partner security information**
 
-**Note:** PGP encryption is optional. You may also send unencrypted email to security@logicnodes.ai for non-sensitive communications.
+**Note:** PGP encryption is optional. You may also send unencrypted email to kontakt@logicnodes.ai for non-sensitive communications.
 
 ---
 
 ## PGP Public Key
 
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Key Type:** RSA 4096
 **Key ID:** `E2A5305B`
 **Fingerprint:** `9530 DB08 2586 1336 B37A  ABB8 3B39 1C7B E2A5 305B`
@@ -123,12 +123,12 @@ curl https://legal.logicnodes.ai/en/pgp.txt -o logicnodes-security.asc
 gpg --import logicnodes-security.asc
 
 # Verify the fingerprint
-gpg --fingerprint security@logicnodes.ai
+gpg --fingerprint kontakt@logicnodes.ai
 ```
 
 **Using Keybase:**
 ```bash
-keybase pgp pull security@logicnodes.ai
+keybase pgp pull kontakt@logicnodes.ai
 ```
 
 **Using Email Clients:**
@@ -147,30 +147,30 @@ keybase pgp pull security@logicnodes.ai
 - This page: /en/pgp
 - Security.txt: /.well-known/security.txt
 - Keybase: https://keybase.io/logicnodes (if published)
-- Contact us directly: security@logicnodes.ai (we'll confirm via signed email)
+- Contact us directly: kontakt@logicnodes.ai (we'll confirm via signed email)
 
 ### 3. Encrypt Your Message
 
 **Using GPG (Command Line):**
 ```bash
 # Encrypt a message
-gpg --encrypt --armor --recipient security@logicnodes.ai message.txt
+gpg --encrypt --armor --recipient kontakt@logicnodes.ai message.txt
 
 # This creates message.txt.asc - send this file via email
 ```
 
 **Using Email Clients:**
-Most email clients with PGP plugins will automatically offer to encrypt when you compose an email to security@logicnodes.ai.
+Most email clients with PGP plugins will automatically offer to encrypt when you compose an email to kontakt@logicnodes.ai.
 
 ### 4. Send Your Encrypted Message
 
-**Email To:** security@logicnodes.ai
+**Email To:** kontakt@logicnodes.ai
 **Subject:** [SECURITY] Brief description
 **Body:** Paste the encrypted message (including `-----BEGIN PGP MESSAGE-----` header)
 
 **Example:**
 ```
-To: security@logicnodes.ai
+To: kontakt@logicnodes.ai
 Subject: [SECURITY] SQL Injection Vulnerability Report
 
 -----BEGIN PGP MESSAGE-----
@@ -184,7 +184,7 @@ Subject: [SECURITY] SQL Injection Vulnerability Report
 
 ## Verifying Our Responses
 
-All responses from security@logicnodes.ai will be **PGP signed** to verify authenticity.
+All responses from kontakt@logicnodes.ai will be **PGP signed** to verify authenticity.
 
 **To verify our signature:**
 ```bash
@@ -194,7 +194,7 @@ gpg --verify message.asc
 
 **Expected output:**
 ```
-gpg: Good signature from "LogicNodes Security Team <security@logicnodes.ai>"
+gpg: Good signature from "LogicNodes Security Team <kontakt@logicnodes.ai>"
 ```
 
 **Warning:** If you see "BAD signature" or a different fingerprint, **do not trust the message**. Contact us via another channel immediately.
@@ -222,7 +222,7 @@ If this key is compromised or needs to be revoked:
 
 **Check for revocations:**
 ```bash
-gpg --refresh-keys security@logicnodes.ai
+gpg --refresh-keys kontakt@logicnodes.ai
 ```
 
 ---
@@ -244,7 +244,7 @@ If you cannot use PGP encryption, consider these alternatives:
 **Note:** Encrypted chat and file sharing
 
 ### 4. Unencrypted Email
-**Email:** security@logicnodes.ai
+**Email:** kontakt@logicnodes.ai
 **Note:** Use for non-sensitive communications only
 
 ---
@@ -257,7 +257,7 @@ This PGP key is also published in our security.txt file per RFC 9116:
 
 **Contents:**
 ```
-Contact: mailto:security@logicnodes.ai
+Contact: mailto:kontakt@logicnodes.ai
 Encryption: /en/pgp
 Expires: [TO BE ADDED]
 Preferred-Languages: en, da
@@ -270,7 +270,7 @@ Policy: /en/responsible-disclosure
 ## Frequently Asked Questions
 
 **Q: Do I need to use PGP to report security issues?**
-A: No. PGP is optional. You can send unencrypted email to security@logicnodes.ai. Use PGP for sensitive information like proof-of-concept exploits.
+A: No. PGP is optional. You can send unencrypted email to kontakt@logicnodes.ai. Use PGP for sensitive information like proof-of-concept exploits.
 
 **Q: How do I know this key is authentic?**
 A: Verify the fingerprint via multiple channels (this page, security.txt, signed email from us). We will also confirm via alternative communication methods if requested.
@@ -300,7 +300,7 @@ A: A new key will be published before expiration. Check this page for the latest
 ## Contact Information
 
 **Security Team:**
-Email: security@logicnodes.ai
+Email: kontakt@logicnodes.ai
 PGP: This page
 Response Time: Within 24 hours for critical issues
 
@@ -313,9 +313,9 @@ CVR: DK45318362
 
 ## Related Pages
 
-- [Responsible Disclosure Policy](/en/responsible-disclosure.html) - How to report vulnerabilities
-- [Security Architecture](mailto:security@logicnodes.ai?subject=Request%20Security%20Architecture) - Available on request
-- [Data Processing Agreement](/en/data-processing-agreement.html) - GDPR compliance
+- [Responsible Disclosure Policy](/en/responsible-disclosure/) - How to report vulnerabilities
+- [Security Architecture](mailto:kontakt@logicnodes.ai?subject=Request%20Security%20Architecture) - Available on request
+- [Data Processing Agreement](/en/data-processing-agreement/) - GDPR compliance
 - [Security.txt](/.well-known/security.txt) - RFC 9116 security contact
 
 ---

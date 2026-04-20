@@ -3,18 +3,18 @@ layout: legal
 title: Privatlivspolitik
 last_updated: 2025-10-25
 lang: da
-lang_equivalent: /en/privacy-policy.html
+lang_equivalent: /en/privacy-policy/
 ---
 
 # Privatlivspolitik
 
-<p class="last-updated">Sidst opdateret: 25. oktober 2025</p>
+<p class="last-updated">Senest opdateret: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 <div class="policy-notice">
 <strong>📋 Hvilken privatlivspolitik gælder for dig?</strong>
 <ul>
 <li><strong>Denne politik:</strong> Hvis du <strong>tilmeldte dig direkte</strong> på app.logicnodes.ai</li>
-<li><strong><a href="{{ '/da/partner-privatlivspolitik.html' | relative_url }}">Partner Embedded Brugere Privatlivspolitik</a>:</strong> Hvis du tilgår LogicNodes <strong>gennem en partners produkt</strong> (f.eks. embedded AI i Rackbeat, Shopify osv.)</li>
+<li><strong><a href="{{ '/da/partner-privatlivspolitik/' | relative_url }}">Partner Embedded Brugere Privatlivspolitik</a>:</strong> Hvis du tilgår LogicNodes <strong>gennem en partners produkt</strong> (f.eks. embedded AI i Rackbeat, Shopify osv.)</li>
 </ul>
 </div>
 
@@ -67,7 +67,7 @@ Vi praktiserer aggressiv dataminimering med følgende opbevaringspolitikker:
 - **Autentificeringsdata** - Opbevares kun mens din konto er aktiv
 - **Kontosletning** - Ved kontosletning fjernes alle tilknyttede data permanent fra vores systemer inden for 24 timer
 
-Du kan anmode om sletning af din konto og alle tilknyttede data til enhver tid ved at kontakte os på legal@logicnodes.ai.
+Du kan anmode om sletning af din konto og alle tilknyttede data til enhver tid ved at kontakte os på kontakt@logicnodes.ai.
 
 ## 5. Informationsdeling og videregivelse
 
@@ -164,7 +164,7 @@ Hvis du er bosiddende i Californien, har du yderligere rettigheder i henhold til
 Hvis du er placeret i Det Europæiske Økonomiske Samarbejdsområde (EØS), har du rettigheder i henhold til den generelle databeskyttelsesforordning:
 
 - **Retsgrundlag for behandling** - Vi behandler dine data baseret på kontraktmæssig nødvendighed (for at levere vores tjenester)
-- **Databeskyttelsesrådgiver** - For privatlivsforespørgsler, kontakt legal@logicnodes.ai
+- **Databeskyttelsesrådgiver** - For privatlivsforespørgsler, kontakt kontakt@logicnodes.ai
 - **Ret til at indgive klage** - Du kan indgive en klage til din lokale databeskyttelsesmyndighed
 - **Dataoverførsler** - Vi sikrer passende garantier for eventuelle dataoverførsler uden for EØS
 
@@ -172,7 +172,7 @@ Hvis du er placeret i Det Europæiske Økonomiske Samarbejdsområde (EØS), har 
 
 Hvis du har spørgsmål, bekymringer eller anmodninger vedrørende denne privatlivspolitik eller vores datapraksis, bedes du kontakte os på:
 
-**E-mail:** legal@logicnodes.ai
+**E-mail:** kontakt@logicnodes.ai
 
 **Svartid:** Vi sigter mod at svare på alle privatlivsforespørgsler inden for 48 timer.
 

@@ -2,10 +2,13 @@
 layout: legal
 title: Support
 lang: da
-lang_equivalent: /en/support.html
+lang_equivalent: /en/support/
+last_updated: 2025-11-04
 ---
 
 # Få Support
+
+<p class="last-updated">Senest opdateret: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 Har du brug for hjælp med LogicNodes? Vi er her for at hjælpe dig.
 
@@ -13,7 +16,7 @@ Har du brug for hjælp med LogicNodes? Vi er her for at hjælpe dig.
 
 For teknisk support, kontoproblemer eller generelle forespørgsler, kontakt venligst vores supportteam:
 
-**E-mail:** [support@logicnodes.ai](mailto:support@logicnodes.ai)
+**E-mail:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 
 **Svartid:** Vi sigter mod at svare på alle supportanmodninger inden for 24-48 timer på hverdage.
 
@@ -30,7 +33,7 @@ For at vi kan hjælpe dig mere effektivt, bedes du inkludere:
 
 For privatlivsrelaterede spørgsmål eller juridiske anliggender, kontakt venligst:
 
-**E-mail:** [legal@logicnodes.ai](mailto:legal@logicnodes.ai)
+**E-mail:** [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai)
 
 ---
 
