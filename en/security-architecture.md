@@ -2,7 +2,7 @@
 layout: legal
 title: Security Overview
 description: "LogicNodes Platform – Enterprise security overview, data protection, and compliance commitments."
-last_updated: 2025-11-03
+last_updated: 2026-04-21
 lang: en
 lang_equivalent: /da/sikkerhedsarkitektur/
 ---
@@ -176,12 +176,12 @@ LogicNodes' infrastructure runs on Supabase (built on AWS). Supabase operates on
 **Current:**
 - SOC 2 Aligned (built on SOC 2 Trust Service Principles)
 - Comprehensive security documentation
-- Annual penetration testing (planned Q2 2026)
+- Annual penetration testing (conducted annually)
 
 **Planned:**
 - SOC 2 Type II audit (as part of our 2026 compliance milestone)
 - ISO 27001 (for EU customers, estimated 2026)
-- Bug bounty program (Q2 2026)
+- Bug bounty program (planned)
 
 ### Sub-Processors
 
@@ -249,7 +249,7 @@ A: European Union (AWS EU-North-1, Stockholm). US data residency available upon 
 A: Yes. Encrypted at rest (database, secrets, storage) and in transit (TLS 1.2+).
 
 **Q: Do you have SOC 2?**  
-A: We're SOC 2 Aligned (built on SOC 2 Trust Service Principles). Formal audit planned as part of our 2026 compliance milestone.
+A: We're SOC 2 Aligned (built on SOC 2 Trust Service Principles). Formal SOC 2 Type II audit is part of our 2026 compliance roadmap.
 
 **Q: Can you sign custom security questionnaires?**
 A: Yes. Send to kontakt@logicnodes.ai. Response time: 5-10 business days.
@@ -330,10 +330,10 @@ Our full Security Architecture document is available to qualified partners under
 
 ## Document Information
 
-**Version:** 1.0 (Public Overview)  
-**Last Updated:** 2025-11-03  
+**Version:** 1.1 (Public Overview)  
+**Last Updated:** 2026-04-21  
 **Status:** This page is informational and subject to change  
 
-**© 2025 LogicNodes ApS. All rights reserved.**
+**© 2026 LogicNodes ApS. All rights reserved.**
 
 This document is intended for partner evaluation. The full Security Architecture is available upon request.

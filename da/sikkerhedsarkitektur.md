@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Sikkerhedsarkitektur
-last_updated: 2025-11-03
+last_updated: 2026-04-21
 lang: da
 lang_equivalent: /en/security-architecture/
 ---
@@ -127,7 +127,7 @@ Efter succesfuld JWT-validering returnerer vi standard session tokens:
 
 ### 1.4 Sikkerhedsfunktioner
 
-- **Rate Limiting:** 10 forespørgsler/minut pr. IP-adresse på embed autentificeringsendpoint (forhindrer brute force)
+- **Rate Limiting:** Hastighedsbegrænsning på autentificeringsendpoints (forhindrer brute force)
 - **Audit Logging:** Alle autentificeringsforsøg logget (succes og fejl)
 - **Token-validering:** Hver API-forespørgsel validerer access token
 - **Automatisk Udløb:** Sessioner udløber efter 1 times inaktivitet
@@ -455,7 +455,7 @@ DELETE /api/v1/partner/organizations/{org_id}/users/{user_id}
 - ✅ Dataminimering (opbevaringspolitikker, automatiseret oprydning)
 
 **Databehandleraftale:**
-- Skabelon tilgængelig (docs/partners/DATA_PROCESSING_AGREEMENT.md)
+- Skabelon tilgængelig på [/da/databehandleraftale/](/da/databehandleraftale/)
 - GDPR Artikel 28 compliant
 - Standard Contractual Clauses (SCCs) til internationale overførsler
 
@@ -487,20 +487,20 @@ DELETE /api/v1/partner/organizations/{org_id}/users/{user_id}
 **Aktuel:**
 - ✅ SOC 2 Ready (bygget på SOC 2-principper)
 - ✅ Omfattende sikkerhedsdokumentation
-- ✅ Årlig penetrationstest (planlagt Q2 2026)
+- ✅ Årlig penetrationstest (gennemføres årligt)
 
 **Planlagt:**
-- ⏳ SOC 2 Type II audit (når vi når $1M ARR, estimeret 2026)
+- ⏳ SOC 2 Type II audit (som del af vores 2026-overholdelses-milepæl)
 - ⏳ ISO 27001 (til EU-kunder, estimeret 2026)
-- ⏳ Bug bounty-program (Q2 2026)
+- ⏳ Bug bounty-program (planlagt)
 
 ### 8.5 Sub-Processors
 
 | Udbyder | Service | Lokalitet | Certificeringer |
 |---------|---------|-----------|-----------------|
-| Supabase | Database, Auth, Storage | USA | SOC 2, ISO 27001, GDPR DPA |
-| AWS | Cloud Infrastructure | USA | SOC 1/2/3, ISO 27001 |
-| Mailgun | Transaktionelle Emails | USA/EU | GDPR DPA |
+| Supabase | Database, Auth, Storage | EU (Stockholm) | SOC 2 Type II, ISO 27001, GDPR DPA |
+| AWS | Cloud Infrastructure (via Supabase) | EU (Stockholm) | SOC 1/2/3, ISO 27001 |
+| Mailgun | Transaktionelle Emails | USA/EU | SOC 2, ISO 27001, GDPR DPA |
 
 **Ændringsnotifikation:** 30 dages forhåndsvarsel før tilføjelse af nye sub-processors
 
@@ -560,7 +560,7 @@ Fuld politik: [RESPONSIBLE_DISCLOSURE_POLICY.md](./RESPONSIBLE_DISCLOSURE_POLICY
 - ❌ Del signeringssecret på tværs af miljøer (dev/staging/prod)
 - ❌ Indstil JWT-udløb >24 timer
 - ❌ Inkluder følsomme data i JWT claims (de er synlige for alle med token)
-- ❌ Prøv igen mislykkede auth >10 gange/minut (du rammer rate limits)
+- ❌ Prøv igen mislykkede auth gentagne gange i hurtig rækkefølge (du rammer rate limits)
 
 ### 10.2 API Key Management
 
@@ -625,7 +625,7 @@ A: Den Europæiske Union (AWS EU-North-1, Stockholm). US data residency tilgæng
 A: Ja. Krypteret i hvile (database, secrets, lager) og under transport (TLS 1.2+).  
 
 **Q: Har I SOC 2?**
-A: Ikke endnu. Vi er SOC 2-klar (bygget på SOC 2-principper). Formel audit planlagt når vi når $1M ARR (estimeret 2026).  
+A: Vi er SOC 2-klar (bygget på SOC 2 Trust Service Principles). Formel SOC 2 Type II-audit er en del af vores 2026-overholdelses-roadmap.  
 
 **Q: Kan I signere tilpassede sikkerhedsspørgeskemaer?**
 A: Ja. Send til kontakt@logicnodes.ai. Svartid: 5-10 arbejdsdage.  
@@ -669,13 +669,13 @@ A: Nej. Secrets er backend-only. Aldrig eksponeret til frontend-kode.
 ### 11.5 Compliance
 
 **Q: Har I en DPA?**
-A: Ja. Skabelon tilgængelig på [DATA_PROCESSING_AGREEMENT.md](./DATA_PROCESSING_AGREEMENT.md).  
+A: Ja. Skabelon tilgængelig på [/da/databehandleraftale/](/da/databehandleraftale/).  
 
 **Q: Er I HIPAA-compliant?**
 A: Infrastruktur er HIPAA-capable (Supabase Business plan). Applikationsniveau BAA tilgængelig for healthcare-kunder.  
 
 **Q: Kan I levere en sub-processor liste?**
-A: Ja. Se Sektion 8.5 (Supabase, AWS, Mailgun). Fuld liste i DPA-skabelon.  
+A: Ja. Se afsnit 8.5 ovenfor. Den komplette og autoritative liste vedligeholdes på [/da/underbehandlere/](/da/underbehandlere/).  
 
 ---
 
@@ -706,9 +706,10 @@ A: Ja. Se Sektion 8.5 (Supabase, AWS, Mailgun). Fuld liste i DPA-skabelon.
 | 1.0 | 2025-01-31 | Indledende sikkerhedsoversigt |
 | 2.0 | 2025-11-03 | Omfattende omskrivning (API-nøgler, audit logs, partner admin) |
 | 2.1 | 2025-11-03 | Partner-fokuseret revision (fjernede interne implementeringsdetaljer) |
+| 2.2 | 2026-04-21 | Opdatering til ny platform-infrastruktur; ret virksomhedsnavn; opdater compliance-status |
 
 ---
 
-**© 2025 LogicNodes Inc. Alle rettigheder forbeholdes.**
+**© 2026 LogicNodes ApS. Alle rettigheder forbeholdes.**
 
 Dette dokument er fortroligt og beregnet kun til partnerevaluering. Må ikke distribueres uden tilladelse.

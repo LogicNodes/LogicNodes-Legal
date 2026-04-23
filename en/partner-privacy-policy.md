@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Partner Embedded Users Privacy Policy
-last_updated: 2025-11-04
+last_updated: 2026-04-21
 lang: en
 lang_equivalent: /da/partner-privatlivspolitik/
 ---
@@ -177,7 +177,7 @@ We use trusted third-party services. **Complete list:** /en/subprocessors
 
 **Sub-Processor Agreements:** All sub-processors have signed Data Processing Agreements (DPAs) with adequate GDPR safeguards.
 
-**Sub-Processors of Sub-Processors:** Each sub-processor may engage their own sub-processors (e.g., Supabase uses AWS; Vercel and Render use AWS/Google Cloud). These are covered under respective vendor DPAs.
+**Sub-Processors of Sub-Processors:** Each sub-processor may engage their own sub-processors (e.g., Supabase uses AWS; Vercel uses AWS/Google Cloud). These are covered under respective vendor DPAs.
 
 ### 5.3 With LLM Providers
 
@@ -525,10 +525,10 @@ Email: dt@datatilsynet.dk
 
 **Changes Notification:** Partners notified 30 days before adding new sub-processors.
 
-**© 2025 LogicNodes ApS. All rights reserved.**
+**© 2026 LogicNodes ApS. All rights reserved.**
 
 LogicNodes ApS
 Sletvej 2D, 8310 Tranbjerg, Denmark
 CVR: DK45318362
 
-This privacy policy is effective as of November 3, 2025. By using LogicNodes through a Partner's product, you acknowledge you have read and understood this policy.
+This privacy policy is effective as of April 21, 2026. By using LogicNodes through a Partner's product, you acknowledge you have read and understood this policy.

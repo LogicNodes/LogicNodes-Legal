@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Databehandleraftale
-last_updated: 2025-11-03
+last_updated: 2026-04-21
 lang: da
 lang_equivalent: /en/data-processing-agreement/
 ---
@@ -10,11 +10,9 @@ lang_equivalent: /en/data-processing-agreement/
 
 **Mellem:**
 - **Dataansvarlig** ("[PARTNER NAVN]", "Partner", "du")
-- **Databehandler** ("LogicNodes Inc.", "LogicNodes", "vi", "os")
+- **Databehandler** ("LogicNodes ApS", "LogicNodes", "vi", "os")
 
 **Ikrafttrædelsesdato:** [DATO]  
-
-**Version:** 1.0  
 
 ---
 
@@ -26,7 +24,7 @@ Til brug for denne Databehandleraftale ("DPA"):
 
 **"GDPR"** betyder Europa-Parlamentets og Rådets forordning (EU) 2016/679 af 27. april 2016 om beskyttelse af fysiske personer i forbindelse med behandling af personoplysninger og om fri udveksling af sådanne oplysninger.
 
-**"Databeskyttelseslovgivning"** betyder alle gældende love og regler vedrørende privatliv og databeskyttelse, herunder GDPR, CCPA og andre gældende love.
+**"Databeskyttelseslovgivning"** betyder alle gældende love og regler vedrørende privatliv og databeskyttelse, herunder GDPR, UK GDPR og Data Protection Act 2018, den schweiziske FADP, CCPA/CPRA og andre gældende love.
 
 **"Personoplysninger"** betyder enhver information vedrørende en identificeret eller identificerbar fysisk person, som behandles af LogicNodes på vegne af Partner i forbindelse med Tjenesterne.
 
@@ -53,15 +51,17 @@ Denne DPA regulerer behandlingen af Personoplysninger af LogicNodes (Databehandl
 ### 2.2 Anvendelighed
 
 Denne DPA gælder for alle Personoplysninger, som behandles af LogicNodes på Partners vegne, herunder men ikke begrænset til:
-- Slutbrugeridentitetsdata (e-mail, navn, organisation)
-- Agent-udførelseslogfiler (API-anmodninger/svar)
-- Stemmetransskriptioner
-- Uploadede filer
+- Slutbrugeridentitetsoplysninger (e-mail, navn, organisation)
+- Agenteksekverings-logs (agent-prompts, -svar og API-anmodninger/svar)
+- Stemmeoptagelser (lydoptagelser fra stemmebaserede agenter) og voiceprints (biometriske data, Art. 9 — jf. §2.3)
+- Uploadede og hentede filer
 - Revisionslogfiler
 
-### 2.3 Hovedserviceaftale
+### 2.3 Voiceprints og biometriske data
 
-Denne DPA udgør en del af og supplerer Hovedserviceaftalen ("MSA") mellem Partner og LogicNodes. I tilfælde af konflikt har denne DPA forrang i databeskyttelsesspørgsmål.
+Platformen tilbyder valgfri stemmeidentifikation, der anvender biometriske stemmeprofiler ("voiceprints") til at identificere talere i lydoptagelser. Voiceprints udgør biometriske data i henhold til GDPR artikel 9, stk. 1, og behandles udelukkende med henblik på talaridentifikation. Hvert voiceprint er knyttet til et selvvalgt navn.
+
+**Særlige Kategorier:** Partner skal sikre et gyldigt retsgrundlag (f.eks. GDPR Art. 9(2)) og implementere passende beskyttelsesforanstaltninger, inden LogicNodes instrueres til at behandle voiceprints eller andre Særlige Kategorier af Personoplysninger.
 
 ---
 
@@ -70,19 +70,19 @@ Denne DPA udgør en del af og supplerer Hovedserviceaftalen ("MSA") mellem Partn
 ### 3.1 Partner-instruktioner
 
 LogicNodes må kun behandle Personoplysninger:
-1. På dokumenterede instruktioner fra Partner (via API-kald, konfigurationsindstillinger)
+1. På dokumenterede instruktioner fra Partner (via API-kald, konfigurationsindstillinger, skriftlige anmodninger til support/sikkerhedskontakter eller MSA)
 2. Som nødvendigt for at levere Tjenesterne
 3. Som krævet af gældende lovgivning (med varsel til Partner, hvis lovligt tilladt)
 
 **Partner-instruktioner inkluderer:**
-- Autentificeringsanmodninger (POST /api/v1/embed/auth)
-- Anmodninger om sletning af organisation/bruger (DELETE APIs)
-- Hemmeligheder-administrationsoperationer (POST/DELETE /api/v1/partner/secrets)
+- Brugerautentificering via SDK (Partner leverer JWT'er med brugeridentitets-claims)
+- Organisation/bruger-sletning (via platformens brugergrænseflade eller skriftlig anmodning til kontakt@logicnodes.ai)
+- Håndtering af hemmeligheder (via platformens brugergrænseflade eller skriftlig anmodning til kontakt@logicnodes.ai)
 - Konfiguration af dataopbevaringsperiode (default_retention_period indstilling)
 
 ### 3.2 Uautoriseret Behandling
 
-Hvis LogicNodes mener, at Partners instruktioner krænker Databeskyttelseslovgivningen, vil LogicNodes:
+Hvis LogicNodes mener, at Partners dokumenterede instruktioner krænker Databeskyttelseslovgivningen, vil LogicNodes:
 1. Straks informere Partner
 2. Suspendere behandling indtil instruktioner afklares
 3. Dokumentere hændelsen til revisionsformål
@@ -100,16 +100,14 @@ Hvis LogicNodes mener, at Partners instruktioner krænker Databeskyttelseslovgiv
 - Levere debugging- og transparensværktøjer
 
 **Type af Personoplysninger:**
-- Identitetsdata: E-mail, navn, bruger-ID, organisations-ID
-- Brugsdata: Agent-kørsler, API-anmodninger/svar, transskriptioner
-- Tekniske data: IP-adresse, user agent (til sikkerhed)
+- Identitetsoplysninger: E-mail, navn, bruger-ID, organisations-ID
+- Brugsdata: Agentkørsler, agent-prompts og -svar, transskriptioner
+- Tekniske data: IP-adresse, user agent (af sikkerhedsmæssige årsager)
+- Stemmeoptagelser: Lydoptagelser fra stemmebaserede agenter; inkl. voiceprints knyttet til selvvalgte navne (biometriske data, Art. 9 — jf. §2.3; valgfri funktionalitet)
+- Uploadede filer: Indsendte og hentede dokumenter
 
 **Kategorier af Registrerede:**
-- Partners slutbrugere (medarbejdere, kunder, kontraktansatte)
-
-**Særlige Kategorier af Data:**
-- Ingen behandlet som standard
-- Hvis Partner leverer følsomme data (sundhed, økonomi osv.), skal Partner meddele LogicNodes og sikre passende beskyttelsesforanstaltninger
+- Partners slutbrugere (medarbejdere, kunder, konsulenter)
 
 ---
 
@@ -142,17 +140,17 @@ LogicNodes implementerer passende tekniske og organisatoriske foranstaltninger t
 - Sikkerhedsbevidsthedstræning (årligt)
 - Leverandørrisikostyring (underdatabehandler-gennemgange)
 
-**Overholdelse:**
-- SOC 2-klar (formel revision planlagt)
-- Årlig penetrationstest (planlagt Q2 2026)
-- Sårbarheds-scanning (automatiseret, ugentligt)
+**Overholdelse (fremadrettet):**
+- SOC 2 Type II-forberedelser er påbegyndt (rapport målrettet 2026/2027; ikke endnu certificeret)
+- Årlig penetrationstest (planlagt Q3 2026)
+- Automatiseret sårbarhedsscanning (via GitHub Dependabot)
 
 ### 4.3 Anmodninger fra Registrerede
 
-LogicNodes skal assistere Partner med at opfylde Registreredes rettigheder i henhold til Databeskyttelseslovgivningen:
+LogicNodes skal assistere Partner med at opfylde Registreredes rettigheder i henhold til Databeskyttelseslovgivningen uden unødig forsinkelse.
 
-**Ret til Adgang (GDPR Art. 15):**
-- Eksport-API-endpoints for agent-kørselshistorik
+**Ret til Indsigt (GDPR Art. 15):**
+- Eksport af agentkørselshistorik via platformens brugergrænseflade eller per anmodning til kontakt@logicnodes.ai
 - JSON-format til maskinlæsbar eksport
 - Svartid: Inden for 30 dage
 
@@ -161,21 +159,21 @@ LogicNodes skal assistere Partner med at opfylde Registreredes rettigheder i hen
 - Ændringer reflekteres øjeblikkeligt
 
 **Ret til Sletning (GDPR Art. 17):**
-- DELETE-API'er til bruger/organisationsfjernelse
-- Kaskaderende sletninger sikrer fuldstændig fjernelse
-- Sletningstidslinje: Inden for 24 timer (produktion), 30 dage (backups)
+- Sletning af bruger/organisation via platformens brugergrænseflade eller per anmodning til kontakt@logicnodes.ai
+- Kaskade-sletning sikrer fuldstændig fjernelse
+- Sletningsperiode: Øjeblikkeligt (produktion), 30 dage (backups)
 
 **Ret til Dataportabilitet (GDPR Art. 20):**
-- Eksport-API returnerer JSON-format
-- Struktureret, maskinlæsbare data
+- Data kan eksporteres i JSON-format via platformens brugergrænseflade eller per anmodning til kontakt@logicnodes.ai
+- Strukturerede, maskinlæsbare data
 
 **Ret til Begrænsning af Behandling (GDPR Art. 18):**
 - Partner kan deaktivere brugerkonti
-- Behandling stoppet (data bevaret men ikke brugt)
+- Behandling stoppes (data bevares, men anvendes ikke)
 
 **Ret til Indsigelse (GDPR Art. 21):**
-- Partner evaluerer indsigelse og instruerer LogicNodes
-- Hvis gyldig, slettes data via DELETE-API'er
+- Partner evaluerer indsigelsen og instruerer LogicNodes
+- Hvis berettiget, slettes data via platformens brugergrænseflade eller per anmodning til kontakt@logicnodes.ai
 
 **Assistance:**
 LogicNodes vil besvare Partner-anmodninger inden for 5 arbejdsdage og levere rimelig assistance (dokumentation, API-vejledning, teknisk support).
@@ -184,7 +182,10 @@ LogicNodes vil besvare Partner-anmodninger inden for 5 arbejdsdage og levere rim
 
 I tilfælde af et Databrud skal LogicNodes:
 
-**Øjeblikkelige Handlinger (inden for 24 timer):**
+**Juridisk forpligtelse (GDPR Art. 33):**
+LogicNodes skal underrette Partner **uden unødig forsinkelse** og, hvor det er muligt, inden for 72 timer efter at have fået kendskab til Databruddet.
+
+**Internt SLA-mål (inden for 24 timer):**
 1. Begrænse bruddet (stoppe uautoriseret adgang)
 2. Underrette Partner via e-mail (sikkerhedskontakt)
 3. Levere foreløbig hændelsesrapport (omfang, berørte data, grundårsag)
@@ -208,7 +209,7 @@ LogicNodes skal levere rimelig assistance, hvis Partner er forpligtet til at udf
 
 ### 4.6 Forudgående Høring
 
-Hvis en DPIA indikerer høj risiko, og Partner skal konsultere en Tilsynsmyndighed (GDPR Art. 36), vil LogicNodes levere nødvendige oplysninger og assistance.
+Hvis en DPIA indikerer høj risiko, og Partner skal konsultere en Tilsynsmyndighed (GDPR Art. 36), vil LogicNodes levere nødvendige oplysninger og assistance. Enhver videregivelse vil være begrænset til oplysninger, der er strengt nødvendige for konsultationen.
 
 ---
 
@@ -218,23 +219,24 @@ Hvis en DPIA indikerer høj risiko, og Partner skal konsultere en Tilsynsmyndigh
 
 Partner giver generel autorisation til LogicNodes til at engagere Underdatabehandlere, underlagt betingelserne i dette afsnit.
 
-**Nuværende Underdatabehandlere:**
+**Komplet Underdatabehandler-liste:** /da/underbehandlere
 
-| Underdatabehandler | Tjeneste | Behandlede Data | Lokation | Beskyttelsesforanstaltninger |
-|---------------|---------|----------------|----------|------------|
-| **Supabase Inc.** | Database, Auth, Storage | Alle Personoplysninger | EU (AWS EU-North-1, Stockholm) | SOC 2, ISO 27001, GDPR DPA, SCC |
-| **Amazon Web Services (AWS)** | Cloud-infrastruktur | Alle Personoplysninger (via Supabase) | EU (Stockholm) | SOC 1/2/3, ISO 27001, SCC |
-| **Mailgun Technologies Inc.** | Transaktions-e-mail | E-mail, navn | USA/EU | GDPR DPA, SCC |
+Den autoritative og opdaterede liste over Underdatabehandlere vedligeholdes på /da/underbehandlere og opdateres med 30 dages forhåndsvarsel ved ændringer.
 
-**Sidst Opdateret:** 3. november 2025
+**Bring Your Own Key (BYOK) — AI-inferenstjenester:**
+Partner kan til enhver tid vælge at anvende egne API-nøgler til AI-tjenester. Når egne nøgler anvendes, behandler AI-udbyderen data direkte på Partners vegne og er Partners direkte databehandler — ikke LogicNodes' underdatabehandler.
+
+**Underdatabehandleres underdatabehandlere:** Underdatabehandlere kan engagere egne underdatabehandlere (f.eks. benytter Supabase AWS; Vercel benytter AWS/Google Cloud; Hetzner behandler data udelukkende i egne EU-datacentre). Disse er dækket af de respektive leverandørers DPA'er.
 
 ### 5.2 Krav til Underdatabehandlere
 
-LogicNodes skal sikre, at alle Underdatabehandlere:
+LogicNodes skal sikre, at alle Underdatabehandlere (med undtagelse af BYOK-valgte AI-udbydere, som er Partners direkte databehandlere):
 1. Er bundet af databeskyttelsesforpligtelser svarende til denne DPA
 2. Implementerer passende tekniske og organisatoriske sikkerhedsforanstaltninger
-3. Har underskrevet Databehandleraftaler (eller tilsvarende)
+3. Er bundet af Databehandleraftaler eller tilsvarende kontraktuelle mekanismer, herunder Standardkontraktbestemmelser (SCC EU 2021/914) for behandlere uden for EØS
 4. Undergår regelmæssige sikkerhedsvurderinger
+
+**Afgrænsning af dokumentationsforpligtelse:** LogicNodes' forpligtelse over for Underdatabehandlere er begrænset til de mekanismer, der er angivet i kolonnen "Sikkerhed" i §5.1 og Appendiks C — dvs. at en GDPR DPA og, hvor relevant, SCC (EU 2021/914) er på plads. LogicNodes afgiver ingen erklæring om og påtager sig intet ansvar for Underdatabehandleres sikkerhedscertificeringer (herunder men ikke begrænset til SOC 2, ISO 27001 eller tilsvarende standarder), medmindre sådanne certificeringer er udtrykkeligt nævnt for den pågældende Underdatabehandler i denne DPA.
 
 ### 5.3 Nye Underdatabehandlere
 
@@ -243,7 +245,7 @@ LogicNodes vil underrette Partner mindst **30 dage** før engagement af nye Unde
 
 **Underretningsmetode:**
 - E-mail til Partners sikkerhedskontakt
-- Opdatering til Underdatabehandler-liste (Appendiks B i Privatlivspolitik)
+- Opdatering til den offentlige underdatabehandler-side på /da/underbehandlere
 
 **Indsigelse:**
 Partner kan gøre indsigelse mod ny Underdatabehandler på rimelige databeskyttelsesgrunde ved at underrette LogicNodes inden for 30 dage.
@@ -255,7 +257,7 @@ Partner kan gøre indsigelse mod ny Underdatabehandler på rimelige databeskytte
 
 ### 5.4 Underdatabehandler-ansvar
 
-LogicNodes forbliver fuldt ansvarlig over for Partner for Underdatabehandlers præstation. Hvis Underdatabehandler fejler i at opfylde databeskyttelsesforpligtelser, er LogicNodes ansvarlig over for Partner, som hvis LogicNodes havde udført behandlingen.
+LogicNodes forbliver fuldt ansvarlig over for Partner for Underdatabehandlers præstation. Hvis Underdatabehandler fejler i at opfylde databeskyttelsesforpligtelser, er LogicNodes ansvarlig over for Partner, som hvis LogicNodes selv havde udført behandlingen. Ansvaret gælder ikke for AI-tjenester, som Partner anvender via egne API-nøgler (BYOK), idet disse udbydere i så fald er Partners direkte databehandlere.
 
 ---
 
@@ -265,8 +267,9 @@ LogicNodes forbliver fuldt ansvarlig over for Partner for Underdatabehandlers pr
 
 **Primær Opbevaring:** Den Europæiske Union (AWS EU-North-1, Stockholm via Supabase)
 
-**US Data-residens (Valgfrit):**
-Partner kan anmode om US data-residens. Yderligere gebyrer kan være gældende.
+**US Data-residens (Valgfrit):** Partner kan anmode om dataopbevaring i USA. Yderligere gebyrer kan forekomme.
+
+**Præcisering — AI-inferens:** Uanset valg af datalagringsregion indebærer standardbrug af platformen, at agent-prompts og -svar transmitteres til LLM-udbydere (OpenAI, Anthropic, Google Cloud, xAI) med servere i USA ved hver agentkørsel. Disse inferenskald udgør internationale dataoverførsler, der er dækket af SCC og de respektive Underdatabehandleres DPA'er som beskrevet i §5 og Appendiks C. Partner kan reducere omfanget af sådanne overførsler ved at anvende egne API-nøgler (BYOK), hvorved LLM-udbyderen bliver Partners direkte databehandler.
 
 ### 6.2 Overførselsmekanismer
 
@@ -279,24 +282,56 @@ For overførsler af Personoplysninger til lande uden en tilstrækkeligheds-afgø
 - Inkorporeret ved reference i denne DPA
 - Fuld tekst tilgængelig på: https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj
 
-**Supabase SCC'er:**
-- Supabase har underskrevet SCC'er med LogicNodes
-- LogicNodes har underskrevet SCC'er med Partner (via denne DPA)
+**UK-tillæg / IDTA:** For overførsler underlagt UK-lovgivning gælder ICO International Data Transfer Addendum (eller IDTA) ved inkorporering.
+
+**Schweizisk tillæg:** For overførsler underlagt schweizisk FADP skal henvisninger til GDPR og "EU" i SCC'erne læses som henvisninger til FADP og "Schweiz".
 
 ### 6.3 Yderligere Beskyttelsesforanstaltninger
 
-Ud over SCC'er implementerer LogicNodes supplerende foranstaltninger:
-- Kryptering i hvile og under transmission (TLS 1.2+, AES-256)
-- Adgangskontrol (multi-tenant-isolation, RLS-politikker)
-- Dataminimering (opbevaringspolitikker, automatisk oprydning)
-- Transparens (revisionslogfiler, dataeksport-API'er)
+Ud over SCC'er implementerer LogicNodes supplerende foranstaltninger som krævet af Schrems II:
 
-### 6.4 Regeringsadgangsanmodninger
+**Kryptering:**
+- Data krypteret i hvile med AES-256 (database, hemmeligheder, opbevaring)
+- Transportkryptering med TLS 1.2 eller højere
+- HTTPS-håndhævelse med HSTS-headers
+
+**Nøglehåndtering:**
+- AWS KMS-administrerede krypteringsnøgler
+- Automatisk nøglerotation mindst årligt
+- Adgang til nøgler begrænset til tjenesterolle
+- Alle dekrypteringsoperationer revisionslogges
+
+**Adgangskontrol:**
+- Multi-tenant-isolation via PostgreSQL Row-Level Security (RLS)
+- JWT-baseret autentificering (RS256, 1-times udløb)
+- Rollebaseret adgangskontrol (admin, medlem, viewer)
+- Applikationslags-adgangskontrol (cross-tenant adgang forhindres by design)
+- Mindst-privilegium princip for medarbejderadgang
+
+**Dataminimering:**
+- Konfigurerbare opbevaringsperioder (1-90 dage for operationelle data)
+- Automatisk daglig oprydning
+- Ingen brug af kundedata til AI-modeltræning eller -analyse
+- Formålsbegrænsning håndhævet by design
+
+**Transparens & Tilsyn:**
+- Omfattende revisionslogfiler (1-års opbevaring)
+- Dataeksport-API'er (JSON-format, maskinlæsbart)
+- Partner-adgang til revisionslogfiler via API
+- Årlige sikkerhedsvurderinger
+
+**Myndighedsadgangsanmodninger:**
+- Vi underretter Partner omgående, medmindre det er juridisk forbudt
+- Vi anvender rimelige juridiske midler til at anfægte eller indsnævre alt for brede anmodninger
+- Vi videregiver kun det minimum af Personoplysninger, der kræves ved lov
+- Alle myndighedsanmodninger dokumenteres og rapporteres til Partner
+
+### 6.4 Myndighedsadgangsanmodninger
 
 Hvis LogicNodes modtager en lovlig anmodning fra offentlige myndigheder om adgang til Personoplysninger:
-1. LogicNodes vil forsøge at omdirigere anmodningen til Partner
-2. Hvis lovligt tilladt, vil LogicNodes underrette Partner før videregivelse
-3. Hvis forbudt fra at underrette, vil LogicNodes anfægte anmodningen eller søge tilladelse til at underrette
+1. Underretter vi omgående Partner, medmindre det er juridisk forbudt
+2. Anvender vi rimelige juridiske midler til at anfægte eller indsnævre anmodningen
+3. Videregiver vi kun det minimum af Personoplysninger, der kræves ved lov, og dokumenterer anmodningen og videregivelsen
 
 ---
 
@@ -312,13 +347,15 @@ Hvis LogicNodes modtager en lovlig anmodning fra offentlige myndigheder om adgan
 | Brugerkontodata | Indtil sletningsanmodning | Manuel eller Partner-initieret |
 | Revisionslogfiler | 1 år (fast) | Automatisk efter 1 år |
 
+Backups er krypteret i hvile (AES-256).
+
 ### 7.2 Afslutning af Tjeneste
 
 Ved opsigelse eller udløb af MSA skal LogicNodes (efter Partners valg):
 
 **Mulighed A: Slet**
 - Slet alle Personoplysninger inden for 30 dage
-- Lever skriftlig bekræftelse på sletning
+- Lever skriftlig bekræftelse på sletning, underskrevet af en autoriseret repræsentant
 
 **Mulighed B: Returnér**
 - Eksportér alle Personoplysninger i JSON-format
@@ -329,11 +366,11 @@ Ved opsigelse eller udløb af MSA skal LogicNodes (efter Partners valg):
 
 ### 7.3 Partner-initieret Sletning
 
-Partner kan anmode om sletning når som helst via:
-- DELETE /api/v1/partner/organizations/{org_id} (fuld org-sletning)
-- DELETE /api/v1/partner/organizations/{org_id}/users/{user_id} (brugersletning)
+Partner kan til enhver tid slette data via:
+- Platformens brugergrænseflade
+- Skriftlig anmodning til kontakt@logicnodes.ai
 
-LogicNodes vil slette øjeblikkeligt fra produktionsdatabase (synkron CASCADE), rense fra backups inden for 30 dage.
+LogicNodes sletter øjeblikkeligt fra produktionsdatabasen (synkron CASCADE) og fjerner fra backups inden for 30 dage.
 
 ---
 
@@ -352,23 +389,25 @@ Partner har ret til at revidere LogicNodes' overholdelse af denne DPA, underlagt
 - Hændelsesrespons-procedurer
 
 **Metode:**
-- Fjernrevision (gennemgang af dokumentation, Q&A)
-- ELLER: On-site revision (med 30 dages varsel, i arbejdstiden)
-- ELLER: Tredjeparts-revision (SOC 2-rapport, penetrationstestresultater)
+- **Primær:** Fjernrevision via gennemgang af dokumentation, sikkerhedsspørgeskema og Q&A
+- **Alternativ:** Tredjeparts-vurderinger (SOC 2-rapport når tilgængelig, penetrationstestresultater under NDA)
+- **On-site:** Kun hvis fjernmetoder er utilstrækkelige med 60 dages forhåndsvarsel, i arbejdstiden, begrænset til rimelig varighed (1-2 arbejdsdage)
 
 **Fortrolighed:**
 Partner accepterer at underskrive NDA og begrænse adgang til fortrolige oplysninger.
 
 **Omkostninger:**
-- Første revision per år: Ingen gebyr
+- Første fjernrevision per år: Ingen gebyr
+- On-site revisioner: Rimelige omkostninger (aftales på forhånd)
 - Yderligere revisioner: Rimelige omkostninger (skal aftales)
 
 ### 8.2 LogicNodes Certificeringer
 
-LogicNodes vil opretholde industri-standard certificeringer og levere på anmodning:
-- SOC 2 Type II-rapport (når tilgængelig, estimeret 2026)
+LogicNodes vil opretholde industri-standard sikkerhedspraksis og levere dokumentation på rimelig anmodning:
+- SOC 2 Type II-rapport (når tilgængelig, planlagt 2026)
 - Penetrationstestrapporter (årligt, under NDA)
-- Underdatabehandler-certificeringer (Supabase SOC 2, ISO 27001)
+- Underdatabehandler-sikkerhedsdokumentation (DPA'er, leverandørsikkerhedssider, tilgængelige certifikater)
+- Svar på standard sikkerhedsspørgeskemaer (CAIQ, SIG, VSA)
 
 ---
 
@@ -376,9 +415,7 @@ LogicNodes vil opretholde industri-standard certificeringer og levere på anmodn
 
 ### 9.1 Ansvarsbegrænsning
 
-Hver parts ansvar under denne DPA er underlagt begrænsninger og undtagelser i MSA, undtagen:
-- Ansvar for Databrud forårsaget af LogicNodes' grove uagtsomhed eller forsætlig mishandling
-- Ansvar for overtrædelser af Databeskyttelseslovgivning forårsaget af LogicNodes' manglende overholdelse af denne DPA
+Begge parter er ansvarlige for tab, der direkte skyldes overtrædelse af denne DPA. Ingen af parterne er ansvarlig for indirekte tab, følgeskader eller tab af data, medmindre tabet skyldes forsæt eller grov uagtsomhed. Disse begrænsninger gælder ikke, hvor lovgivningen forbyder dem, herunder ved overtrædelse af GDPR.
 
 ### 9.2 Erstatning
 
@@ -389,9 +426,9 @@ LogicNodes skal skadesløsholde og holde Partner fri for:
 
 **Undtagelser:**
 LogicNodes er IKKE ansvarlig for krav opstået fra:
-- Partners instruktioner (hvis Partner instruerer ulovlig behandling)
-- Partners manglende overholdelse af Databeskyttelseslovgivning
-- Registreredes handlinger (hvis Registrerede forårsager brud)
+- Behandling foretaget på Partners dokumenterede instruktioner, som strider mod Databeskyttelseslovgivningen
+- Partners brud på denne DPA, MSA eller Databeskyttelseslovgivning
+- Hændelser forårsaget af Partners systemer, integrationer eller slutbrugere
 
 ---
 
@@ -399,11 +436,11 @@ LogicNodes er IKKE ansvarlig for krav opstået fra:
 
 ### 10.1 Periode
 
-Denne DPA er gyldig fra Ikrafttrædelsesdatoen og fortsætter i MSA's varighed.
+Denne DPA træder i kraft fra Ikrafttrædelsesdatoen og gælder, indtil den opsiges af en af parterne i overensstemmelse med afsnit 10.2.
 
 ### 10.2 Opsigelse
 
-Denne DPA opsiges automatisk ved opsigelse eller udløb af MSA.
+Denne DPA ophører automatisk ved opsigelse.
 
 ### 10.3 Overlevelse
 
@@ -411,7 +448,7 @@ Følgende afsnit overlever opsigelse:
 - Afsnit 4.2 (Sikkerhedsforanstaltninger) - indtil data slettes
 - Afsnit 4.4 (Underretning om Databrud) - for brud forekommet under perioden
 - Afsnit 7 (Dataopbevaring & Sletning) - indtil data slettes
-- Afsnit 9 (Ansvar & Erstatning) - per MSA-begrænsningsperiode
+- Afsnit 9 (Ansvar & Erstatning) - i 2 år efter opsigelse
 
 ---
 
@@ -419,15 +456,11 @@ Følgende afsnit overlever opsigelse:
 
 ### 11.1 Lovvalg
 
-Denne DPA er underlagt lovene specificeret i MSA.
-
-For GDPR-overholdelse gælder EU-databeskyttelseslovgivning i det omfang, som kræves af GDPR artikel 28(3)(a).
+Denne DPA er underlagt dansk ret. For GDPR-overholdelse gælder EU-databeskyttelseslovgivning i det omfang, som kræves af GDPR artikel 28(3)(a). I tilfælde af konflikt mellem denne DPA og SCC'erne vedrørende overførsler af personoplysninger har SCC'erne forrang.
 
 ### 11.2 Ændringer
 
-LogicNodes kan ændre denne DPA for at overholde ændringer i Databeskyttelseslovgivningen ved at give 30 dages varsel til Partner.
-
-Væsentlige ændringer kræver Partners samtykke (fortsat brug af Tjenester udgør samtykke).
+LogicNodes kan opdatere denne DPA ved at give mindst 30 dages skriftligt varsel til Partner. Partner kan inden varselets udløb vælge at opsige denne DPA med virkning fra varselets udløb. Fortsætter Partner brugen af Ydelserne efter varselets udløb, anses den opdaterede DPA for accepteret.
 
 ### 11.3 Adskillelse
 
@@ -435,14 +468,13 @@ Hvis nogen bestemmelse i denne DPA er ugyldig eller ikke kan håndhæves, forbli
 
 ### 11.4 Hele Aftalen
 
-Denne DPA udgør sammen med MSA og Privatlivspolitikken hele aftalen om databeskyttelse.
+Denne DPA udgør sammen med Privatlivspolitikken hele aftalen om databeskyttelse.
 
 ### 11.5 Rangorden
 
 I tilfælde af konflikt:
-1. Denne DPA (for databeskyttelsesspørgsmål)
-2. MSA (for kommercielle vilkår)
-3. Privatlivspolitik (for slutbrugerdatarettigheder)
+1. Denne DPA (for databeskyttelsesmæssige spørgsmål)
+2. Privatlivspolitik (for slutbrugeres datarettigheder)
 
 ---
 
@@ -455,7 +487,7 @@ Navn: [PARTNER AUTORISERET UNDERSKRIVER]
 Titel: _______________________________  
 Dato: _______________________________  
 
-**LogicNodes Inc. (Databehandler):**
+**LogicNodes ApS (Databehandler):**
 
 Underskrift: _______________________________  
 Navn: [LOGICNODES AUTORISERET UNDERSKRIVER]  
@@ -478,8 +510,9 @@ Fuld tekst tilgængelig på: https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj
 - Kontakt: [PARTNER SIKKERHEDSKONTAKT]  
 
 **Dataimportør (Databehandler):**
-- Navn: LogicNodes Inc.  
-- Adresse: [LOGICNODES ADRESSE]  
+- Navn: LogicNodes ApS
+- Adresse: Sletvej 2D, 8310 Tranbjerg, Danmark
+- CVR: DK45318362
 - Kontakt: kontakt@logicnodes.ai  
 
 **Kompetent Tilsynsmyndighed:**
@@ -500,6 +533,12 @@ Lovgivningen i det EU-medlemsland, hvor Dataeksportør er etableret
 **Klausul 18 (Valg af Forum):**
 Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 
+**UK-tillæg:**
+Hvor det er påkrævet, udgør UK-tillægget til SCC'erne (version udstedt af ICO) en del af denne DPA.
+
+**Schweizisk tillæg:**
+For schweiziske FADP-overførsler skal henvisninger i SCC'erne til GDPR og EU-lovgivning læses som henvisninger til FADP og schweizisk lovgivning.
+
 ---
 
 ## Appendiks B: Tekniske og Organisatoriske Foranstaltninger
@@ -514,13 +553,13 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 
 **Systemadgang:**
 - Multi-faktor-autentificering (MFA) krævet for produktionsadgang
-- SSH-nøglebaseret autentificering (ingen adgangskode-login)
-- IP-whitelisting for produktionssystemer
+- Nøglebaseret autentificering (adgangskode-baseret login deaktiveret)
 - Mindst-privilegium-adgangsprincip (rollebaseret)
+- Al produktionsadgang logget til revisionsformål
 
 **Dataadgang:**
 - Row-Level Security (RLS)-politikker håndhæver multi-tenant-isolation
-- JWT-baseret autentificering (HS256, 1-times udløb)
+- JWT-baseret autentificering (RS256, 1-times udløb)
 - API-nøgle-autentificering (bcrypt-hashing, vis-én-gang)
 - Service role-adgang logget til revisionslogfiler
 
@@ -532,16 +571,18 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 - HSTS-headers (forhindrer nedrustningsangreb)
 
 **API-sikkerhed:**
-- Hastighedsbegrænsning (10 anm./min på autentificeringsendpoints)
-- Input-validering (Pydantic-skemaer, UUID-validering)
+- Hastighedsbegrænsning på autentificeringsendpoints
+- Input-validering og parameteriserede forespørgsler
 - SQL-injektionsforebyggelse (kun parameteriserede forespørgsler)
 
 ### 3. Opbevaringskontrol
 
 **Kryptering i Hvile:**
 - Database-kryptering (Supabase standard, AES-256)
-- Hemmeligheder-kryptering (Supabase Vault, administrerede nøgler)
+- Hemmeligheder-kryptering (Supabase Vault via AWS KMS)
 - Storage bucket-kryptering (AWS S3, AES-256)
+- Nøglehåndtering: AWS KMS-administrerede nøgler, automatisk rotation mindst årligt
+- Nøgleadgang: Begrænset til tjenesterolle, alle dekrypteringsoperationer revisionslogges
 
 **Backup-sikkerhed:**
 - Automatiserede daglige backups (Supabase)
@@ -552,7 +593,7 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 
 **Bruger-autentificering:**
 - Skygge-brugere (ingen adgangskode-deling med LogicNodes)
-- JWT-validering (partners signeringshemmelighed)
+- JWT-validering (partners signeringsnøgle)
 - Session-administration (1-times udløb, refresh tokens)
 
 **Autorisation:**
@@ -564,11 +605,10 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 
 **Multi-Tenancy:**
 - Database RLS-politikker (håndhæver organization_id scoping)
-- Applikationslags-validering (MultiTenantRepository-mønster)
+- Applikationslags-validering (cross-tenant adgang forhindres by design)
 - JWT custom claims (org_id indlejret i session)
 
 **Testdækning:**
-- 85%+ sikkerhedstestdækning
 - Forebyggelse af adgang på tværs af organisationer tests
 - Automatiserede sikkerhedsregressionstests
 
@@ -580,25 +620,24 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 
 **Revisionslogfiler:**
 - Bruger-ID'er i stedet for navne/e-mails
-- IP-adresser hashet (planlagt, ikke implementeret endnu)
+- IP-adresser håndteres i overensstemmelse med sikkerhedsovervågning og juridiske krav
 
 ### 7. Tilgængelighed & Modstandsdygtighed
 
 **Infrastruktur:**
 - Multi-AZ-deployment (AWS EU-North-1, via Supabase)
 - Automatiseret failover (Supabase-administreret)
-- 99,9% uptime SLA (Supabase)
+- Høj tilgængelighed via Supabase/AWS
 
 **Katastrofegendannelse:**
 - Daglige automatiserede backups
-- Point-in-time gendannelse (sidste 7 dage)
-- RTO: 4 timer, RPO: 15 minutter
+- Genopretnings-tid og -punkt mål designet til at opfylde forretningskontinuitetskrav
 
 ### 8. Hændelsesstyring
 
 **Detektion:**
 - Realtidsovervågning (fejlet auth, usædvanlige mønstre)
-- Automatiserede alarmer (PagerDuty-integration)
+- Automatiserede alarmer
 - Revisionslog-analyse (kvartalsvis gennemgang)
 
 **Respons:**
@@ -607,9 +646,9 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 - Post-hændelsesrapporter (inden for 5 arbejdsdage)
 
 **Eskalering:**
-- Vagtingeniør (24/7)
-- Hændelseskommandør (CTO)
-- Kundekommunikation (Customer Success)
+- Teknisk team-notifikation (kritiske problemer)
+- CTO/teknisk ledelse-tilsyn
+- Partnerkommunikation via sikkerhedskontakt (kontakt@logicnodes.ai)
 
 ### 9. Dataportabilitet & Sletning
 
@@ -621,7 +660,7 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 **Sletning:**
 - Kaskaderende sletninger (foreign key constraints)
 - Automatisk storage-oprydning (triggers)
-- Sletningstidslinje: 24 timer (produktion), 30 dage (backups)
+- Sletningstidslinje: Øjeblikkeligt (produktion), 30 dage (backups)
 
 ### 10. Logning & Overvågning
 
@@ -634,25 +673,26 @@ Domstole i det EU-medlemsland, hvor Dataeksportør er etableret
 **Sikkerhedsovervågning:**
 - Sporing af fejlet autentificering
 - API-nøgle-brugsovervågning
-- Anomali-detektion (planlagt, ikke implementeret endnu)
+- Løbende forbedring af anomalidetektion
 
 ---
 
 ## Appendiks C: Underdatabehandler-liste
 
-| Underdatabehandler | Tjeneste | Behandlede Data | Lokation | Beskyttelsesforanstaltninger | Kontakt |
-|---------------|---------|----------------|----------|------------|---------|
-| **Supabase Inc.** | Database, Autentificering, Opbevaring | Alle Personoplysninger | EU (AWS EU-North-1, Stockholm) | SOC 2, ISO 27001, GDPR DPA | privacy@supabase.com |
-| **Amazon Web Services (AWS)** | Cloud-infrastruktur | Alle Personoplysninger (via Supabase) | EU (Stockholm) | SOC 1/2/3, ISO 27001, PCI DSS | aws-compliance@amazon.com |
-| **Mailgun Technologies Inc. (Sinch)** | Transaktions-e-mail | E-mail, navn | USA/EU | GDPR DPA, SCC | privacy@mailgun.com |
+**Autoritativ Liste:** /da/underbehandlere
 
-**Sidst Opdateret:** 3. november 2025
+Den komplette og opdaterede liste over Underdatabehandlere vedligeholdes på /da/underbehandlere. Partnere underrettes 30 dage før eventuelle ændringer til denne liste (ny Underdatabehandler, væsentlig ændring af eksisterende).
 
-**Ændringer:**
-Partnere vil blive underrettet 30 dage før eventuelle ændringer til denne liste (ny Underdatabehandler, væsentlig ændring af eksisterende).
+**LLM-udbydere:** Som standard leverer LogicNodes API-nøgler til LLM-tjenester. Partnere kan valgfrit levere deres egne API-nøgler, i hvilket tilfælde LLM-udbyderen bliver Partners direkte databehandler (ikke LogicNodes' underdatabehandler).
+
+**Senest Opdateret:** 21. april 2026
 
 ---
 
-**© 2025 LogicNodes Inc. Alle rettigheder forbeholdes.**
+**© 2026 LogicNodes ApS. Alle rettigheder forbeholdes.**
 
-Denne Databehandleraftale er fortrolig og beregnet til Partner-eksekvering kun.
+LogicNodes ApS  
+Sletvej 2D, 8310 Tranbjerg, Danmark  
+CVR: DK45318362
+
+Denne Databehandleraftale er fortrolig og beregnet til Partner-eksekvering. Offentlig distribution er ikke tilladt.

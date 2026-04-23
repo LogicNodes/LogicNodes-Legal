@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Data Processing Agreement
-last_updated: 2025-11-04
+last_updated: 2026-04-21
 lang: en
 lang_equivalent: /da/databehandleraftale/
 description: "Data Processing Agreement between LogicNodes ApS (Processor) and Partner (Controller). GDPR Art. 28 compliant."
@@ -49,16 +49,16 @@ This DPA governs the processing of Personal Data by LogicNodes (Data Processor) 
 
 This DPA applies to all Personal Data processed by LogicNodes on Partner's behalf, including but not limited to:
 - End-user identity data (email, name, organization)
-- Agent execution logs (API requests/responses)
-- Voice transcriptions
-- Uploaded files
+- Agent execution logs (agent prompts, responses, and API requests/responses)
+- Voice recordings (audio from voice-based agents) and voiceprints (biometric data, Art. 9 — see §2.3)
+- Uploaded and retrieved files
 - Audit logs
 
-**Special Categories:** Partner will not instruct LogicNodes to process Special Categories of Personal Data under GDPR Article 9 or criminal data under Article 10 unless expressly agreed in writing with appropriate safeguards.
+### 2.3 Voiceprints and Biometric Data
 
-### 2.3 Master Services Agreement
+The platform offers optional speaker identification that uses biometric voice profiles ("voiceprints") to identify speakers in audio recordings. Voiceprints constitute biometric data under GDPR Article 9(1) and are processed solely for the purpose of speaker identification. Each voiceprint is linked to a self-chosen name.
 
-This DPA forms part of and supplements the Master Services Agreement ("MSA") between Partner and LogicNodes. In the event of conflict, this DPA prevails on data protection matters.
+**Special Categories:** Partner must ensure a valid legal basis (e.g., GDPR Art. 9(2)) and implement appropriate safeguards before instructing LogicNodes to process voiceprints or any other Special Categories of Personal Data.
 
 ## 3. Processing of Personal Data
 
@@ -71,8 +71,8 @@ LogicNodes shall process Personal Data only:
 
 **Partner Instructions Include:**
 - User authentication via SDK (Partner provides JWTs containing user identity claims)
-- Organization/user deletion requests (DELETE APIs)
-- Secret management operations (POST/DELETE /api/v1/partner/secrets)
+- Organization/user deletion (via platform UI or written request to kontakt@logicnodes.ai)
+- Secret management (via platform UI or written request to kontakt@logicnodes.ai)
 - Data retention configuration (default_retention_period setting)
 
 ### 3.2 Unauthorized Processing
@@ -96,18 +96,13 @@ If LogicNodes believes documented Partner instructions violate Data Protection L
 
 **Type of Personal Data:**
 - Identity data: Email, name, user ID, organization ID
-- Usage data: Agent runs, API requests/responses, transcriptions
-- Technical data: IP address, user agent (for security)
+- Usage data: Agent runs, agent prompts and responses, transcriptions
+- Technical data: IP address, user agent (for security purposes)
+- Voice recordings: Audio from voice-based agents; incl. voiceprints linked to self-chosen names (biometric data, Art. 9 — see §2.3; optional feature)
+- Uploaded files: Submitted and retrieved documents
 
 **Categories of Data Subjects:**
 - Partner's end-users (employees, customers, contractors)
-
-**Special Categories of Data:**
-- None processed by default
-- If Partner provides Special Categories of Personal Data (e.g., health) or other sensitive data, Partner must  
-(a) notify LogicNodes in advance in writing,  
-(b) ensure a valid legal basis (e.g., GDPR Art. 9(2)), and  
-(c) implement appropriate safeguards
 
 ## 4. LogicNodes Obligations
 
@@ -138,17 +133,17 @@ LogicNodes implements appropriate technical and organizational measures to prote
 - Security awareness training (annual)
 - Vendor risk management (sub-processor reviews)
 
-**Compliance:**
-- SOC 2 ready (formal audit planned)
-- Annual penetration testing (planned Q2 2026)
-- Dependency vulnerability scanning (automated via GitHub Dependabot)
+**Compliance (forward-looking):**
+- SOC 2 Type II preparations underway (report targeted 2026/2027; not yet certified)
+- Annual penetration testing (planned Q3 2026)
+- Automated vulnerability scanning (via GitHub Dependabot)
 
 ### 4.3 Data Subject Requests
 
 LogicNodes shall assist Partner in fulfilling Data Subject rights under Data Protection Laws. LogicNodes will assist **without undue delay**.
 
 **Right to Access (GDPR Art. 15):**
-- Export API endpoints for agent run history
+- Export of agent run history via platform UI or upon request to kontakt@logicnodes.ai
 - JSON format for machine-readable export
 - Response time: Within 30 days
 
@@ -157,12 +152,12 @@ LogicNodes shall assist Partner in fulfilling Data Subject rights under Data Pro
 - Changes reflected immediately
 
 **Right to Erasure (GDPR Art. 17):**
-- DELETE APIs for user/organization removal
+- User/organization deletion via platform UI or upon request to kontakt@logicnodes.ai
 - Cascading deletes ensure complete removal
 - Deletion timeline: Immediate (production), 30 days (backups)
 
 **Right to Data Portability (GDPR Art. 20):**
-- Export API returns JSON format
+- Data can be exported in JSON format via platform UI or upon request to kontakt@logicnodes.ai
 - Structured, machine-readable data
 
 **Right to Restrict Processing (GDPR Art. 18):**
@@ -171,7 +166,7 @@ LogicNodes shall assist Partner in fulfilling Data Subject rights under Data Pro
 
 **Right to Object (GDPR Art. 21):**
 - Partner evaluates objection and instructs LogicNodes
-- If valid, data deleted via DELETE APIs
+- If valid, data deleted via platform UI or upon request to kontakt@logicnodes.ai
 
 **Assistance:**
 LogicNodes will respond to Partner requests within 5 business days and provide reasonable assistance (documentation, API guidance, technical support).
@@ -232,19 +227,22 @@ Partner grants general authorization for LogicNodes to engage Sub-Processors, su
 | **Google Cloud Platform** | AI Model Inference (Gemini) | Agent prompts, responses | EU / Global | SOC 2, ISO 27001, GDPR DPA, SCC |
 | **xAI Corp.** | AI Model Inference (Grok) | Agent prompts, responses | Global / USA | GDPR DPA, SCC |
 
-**LLM Providers:** By default, LogicNodes provides API keys for LLM services (OpenAI, Anthropic, Google, xAI). Partners may optionally provide their own API keys, in which case the LLM provider becomes Partner's direct processor (not LogicNodes' sub-processor).
+**Bring Your Own Key (BYOK) — AI Inference Services:**
+Partner may at any time choose to use their own API keys for AI services. When own keys are used, the AI provider processes data directly on Partner's behalf and is Partner's direct processor — not LogicNodes' sub-processor.
 
-**Sub-Processors of Sub-Processors:** Each sub-processor may engage their own sub-processors (e.g., Supabase uses AWS; Vercel and Render use AWS/Google Cloud). These are covered under respective vendor DPAs.
+**Sub-Processors of Sub-Processors:** Sub-processors may engage their own sub-processors (e.g., Supabase uses AWS; Vercel uses AWS/Google Cloud; Hetzner processes data exclusively in its own EU data centres). These are covered under respective vendor DPAs.
 
-**Last Updated:** November 4, 2025
+**Last Updated:** April 21, 2026
 
 ### 5.2 Sub-Processor Requirements
 
-LogicNodes shall ensure that all Sub-Processors:
+LogicNodes shall ensure that all Sub-Processors (excluding BYOK-selected AI providers, which are Partner's direct processors):
 1. Are bound by data protection obligations equivalent to this DPA
 2. Implement appropriate technical and organizational security measures
-3. Have signed Data Processing Agreements (or equivalent)
+3. Are bound by Data Processing Agreements or equivalent contractual mechanisms, including Standard Contractual Clauses (SCC EU 2021/914) for processors outside the EEA
 4. Undergo regular security assessments
+
+**Documentation obligation scope:** LogicNodes' obligations towards Sub-Processors are limited to the mechanisms listed in the "Safeguards" column in §5.1 and Appendix C — i.e. that a GDPR DPA and, where applicable, SCC (EU 2021/914) are in place. LogicNodes makes no representation and accepts no liability for Sub-Processors' security certifications (including but not limited to SOC 2, ISO 27001, or equivalent standards), unless such certifications are expressly stated for the relevant Sub-Processor in this DPA.
 
 ### 5.3 New Sub-Processors
 
@@ -265,7 +263,7 @@ Partner may object to new Sub-Processor on reasonable data protection grounds by
 
 ### 5.4 Sub-Processor Liability
 
-LogicNodes remains fully liable to Partner for Sub-Processor performance. If Sub-Processor fails to fulfill data protection obligations, LogicNodes is liable to Partner as if LogicNodes had performed the processing.
+LogicNodes remains fully liable to Partner for Sub-Processor performance. If Sub-Processor fails to fulfill data protection obligations, LogicNodes is liable to Partner as if LogicNodes had performed the processing. This liability does not apply to AI services that Partner uses via their own API keys (BYOK), as those providers are in that case Partner's direct processors.
 
 ## 6. International Data Transfers
 
@@ -273,8 +271,9 @@ LogicNodes remains fully liable to Partner for Sub-Processor performance. If Sub
 
 **Primary Storage:** European Union (AWS EU-North-1, Stockholm via Supabase)
 
-**US Data Residency (Optional):**
-Partner may request US data residency. Additional fees may apply.
+**US Data Residency (Optional):** Partner may request US data residency. Additional fees may apply.
+
+**Clarification — AI inference:** Regardless of chosen data storage region, standard platform use involves agent prompts and responses being transmitted to LLM providers (OpenAI, Anthropic, Google Cloud, xAI) with servers in the USA at each agent run. These inference calls constitute international data transfers covered by SCCs and the respective Sub-Processors' DPAs as described in §5 and Appendix C. Partner can reduce the scope of such transfers by using their own API keys (BYOK), whereby the LLM provider becomes Partner's direct processor.
 
 ### 6.2 Transfer Mechanisms
 
@@ -314,7 +313,7 @@ In addition to SCCs, LogicNodes implements supplementary measures required by Sc
 - Multi-tenant isolation via PostgreSQL Row-Level Security (RLS)
 - JWT-based authentication (RS256, 1-hour expiration)
 - Role-based access control (admin, member, viewer)
-- Application-layer access controls with MultiTenantRepository pattern
+- Application-layer access controls (cross-tenant access prevented by design)
 - Least-privilege principle for employee access
 
 **Data Minimization:**
@@ -373,11 +372,11 @@ Upon termination or expiration of the MSA, LogicNodes shall (at Partner's choice
 
 ### 7.3 Partner-Initiated Deletion
 
-Partner may request deletion at any time via:
-- DELETE /api/v1/partner/organizations/{org_id} (full org deletion)
-- DELETE /api/v1/partner/organizations/{org_id}/users/{user_id} (user deletion)
+Partner may delete data at any time via:
+- Platform UI
+- Written request to kontakt@logicnodes.ai
 
-LogicNodes will delete immediately from production database (synchronous CASCADE), purge from backups within 30 days.
+LogicNodes will delete immediately from production database (synchronous CASCADE) and purge from backups within 30 days.
 
 ## 8. Audit & Compliance
 
@@ -421,7 +420,7 @@ LogicNodes will maintain industry-standard security practices and provide docume
 
 ### 9.1 Limitation of Liability
 
-Each party's liability under this DPA is subject to the limitations and exclusions set out in the MSA, except to the extent such limitations are not permitted by applicable Data Protection Laws.
+Each party is liable for losses directly caused by a breach of this DPA. Neither party is liable for indirect losses, consequential damages, or loss of data, unless the loss is caused by willful misconduct or gross negligence. These limitations do not apply where prohibited by law, including in the event of a breach of the GDPR.
 
 ### 9.2 Indemnification
 
@@ -440,11 +439,11 @@ LogicNodes is NOT liable for claims arising from:
 
 ### 10.1 Term
 
-This DPA is effective as of the Effective Date and continues for the duration of the MSA.
+This DPA is effective as of the Effective Date and continues until terminated by either party in accordance with Section 10.2.
 
 ### 10.2 Termination
 
-This DPA terminates automatically upon termination or expiration of the MSA.
+This DPA terminates automatically upon termination.
 
 ### 10.3 Survival
 
@@ -452,21 +451,17 @@ The following sections survive termination:
 - Section 4.2 (Security Measures) - until data deleted
 - Section 4.4 (Data Breach Notification) - for breaches occurring during term
 - Section 7 (Data Retention & Deletion) - until data deleted
-- Section 9 (Liability & Indemnification) - per MSA limitations period
+- Section 9 (Liability & Indemnification) - for 2 years following termination
 
 ## 11. General Provisions
 
 ### 11.1 Governing Law
 
-This DPA is governed by the laws specified in the MSA.
-
-For GDPR compliance, EU data protection law applies to the extent required by GDPR Article 28(3)(a).
-
-In case of conflict between this DPA and the SCCs with respect to personal data transfers, the SCCs shall prevail.
+This DPA is governed by Danish law. For GDPR compliance, EU data protection law applies to the extent required by GDPR Article 28(3)(a). In case of conflict between this DPA and the SCCs with respect to personal data transfers, the SCCs shall prevail.
 
 ### 11.2 Amendments
 
-LogicNodes may update this DPA to reflect changes required by Data Protection Laws by providing at least 30 days' notice to Partner. Material changes that adversely affect Partner's rights require Partner's consent, which may be evidenced by continued use of the Services after the effective date where permitted by law.
+LogicNodes may update this DPA by providing at least 30 days' written notice to Partner. Partner may, before the notice period expires, choose to terminate this DPA with effect from the end of the notice period. Continued use of the Services after the notice period expires constitutes acceptance of the updated DPA.
 
 ### 11.3 Severability
 
@@ -474,14 +469,13 @@ If any provision of this DPA is invalid or unenforceable, the remaining provisio
 
 ### 11.4 Entire Agreement
 
-This DPA, together with the MSA and Privacy Policy, constitutes the entire agreement on data protection.
+This DPA, together with the Privacy Policy, constitutes the entire agreement on data protection.
 
 ### 11.5 Order of Precedence
 
 In the event of conflict:
 1. This DPA (for data protection matters)
-2. MSA (for commercial terms)
-3. Privacy Policy (for end-user data rights)
+2. Privacy Policy (for end-user data rights)
 
 ## 12. Signatures
 
@@ -607,7 +601,7 @@ For Swiss FADP transfers, references in the SCCs to the GDPR and EU law shall be
 
 **Multi-Tenancy:**
 - Database RLS policies (enforce organization_id scoping)
-- Application-layer validation (MultiTenantRepository pattern)
+- Application-layer validation (cross-tenant access prevented by design)
 - JWT custom claims (org_id embedded in session)
 
 **Test Coverage:**
@@ -696,16 +690,16 @@ For Swiss FADP transfers, references in the SCCs to the GDPR and EU law shall be
 
 **LLM Providers:** By default, LogicNodes provides API keys for LLM services. Partners may optionally provide their own API keys, in which case the LLM provider becomes Partner's direct processor (not LogicNodes' sub-processor).
 
-**Sub-Processors of Sub-Processors:** Each sub-processor may engage their own sub-processors (e.g., Supabase uses AWS; Vercel and Render use AWS/Google Cloud). These are covered under respective vendor DPAs.
+**Sub-Processors of Sub-Processors:** Each sub-processor may engage their own sub-processors (e.g., Supabase uses AWS; Vercel uses AWS/Google Cloud). These are covered under respective vendor DPAs.
 
-**Last Updated:** November 4, 2025
+**Last Updated:** April 21, 2026
 
 **Changes:**
 Partners will be notified 30 days before any changes to this list (new Sub-Processor, material change to existing).
 
 The authoritative sub-processor list is maintained at /en/subprocessors.
 
-**© 2025 LogicNodes ApS. All rights reserved.**
+**© 2026 LogicNodes ApS. All rights reserved.**
 
 LogicNodes ApS
 Sletvej 2D, 8310 Tranbjerg, Denmark

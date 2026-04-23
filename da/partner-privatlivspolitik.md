@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Privatlivspolitik (Partner Embedded Brugere)
-last_updated: 2025-11-03
+last_updated: 2026-04-21
 lang: da
 lang_equivalent: /en/partner-privacy-policy/
 ---
@@ -18,7 +18,7 @@ lang_equivalent: /en/partner-privacy-policy/
 
 # LogicNodes Platform - Privatlivspolitik
 
-**Ikrafttrædelsesdato:** 3. november 2025  
+**Ikrafttrædelsesdato:** 21. april 2026  
 
 <p class="last-updated">Senest opdateret: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
@@ -468,10 +468,11 @@ Californiens bosiddende kan udpege en autoriseret agent til at fremsætte anmodn
 **Formål:** Sikkerhedshændelser, databrud
 
 ### Postadresse
-LogicNodes Inc.  
-[Firmaadresse]  
-[By, Stat, Postnummer]
-USA
+LogicNodes ApS  
+Sletvej 2D  
+8310 Tranbjerg  
+Danmark  
+CVR: DK45318362
 
 ---
 
@@ -532,12 +533,12 @@ Email: dt@datatilsynet.dk
 | Amazon Web Services (AWS) | Cloud infrastruktur | Alle data (via Supabase) | EU (Stockholm) | ✅ Ja (via Supabase) |
 | Mailgun | Transaktionelle emails | Email, navn | USA/EU | ✅ Ja |
 
-**Senest Opdateret:** 3. november 2025  
+**Senest Opdateret:** 21. april 2026  
 
 **Ændringsnotifikation:** Partnere underrettet 30 dage før tilføjelse af nye sub-processors.
 
 ---
 
-**© 2025 LogicNodes Inc. Alle rettigheder forbeholdes.**
+**© 2026 LogicNodes ApS. Alle rettigheder forbeholdes.**
 
-Denne privatlivspolitik træder i kraft d. 3. november 2025. Ved at bruge LogicNodes gennem en Partners produkt, anerkender du at du har læst og forstået denne politik.
+Denne privatlivspolitik træder i kraft d. 21. april 2026. Ved at bruge LogicNodes gennem en Partners produkt, anerkender du at du har læst og forstået denne politik.

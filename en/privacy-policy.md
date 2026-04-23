@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Privacy Policy
-last_updated: 2025-11-04
+last_updated: 2026-04-21
 lang: en
 lang_equivalent: /da/privatlivspolitik/
 ---
@@ -182,6 +182,6 @@ CVR: DK45318362
 
 ---
 
-**© 2025 LogicNodes ApS. All rights reserved.**
+**© 2026 LogicNodes ApS. All rights reserved.**
 
 *This Privacy Policy is effective as of the date listed above and applies to all users of LogicNodes services.*

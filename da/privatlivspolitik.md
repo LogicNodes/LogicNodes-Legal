@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Privatlivspolitik
-last_updated: 2025-10-25
+last_updated: 2026-04-21
 lang: da
 lang_equivalent: /en/privacy-policy/
 ---
@@ -174,8 +174,17 @@ Hvis du har spørgsmål, bekymringer eller anmodninger vedrørende denne privatl
 
 **E-mail:** kontakt@logicnodes.ai
 
-**Svartid:** Vi sigter mod at svare på alle privatlivsforespørgsler inden for 48 timer.
+**Svartid:** Vi sigter mod at svare på alle privatlivsforespørgsler inden for 5 arbejdsdage.
+
+**Virksomhedsoplysninger:**  
+LogicNodes ApS  
+Sletvej 2D  
+8310 Tranbjerg  
+Danmark  
+CVR: DK45318362
 
 ---
+
+**© 2026 LogicNodes ApS. Alle rettigheder forbeholdes.**
 
 *Denne privatlivspolitik er gældende fra den dato, der er angivet ovenfor, og gælder for alle brugere af LogicNodes-tjenester.*
