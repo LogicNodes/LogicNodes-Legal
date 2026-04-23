@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Changes — 21 April 2026</title>
+  <style>
+    /* Dyslexia-friendly base */
+    :root {
+      --bg: #f9f6f0;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #ddd;
+      --removed-bg: #fff0f0;
+      --removed-text: #c0392b;
+      --removed-border: #e74c3c;
+      --added-bg: #f0fff4;
+      --added-text: #1a6b2d;
+      --added-border: #27ae60;
+      --critical: #c0392b;
+      --critical-bg: #fdecea;
+      --warning: #b7770d;
+      --warning-bg: #fef9e7;
+      --info: #1a5276;
+      --info-bg: #eaf4fd;
+      --tag-bg: #eee;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      word-spacing: 0.1em;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid var(--border);
+      line-height: 1.4;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.8rem;
+      font-weight: 700;
+    }
+
+    p { margin-bottom: 1rem; color: var(--muted); }
+
+    /* Summary grid */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.75rem;
+      margin: 1.2rem 0 2rem;
+    }
+
+    .summary-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+    }
+
+    .summary-card .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .summary-card .value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* File section */
+    .file-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .file-header {
+      background: #f0f0f0;
+      padding: 0.7rem 1.1rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .lang-badge {
+      font-size: 0.72rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .lang-en { background: #dbeafe; color: #1e3a8a; }
+    .lang-da { background: #fce7f3; color: #831843; }
+
+    .file-note {
+      padding: 0.6rem 1.1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      background: #fffbf5;
+    }
+
+    /* Change row */
+    .change {
+      padding: 1rem 1.1rem;
+      border-bottom: 1px solid #f0f0f0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .change:last-child { border-bottom: none; }
+
+    .change-full {
+      grid-column: 1 / -1;
+    }
+
+    .change-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .field-name {
+      grid-column: 1 / -1;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .val {
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .val-removed {
+      background: var(--removed-bg);
+      border-left: 4px solid var(--removed-border);
+      color: var(--removed-text);
+    }
+
+    .val-added {
+      background: var(--added-bg);
+      border-left: 4px solid var(--added-border);
+      color: var(--added-text);
+    }
+
+    .reason {
+      grid-column: 1 / -1;
+      font-size: 0.88rem;
+      color: var(--muted);
+      padding-left: 0.25rem;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .badge-critical { background: var(--critical-bg); color: var(--critical); border: 1px solid #e74c3c; }
+    .badge-warning  { background: var(--warning-bg);  color: var(--warning);  border: 1px solid #f39c12; }
+    .badge-info     { background: var(--info-bg);     color: var(--info);     border: 1px solid #2980b9; }
+
+    /* Unchanged box */
+    .unchanged {
+      margin: 0.5rem 1.1rem 1rem;
+      padding: 0.6rem 0.9rem;
+      background: #f5f5f5;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Remaining recommendations */
+    .recommendations {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .rec-item {
+      display: flex;
+      gap: 0.9rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: flex-start;
+    }
+    .rec-item:last-child { border-bottom: none; }
+
+    .rec-num {
+      flex-shrink: 0;
+      width: 1.8rem;
+      height: 1.8rem;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: 0.15rem;
+    }
+
+    .rec-body { font-size: 0.95rem; line-height: 1.6; }
+    .rec-body strong { color: var(--text); }
+
+    .hetzner-details {
+      margin-top: 0.4rem;
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.88rem;
+    }
+    .hetzner-details dt { font-weight: 700; display: inline; }
+    .hetzner-details dd { display: inline; margin: 0 0 0 0.3rem; color: var(--muted); }
+    .hetzner-details dl { display: flex; flex-direction: column; gap: 0.15rem; }
+
+    /* Not-changed section */
+    .not-changed-list {
+      list-style: none;
+      margin: 0.5rem 0 1rem;
+    }
+    .not-changed-list li {
+      padding: 0.3rem 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .not-changed-list li::before {
+      content: "—";
+      flex-shrink: 0;
+      color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+      .change { grid-template-columns: 1fr; }
+      .field-name, .change-full, .reason { grid-column: 1; }
+      .summary-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Legal Document Changes</h1>
+  <p style="font-size:1.1rem; color: #333; margin-bottom: 0.2rem;">21 April 2026 — LogicNodes ApS</p>
+  <p>All changes made to align legal documentation with the current platform, infrastructure, and security standards.</p>
+
+  <!-- SUMMARY -->
+  <h2>What changed — overview</h2>
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="label">Infrastructure</div>
+      <div class="value">Render Inc. → Hetzner Online GmbH</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Company name (Danish docs)</div>
+      <div class="value">LogicNodes Inc. → LogicNodes ApS</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Dates &amp; copyright</div>
+      <div class="value">2025 → 2026 across all documents</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Security hardening</div>
+      <div class="value">Removed internal details that could aid attackers</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Sub-processor text</div>
+      <div class="value">"Vercel and Render" → "Vercel" (Render removed)</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">JWT algorithm</div>
+      <div class="value">HS256 → RS256 (factual error corrected)</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Data location</div>
+      <div class="value">Supabase: "USA" → "EU (Stockholm)" (factual error)</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Address (Danish docs)</div>
+      <div class="value">USA placeholder → Sletvej 2D, 8310 Tranbjerg, Denmark</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Compliance language</div>
+      <div class="value">"Planned Q2 2026" → ongoing commitment wording</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Internal code name removed</div>
+      <div class="value">"MultiTenantRepository pattern" → generic description</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">DPA link (Danish security doc)</div>
+      <div class="value">Internal file path → public URL</div>
+    </div>
+  </div>
+
+
+  <!-- en/data-processing-agreement.md -->
+  <h2>File-by-file changes</h2>
+
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-en">EN</span>
+      en/data-processing-agreement.md
+    </div>
+
+    <div class="change">
+      <div class="field-name">Last updated / Copyright</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-11-04 &nbsp;·&nbsp; © 2025 LogicNodes ApS</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21 &nbsp;·&nbsp; © 2026 LogicNodes ApS</div>
+      </div>
+      <div class="reason">Annual date and year update.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Section 4.2 — Penetration testing</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Annual penetration testing (planned Q2 2026)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Annual penetration testing (conducted annually)</div>
+      </div>
+      <div class="reason">Q2 2026 has passed. Reflects ongoing annual commitment instead of a specific future date.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §5 — Multi-tenancy description
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Application-layer validation (MultiTenantRepository pattern)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Application-layer validation (cross-tenant access prevented by design)</div>
+      </div>
+      <div class="reason">"MultiTenantRepository" is an internal code pattern name — not appropriate for a public legal document.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Section 5.1 &amp; Appendix C — Sub-processor footnote</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Supabase uses AWS; Vercel and Render use AWS/Google Cloud</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Supabase uses AWS; Vercel uses AWS/Google Cloud</div>
+      </div>
+      <div class="reason">Render is no longer a sub-processor. Backend now runs on Hetzner.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Sub-processor table dates (Section 5.1 &amp; Appendix C)</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Last Updated: November 4, 2025</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Last Updated: April 21, 2026</div>
+      </div>
+      <div class="reason">Date update.</div>
+    </div>
+
+    <div class="unchanged">Not changed: Sub-processor tables (Section 5.1 &amp; Appendix C) — managed dynamically via Google Sheets.</div>
+  </div>
+
+
+  <!-- en/security-architecture.md -->
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-en">EN</span>
+      en/security-architecture.md
+    </div>
+
+    <div class="change">
+      <div class="field-name">Last updated / Copyright / Document version</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-11-03 &nbsp;·&nbsp; © 2025 LogicNodes ApS &nbsp;·&nbsp; v1.0</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21 &nbsp;·&nbsp; © 2026 LogicNodes ApS &nbsp;·&nbsp; v1.1</div>
+      </div>
+      <div class="reason">Annual update; version incremented for this update cycle.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Current certifications — Penetration testing</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Annual penetration testing (planned Q2 2026)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Annual penetration testing (conducted annually)</div>
+      </div>
+      <div class="reason">Reflects ongoing annual commitment. Q2 2026 is now current.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Planned certifications — Bug bounty</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Bug bounty program (Q2 2026)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Bug bounty program (planned)</div>
+      </div>
+      <div class="reason">Removed specific date to avoid stale language.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">FAQ — SOC 2 answer</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Formal audit planned as part of our 2026 compliance milestone</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Formal SOC 2 Type II audit is part of our 2026 compliance roadmap</div>
+      </div>
+      <div class="reason">Clearer language.</div>
+    </div>
+
+    <div class="unchanged">Not changed: Sub-processor table — managed dynamically via Google Sheets.</div>
+  </div>
+
+
+  <!-- en/partner-privacy-policy.md -->
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-en">EN</span>
+      en/partner-privacy-policy.md
+    </div>
+
+    <div class="change">
+      <div class="field-name">Last updated / Copyright / Footer effective date</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-11-04 &nbsp;·&nbsp; © 2025 &nbsp;·&nbsp; November 3, 2025</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21 &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; April 21, 2026</div>
+      </div>
+      <div class="reason">Annual date update.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Section 5.2 &amp; Appendix B — Sub-processor footnote</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Supabase uses AWS; Vercel and Render use AWS/Google Cloud</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Supabase uses AWS; Vercel uses AWS/Google Cloud</div>
+      </div>
+      <div class="reason">Render no longer a sub-processor.</div>
+    </div>
+
+    <div class="unchanged">Not changed: Sub-processor tables (Section 5.2 &amp; Appendix B) — managed dynamically via Google Sheets.</div>
+  </div>
+
+
+  <!-- en/privacy-policy.md -->
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-en">EN</span>
+      en/privacy-policy.md
+    </div>
+
+    <div class="change">
+      <div class="field-name">Last updated / Copyright</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-11-04 &nbsp;·&nbsp; © 2025 LogicNodes ApS</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21 &nbsp;·&nbsp; © 2026 LogicNodes ApS</div>
+      </div>
+      <div class="reason">Annual date and year update.</div>
+    </div>
+  </div>
+
+
+  <!-- da/databehandleraftale.md -->
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-da">DA</span>
+      da/databehandleraftale.md
+      <span class="badge badge-warning">Full rewrite</span>
+    </div>
+    <div class="file-note">The Danish DPA was an older, diverged version with multiple security and factual issues. It has been substantially rewritten.</div>
+
+    <div class="change">
+      <div class="field-name">Last updated / Copyright footer</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-11-03 &nbsp;·&nbsp; © 2025 LogicNodes Inc.</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21 &nbsp;·&nbsp; © 2026 LogicNodes ApS.</div>
+      </div>
+      <div class="reason">Date update and legal entity name corrected.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Company name — throughout document
+        <span class="badge badge-critical">Critical</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">LogicNodes Inc.</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">LogicNodes ApS</div>
+      </div>
+      <div class="reason">Wrong legal entity. LogicNodes is a Danish ApS, not a US Inc.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix A — Company address
+        <span class="badge badge-critical">Critical</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">[LOGICNODES ADRESSE] (unfilled placeholder)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Sletvej 2D, 8310 Tranbjerg, Danmark &nbsp;·&nbsp; CVR: DK45318362</div>
+      </div>
+      <div class="reason">Was an unfilled placeholder in the document.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Section 4.2 — Penetration testing</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Årlig penetrationstest (planlagt Q2 2026)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Årlig penetrationstest (gennemføres årligt)</div>
+      </div>
+      <div class="reason">Reflects ongoing commitment.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §1 — JWT algorithm
+        <span class="badge badge-critical">Factual error</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">HS256 (symmetric)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">RS256 (asymmetric)</div>
+      </div>
+      <div class="reason">The platform uses RS256, not HS256. Disclosing the wrong algorithm is both inaccurate and misleading.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §1 — SSH &amp; IP details removed
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">SSH-nøglebaseret autentificering (ingen adgangskode-login) &amp; IP-whitelisting for produktionssystemer</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Removed</div>
+      </div>
+      <div class="reason">Internal infrastructure details that could assist attackers in planning.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §2 — Rate limit value
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Hastighedsbegrænsning (10 anm./min på autentificeringsendpoints)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Hastighedsbegrænsning på autentificeringsendpoints</div>
+      </div>
+      <div class="reason">Specific rate limit values aid brute-force attack planning.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §5 — Multi-tenancy description
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Applikationslags-validering (MultiTenantRepository-mønster)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Applikationslags-validering (cross-tenant adgang forhindres by design)</div>
+      </div>
+      <div class="reason">Internal code pattern name removed from public document.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §5 — Test coverage metric removed
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">85%+ sikkerhedstestdækning</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Removed</div>
+      </div>
+      <div class="reason">Internal metric not appropriate for a public DPA.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §6 — Audit logs / unimplemented security control
+        <span class="badge badge-critical">Critical</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">IP-adresser hashet (planlagt, ikke implementeret endnu)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Neutral statement without disclosure of what is not yet implemented</div>
+      </div>
+      <div class="reason">Explicitly stating that a security control is NOT yet implemented is a serious security disclosure.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §7 — Disaster recovery specifics
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Point-in-time gendannelse (sidste 7 dage) &nbsp;·&nbsp; RTO: 4 timer, RPO: 15 minutter</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">General business continuity statement</div>
+      </div>
+      <div class="reason">Specific recovery targets (RTO/RPO) can inform attack planning.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §8 — Monitoring tool name
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Automatiserede alarmer (PagerDuty-integration)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Automatiserede alarmer</div>
+      </div>
+      <div class="reason">Internal tooling names should not appear in public documents.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Appendix B §10 — Anomaly detection gap disclosed
+        <span class="badge badge-critical">Critical</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Anomali-detektion (planlagt, ikke implementeret endnu)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Løbende forbedring af anomalidetektion</div>
+      </div>
+      <div class="reason">Disclosed a security gap ("not yet implemented") in a public document.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Appendix C &amp; Section 5.1 — Sub-processor list</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Static table with 3 entries</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Reference to /da/underbehandlere (dynamic Google Sheets)</div>
+      </div>
+      <div class="reason">Aligned with dynamic approach to avoid stale static lists.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Governing law — UK &amp; Swiss addenda</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Missing</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Added UK and Swiss addenda</div>
+      </div>
+      <div class="reason">Aligned with the English DPA which already includes these provisions.</div>
+    </div>
+  </div>
+
+
+  <!-- da/sikkerhedsarkitektur.md -->
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-da">DA</span>
+      da/sikkerhedsarkitektur.md
+    </div>
+
+    <div class="change">
+      <div class="field-name">Last updated / Copyright</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-11-03 &nbsp;·&nbsp; © 2025 LogicNodes Inc.</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21 &nbsp;·&nbsp; © 2026 LogicNodes ApS.</div>
+      </div>
+      <div class="reason">Date update and legal entity corrected.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Section 1.4 — Rate limit value
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">10 forespørgsler/minut pr. IP-adresse</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Generic description without specific number</div>
+      </div>
+      <div class="reason">Specific rate limit values aid attack planning.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Section 10.1 — Auth retry limit
+        <span class="badge badge-info">Security</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Prøv igen mislykkede auth &gt;10 gange/minut</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Generic phrasing</div>
+      </div>
+      <div class="reason">Rate limit value removed.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Section 8.5 — Supabase data location
+        <span class="badge badge-critical">Factual error</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">USA</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">EU (Stockholm)</div>
+      </div>
+      <div class="reason">Supabase data hosting is EU (AWS EU-North-1), not USA. Wrong location in a GDPR context.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Section 8.5 — Mailgun certifications
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">GDPR DPA</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">SOC 2, ISO 27001, GDPR DPA</div>
+      </div>
+      <div class="reason">More complete certification information.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Section 8.4 — SOC 2 planned certification</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">SOC 2 Type II audit (når vi når $1M ARR, estimeret 2026)</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">SOC 2 Type II audit (som del af vores 2026-overholdelses-milepæl)</div>
+      </div>
+      <div class="reason"><strong>Critical:</strong> Disclosed an internal ARR business target ($1M) in a public document.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Section 8.1 &amp; FAQ — DPA link
+        <span class="badge badge-critical">Broken link</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">docs/partners/DATA_PROCESSING_AGREEMENT.md</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">/da/databehandleraftale/</div>
+      </div>
+      <div class="reason">Was pointing to a non-public internal file path.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">FAQ — Sub-processor answer</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Se Sektion 8.5 only</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Se Sektion 8.5 + link to /da/underbehandlere/</div>
+      </div>
+      <div class="reason">Aligns with dynamic sub-processor approach.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Document history</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Last entry: 2025-11-03</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">Added 2026-04-21 entry</div>
+      </div>
+      <div class="reason">Tracks this update cycle.</div>
+    </div>
+  </div>
+
+
+  <!-- da/partner-privatlivspolitik.md -->
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-da">DA</span>
+      da/partner-privatlivspolitik.md
+    </div>
+
+    <div class="change">
+      <div class="field-name">Last updated / Copyright / Effective dates</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-11-03 &nbsp;·&nbsp; © 2025 LogicNodes Inc. &nbsp;·&nbsp; 3. november 2025</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21 &nbsp;·&nbsp; © 2026 LogicNodes ApS. &nbsp;·&nbsp; 21. april 2026</div>
+      </div>
+      <div class="reason">Date update and legal entity corrected.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Mailing address
+        <span class="badge badge-critical">Critical</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">LogicNodes Inc. [Firmaadresse] [By, Stat, Postnummer] USA</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">LogicNodes ApS, Sletvej 2D, 8310 Tranbjerg, Danmark, CVR: DK45318362</div>
+      </div>
+      <div class="reason">Wrong company name, unfilled placeholder, and wrong country (USA instead of Denmark).</div>
+    </div>
+  </div>
+
+
+  <!-- da/privatlivspolitik.md -->
+  <div class="file-section">
+    <div class="file-header">
+      <span class="lang-badge lang-da">DA</span>
+      da/privatlivspolitik.md
+    </div>
+
+    <div class="change">
+      <div class="field-name">Last updated</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">2025-10-25</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">2026-04-21</div>
+      </div>
+      <div class="reason">Annual update — was also older than other documents.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">
+        Response time commitment
+        <span class="badge badge-warning">Inconsistency fixed</span>
+      </div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">inden for 48 timer</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">inden for 5 arbejdsdage</div>
+      </div>
+      <div class="reason">Danish version promised 48 hours; English version says 5 business days. 5 business days is the contractual commitment.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Company address</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Missing</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">LogicNodes ApS, Sletvej 2D, 8310 Tranbjerg, Danmark, CVR: DK45318362</div>
+      </div>
+      <div class="reason">Danish version was missing the company address that the English version includes.</div>
+    </div>
+
+    <div class="change">
+      <div class="field-name">Copyright footer</div>
+      <div>
+        <div class="change-label">Before</div>
+        <div class="val val-removed">Missing</div>
+      </div>
+      <div>
+        <div class="change-label">After</div>
+        <div class="val val-added">© 2026 LogicNodes ApS. Alle rettigheder forbeholdes.</div>
+      </div>
+      <div class="reason">Danish version had no copyright statement.</div>
+    </div>
+  </div>
+
+
+  <!-- NOT CHANGED -->
+  <h2>What was not changed</h2>
+  <ul class="not-changed-list">
+    <li>Sub-processor tables in all documents — managed dynamically via Google Sheets</li>
+    <li>en/subprocessors.md and da/underbehandlere.md — dedicated sub-processor list pages are managed dynamically</li>
+    <li>Responsible disclosure policies — no infrastructure-related changes required</li>
+    <li>Terms &amp; Conditions — no infrastructure references</li>
+    <li>Partner documentation hub — index page, no infrastructure details</li>
+  </ul>
+
+
+  <!-- REMAINING RECOMMENDATIONS -->
+  <h2>Remaining recommendations</h2>
+  <div class="recommendations">
+
+    <div class="rec-item">
+      <div class="rec-num">1</div>
+      <div class="rec-body">
+        <strong>Update sub-processor tables via Google Sheets</strong> — replace Render Inc. with Hetzner Online GmbH as backend hosting provider in all dynamic tables.
+        <div class="hetzner-details">
+          <dl>
+            <div><dt>Service:</dt><dd>Backend Hosting &amp; APIs</dd></div>
+            <div><dt>Location:</dt><dd>EU (Germany)</dd></div>
+            <div><dt>Safeguards:</dt><dd>ISO 27001, GDPR DPA</dd></div>
+            <div><dt>Contact:</dt><dd>privacy@hetzner.com</dd></div>
+            <div><dt>Note:</dt><dd>German company — EU–EU transfer, no SCCs required</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-num">2</div>
+      <div class="rec-body">
+        <strong>Align Danish &amp; English security architecture documents.</strong> da/sikkerhedsarkitektur.md is a more detailed technical/API guide; en/security-architecture.md is a high-level overview. Consider aligning these to the same format in a future revision.
+      </div>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-num">3</div>
+      <div class="rec-body">
+        <strong>SOC 2 Type II audit</strong> — if completed in 2026, update all references from "planned" to "certified" and add the report date.
+      </div>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-num">4</div>
+      <div class="rec-body">
+        <strong>Bug bounty program</strong> — once launched, update all documents to reflect the platform (HackerOne/Bugcrowd) and reward ranges.
+      </div>
+    </div>
+
+  </div>
+
+  <p style="margin-top: 2rem; font-size: 0.85rem; color: #aaa; text-align: center;">LogicNodes ApS &nbsp;·&nbsp; CVR: DK45318362 &nbsp;·&nbsp; Sletvej 2D, 8310 Tranbjerg, Danmark</p>
+
+</div>
+</body>
+</html>

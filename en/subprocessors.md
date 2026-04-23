@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Sub-Processor List
-last_updated: 2025-11-04
+last_updated: 2026-04-23
 lang: en
 lang_equivalent: /da/underbehandlere
 description: "Complete list of third-party sub-processors engaged by LogicNodes ApS for service delivery. GDPR-compliant notification page."
@@ -9,7 +9,7 @@ description: "Complete list of third-party sub-processors engaged by LogicNodes 
 
 # LogicNodes – Authorized Sub-Processors
 
-**Effective Date:** November 4, 2025
+**Effective Date:** April 23, 2026
 <p class="last-updated">Last Updated: {{ page.last_updated | date: "%B %-d, %Y" }}</p>
 
 This page lists all third-party sub-processors engaged by **LogicNodes ApS** (CVR: DK45318362) in connection with providing the LogicNodes platform and related services.
@@ -22,16 +22,19 @@ Copies of all executed or click-through DPAs are maintained internally and can b
 
 ## Primary Sub-Processors
 
-| Sub-Processor | Service | Primary Region | DPA Status | Notes |
-|----------------|----------|---------|-------------|--------|
-| **Supabase Inc.** | Database, Authentication, Storage | EU (eu-north-1 – Stockholm) | ✅ Signed | Core data infrastructure provider. Supabase may engage AWS and other infrastructure vendors under its own DPA. |
-| **Vercel Inc.** | Web & Edge Hosting for Frontend Services | EU (Frankfurt) | ✅ Auto-executed on signup | Used for hosting web assets and edge functions. |
-| **Render Inc.** | Backend Hosting & APIs | EU (Frankfurt) | ✅ Auto-executed on signup | Used for application servers and scheduled jobs. |
-| **Sinch / Mailgun Technologies Inc.** | Transactional Email Delivery | EU (Germany) / USA | ✅ Auto-executed on signup | Used for system notifications and transactional email. Routing is region-dependent. |
-| **OpenAI LLC** | AI Model Inference (LLM) | Global / USA | ✅ Auto-executed on signup | LogicNodes-provided API keys by default. Partners may optionally provide their own keys (becoming direct processors). |
-| **Anthropic PBC** | AI Model Inference (LLM) | Global / USA | ✅ Auto-executed on signup | LogicNodes-provided API keys by default. Partners may optionally provide their own keys (becoming direct processors). |
-| **Google Cloud Platform** | AI Model Inference (Gemini API) | EU / Global | ✅ Auto-executed on signup | LogicNodes-provided API keys by default. Partners may optionally provide their own keys (becoming direct processors). |
-| **xAI Corp.** | AI Model Inference (Grok API) | Global / USA | ✅ Auto-executed on signup | LogicNodes-provided API keys by default. Partners may optionally provide their own keys (becoming direct processors). |
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHy76XGvurEqCuaIjMYAKlogtBJg4Maz1EOIptwtBQth89Vyaq3CM929kRdwEEf8mSbESwZrfnd9o7/pubhtml?gid=0&single=true" width="100%" height="550" frameborder="0" scrolling="no"></iframe>
+
+### What Each Sub-Processor Does
+
+| Sub-Processor | Service |
+|---|---|
+| **Supabase** | Database, authentication, and file storage |
+| **Vercel** | Web application hosting and edge delivery |
+| **Hetzner** | Backend API hosting |
+| **Mailgun** | Transactional email delivery |
+| **ElevenLabs** | Speech-to-text transcription |
+| **Pyannote** | Speaker identification (optional; involves biometric data — GDPR Art. 9) |
+| **OpenAI / Anthropic / Google / xAI** | AI language model inference |
 
 ---
 
@@ -64,41 +67,16 @@ Partners can specify which LLM provider(s) to use or disable LLM features entire
 
 ## Sub-Processor of Sub-Processors
 
-Each sub-processor listed above may in turn engage their own sub-processors (for example, infrastructure or CDN providers).
+Each sub-processor may use their own infrastructure providers to deliver their service. Known examples:
 
-**Examples:**
-- **Supabase** uses AWS (Amazon Web Services) for infrastructure
-- **Vercel** uses AWS and Google Cloud for edge network
-- **Render** uses AWS and Google Cloud for infrastructure
-- **Mailgun** uses various email delivery networks
+| Sub-Processor | Infrastructure | Purpose |
+|---|---|---|
+| Supabase | AWS (eu-north-1, Stockholm) | Managed database and object storage |
+| Vercel | AWS, Google Cloud | Edge network and CDN delivery |
+| Hetzner | Own EU data centres (Falkenstein/Nuremberg) | Dedicated server infrastructure |
+| Mailgun | Various email delivery networks | Email routing and delivery |
 
-These nested relationships are governed under the respective vendor's DPA, which LogicNodes ApS has reviewed and archived.
-
-All major sub-processors maintain their own sub-processor lists:
-- Supabase maintains transparency documentation for their infrastructure stack
-- Vercel, Render, and Mailgun publish their own sub-processor lists
-- LLM providers publish their infrastructure and data handling documentation
-
-LogicNodes ApS monitors these relationships and maintains archived copies of all relevant agreements.
-
----
-
-## Data Processing Agreements (DPAs)
-
-**Our Commitments:**
-- All sub-processors have executed DPAs with GDPR-compliant safeguards
-- Standard Contractual Clauses (SCCs) are in place for all international transfers
-- Sub-processors maintain appropriate security certifications and rely on certified infrastructure
-
-**DPA Availability:**
-Partners may request copies of archived DPAs by contacting:
-- **Email:** kontakt@logicnodes.ai
-- **Response Time:** 5 business days
-
-**What We Provide:**
-- Copy of executed or auto-accepted DPA (with timestamp)
-- Certification documentation (SOC 2 reports, ISO certificates)
-- Sub-processor's own sub-processor list (where applicable)
+These relationships are governed under each vendor's own DPA and are publicly documented on their trust and legal pages (see the appendix for links). The DPA between LogicNodes ApS and each sub-processor covers that sub-processor's use of its own sub-processors.
 
 ---
 
@@ -107,7 +85,7 @@ Partners may request copies of archived DPAs by contacting:
 **Default Configuration:**
 - Primary data storage: **EU (AWS eu-north-1, Stockholm via Supabase)**
 - Web hosting: **EU (Frankfurt via Vercel)**
-- Backend services: **EU (Frankfurt via Render)**
+- Backend services: **EU (Falkenstein/Nuremberg via Hetzner)**
 - Email delivery: **EU/USA routing-dependent (via Mailgun)**
 
 **US Data Residency:**
@@ -128,7 +106,7 @@ All sub-processors meet or exceed LogicNodes' security requirements:
 | Standard Contractual Clauses (SCCs) | ✅ All international transfers |
 | SOC 2 Type II | ✅ Mailgun, OpenAI, Anthropic, Google |
 | ISO 27001 | ✅ Mailgun, Google, AWS (via Supabase) |
-| EU-US Data Privacy Framework (DPF) | ✅ Render |
+| EU-US Data Privacy Framework (DPF) | ✅ ElevenLabs |
 | HIPAA-Eligible Infrastructure | ✅ Mailgun, AWS (via Supabase), Google |
 | Encryption at Rest (AES-256) | ✅ All data storage providers |
 | Encryption in Transit (TLS 1.2+) | ✅ All sub-processors |
@@ -143,13 +121,16 @@ All sub-processors meet or exceed LogicNodes' security requirements:
 - All DPAs are timestamped and archived in our internal legal repository
 - Security certifications (SOC 2, ISO 27001) are verified annually
 
-**Last Full Review:** November 2025
-**Next Scheduled Review:** May 2026
+**Last Full Review:** April 2026
+**Next Scheduled Review:** October 2026
 
 **Change Log:**
 - **2025-11-04:** Initial publication with complete sub-processor list
 - **2025-11-04:** Added LLM providers (OpenAI, Anthropic, Google, xAI)
 - **2025-11-04:** Clarified EU data residency and routing
+- **2026-04-23:** Replaced Render with Hetzner Online GmbH for backend hosting
+- **2026-04-23:** Added ElevenLabs Inc. (speech transcription) and Pyannote SAS (speaker identification)
+- **2026-04-23:** Updated xAI enterprise contact email
 
 ---
 
@@ -222,20 +203,22 @@ For direct inquiries to sub-processors regarding their data processing practices
 |---------------|-----------------|-----------------|
 | Supabase Inc. | privacy@supabase.com | [Supabase Trust Center](https://supabase.com/security) |
 | Vercel Inc. | privacy@vercel.com | [Vercel DPA](https://vercel.com/legal/dpa) |
-| Render Inc. | privacy@render.com | [Render Security](https://render.com/security) |
+| Hetzner Online GmbH | datenschutz@hetzner.com | [Hetzner Privacy](https://www.hetzner.com/legal/privacy-policy/) |
 | Mailgun / Sinch | privacy@mailgun.com | [Mailgun Privacy](https://www.mailgun.com/legal/privacy-policy/) |
 | OpenAI LLC | privacy@openai.com | [OpenAI Privacy](https://openai.com/privacy/) |
 | Anthropic PBC | privacy@anthropic.com | [Anthropic Privacy](https://www.anthropic.com/legal/privacy) |
 | Google Cloud | cloud-privacy@google.com | [Google Cloud Privacy](https://cloud.google.com/privacy) |
-| xAI Corp. | privacy@x.ai | [xAI Privacy](https://x.ai/privacy/) |
+| xAI Corp. | privacy+enterprise@x.ai | [xAI Privacy](https://x.ai/privacy/) |
+| ElevenLabs Inc. | legal@elevenlabs.io | [ElevenLabs Trust Center](https://compliance.elevenlabs.io/) |
+| Pyannote SAS | support@pyannote.ai | [PyAnnoteAI](https://pyannote.ai/) |
 
 **Note:** Contact information is provided for reference only. All sub-processor relationships are managed by LogicNodes ApS. Partners should direct all inquiries to kontakt@logicnodes.ai.
 
 ---
 
-**Version:** 1.0
-**Effective Date:** November 4, 2025
-**Last Updated:** November 4, 2025
+**Version:** 1.1
+**Effective Date:** April 23, 2026
+**Last Updated:** April 23, 2026
 
 **© 2025 LogicNodes ApS. All rights reserved.**
 

@@ -221,6 +221,8 @@ Partner giver generel autorisation til LogicNodes til at engagere Underdatabehan
 
 **Komplet Underdatabehandler-liste:** /da/underbehandlere
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHy76XGvurEqCuaIjMYAKlogtBJg4Maz1EOIptwtBQth89Vyaq3CM929kRdwEEf8mSbESwZrfnd9o7/pubhtml?gid=0&single=true" width="100%" height="550" frameborder="0" scrolling="no"></iframe>
+
 Den autoritative og opdaterede liste over Underdatabehandlere vedligeholdes på /da/underbehandlere og opdateres med 30 dages forhåndsvarsel ved ændringer.
 
 **Bring Your Own Key (BYOK) — AI-inferenstjenester:**
@@ -680,6 +682,8 @@ For schweiziske FADP-overførsler skal henvisninger i SCC'erne til GDPR og EU-lo
 ## Appendiks C: Underdatabehandler-liste
 
 **Autoritativ Liste:** /da/underbehandlere
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHy76XGvurEqCuaIjMYAKlogtBJg4Maz1EOIptwtBQth89Vyaq3CM929kRdwEEf8mSbESwZrfnd9o7/pubhtml?gid=0&single=true" width="100%" height="550" frameborder="0" scrolling="no"></iframe>
 
 Den komplette og opdaterede liste over Underdatabehandlere vedligeholdes på /da/underbehandlere. Partnere underrettes 30 dage før eventuelle ændringer til denne liste (ny Underdatabehandler, væsentlig ændring af eksisterende).
 

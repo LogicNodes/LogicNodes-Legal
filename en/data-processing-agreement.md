@@ -216,16 +216,7 @@ Partner grants general authorization for LogicNodes to engage Sub-Processors, su
 
 **Summary:**
 
-| Sub-Processor | Service | Data Processed | Location | Safeguards |
-|---------------|---------|----------------|----------|------------|
-| **Supabase Inc.** | Database, Auth, Storage | All Personal Data | EU data hosting (AWS EU-North-1, Stockholm); entity domicile outside the EEA may apply | GDPR DPA, SCC (relies on SOC 2/ISO 27001 certified infrastructure: AWS) |
-| **Vercel Inc.** | Web & Edge Hosting | Technical data, session data | EU (Frankfurt) | GDPR DPA, SCC |
-| **Render Inc.** | Backend Hosting & APIs | All Personal Data | EU (Frankfurt) | EU-US DPF, GDPR DPA, SCC |
-| **Mailgun Technologies Inc. (Sinch)** | Transactional email | Email, name | USA/EU (routing-dependent) | SOC 2 Type I & II, ISO 27001, GDPR DPA, SCC |
-| **OpenAI LLC** | AI Model Inference (LLM) | Agent prompts, responses | Global / USA | SOC 2 Type II, GDPR DPA, SCC |
-| **Anthropic PBC** | AI Model Inference (LLM) | Agent prompts, responses | Global / USA | SOC 2, GDPR DPA, SCC |
-| **Google Cloud Platform** | AI Model Inference (Gemini) | Agent prompts, responses | EU / Global | SOC 2, ISO 27001, GDPR DPA, SCC |
-| **xAI Corp.** | AI Model Inference (Grok) | Agent prompts, responses | Global / USA | GDPR DPA, SCC |
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHy76XGvurEqCuaIjMYAKlogtBJg4Maz1EOIptwtBQth89Vyaq3CM929kRdwEEf8mSbESwZrfnd9o7/pubhtml?gid=0&single=true" width="100%" height="550" frameborder="0" scrolling="no"></iframe>
 
 **Bring Your Own Key (BYOK) — AI Inference Services:**
 Partner may at any time choose to use their own API keys for AI services. When own keys are used, the AI provider processes data directly on Partner's behalf and is Partner's direct processor — not LogicNodes' sub-processor.
@@ -677,16 +668,7 @@ For Swiss FADP transfers, references in the SCCs to the GDPR and EU law shall be
 
 **Summary:**
 
-| Sub-Processor | Service | Data Processed | Location | Safeguards | Contact |
-|---------------|---------|----------------|----------|------------|---------|
-| **Supabase Inc.** | Database, Authentication, Storage | All Personal Data | EU data hosting (AWS EU-North-1, Stockholm); entity domicile outside the EEA may apply | GDPR DPA, SCC (relies on SOC 2/ISO 27001 certified infrastructure: AWS) | privacy@supabase.com |
-| **Vercel Inc.** | Web & Edge Hosting | Technical data, session data | EU (Frankfurt) | GDPR DPA, SCC | privacy@vercel.com |
-| **Render Inc.** | Backend Hosting & APIs | All Personal Data | EU (Frankfurt) | EU-US DPF, GDPR DPA, SCC | privacy@render.com |
-| **Mailgun Technologies Inc. (Sinch)** | Transactional email | Email, name | USA/EU (routing-dependent) | SOC 2 Type I & II, ISO 27001, GDPR DPA, SCC | privacy@mailgun.com |
-| **OpenAI LLC** | AI Model Inference (LLM) | Agent prompts, responses | Global / USA | SOC 2 Type II, GDPR DPA, SCC | privacy@openai.com |
-| **Anthropic PBC** | AI Model Inference (LLM) | Agent prompts, responses | Global / USA | SOC 2, GDPR DPA, SCC | privacy@anthropic.com |
-| **Google Cloud Platform** | AI Model Inference (Gemini) | Agent prompts, responses | EU / Global | SOC 2, ISO 27001, GDPR DPA, SCC | cloud-privacy@google.com |
-| **xAI Corp.** | AI Model Inference (Grok) | Agent prompts, responses | Global / USA | GDPR DPA, SCC | privacy@x.ai |
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHy76XGvurEqCuaIjMYAKlogtBJg4Maz1EOIptwtBQth89Vyaq3CM929kRdwEEf8mSbESwZrfnd9o7/pubhtml?gid=0&single=true" width="100%" height="550" frameborder="0" scrolling="no"></iframe>
 
 **LLM Providers:** By default, LogicNodes provides API keys for LLM services. Partners may optionally provide their own API keys, in which case the LLM provider becomes Partner's direct processor (not LogicNodes' sub-processor).
 
