@@ -134,10 +134,6 @@ Du beholder ejerskabet af alle data, input og indhold, du indfører i platformen
 
 Outputs genereret af AI-automatiseringer på dine vegne ejes af dig, med forbehold for betingelserne hos den AI-udbyder, der er anvendt til at generere dem. Når du bruger LogicNodes' egne AI API-nøgler, kan den gældende AI-underbehandlers betingelser ligeledes regulere ejerskab af output — se [/da/underbehandlere/](/da/underbehandlere/) for links til den enkelte udbyders betingelser. Når du anvender dine egne API-nøgler (Bring Your Own Key), gælder AI-udbyderens betingelser direkte mellem dig og den pågældende udbyder.
 
-### 6.4 Apps og Skabeloner
-
-Hvor du opretter apps eller skabeloner ved hjælp af LogicNodes' indbyggede værktøjer, kan LogicNodes anvende de strukturelle og konfigurationsmæssige data fra sådanne apps og skabeloner — **renset for alle personoplysninger og proprietært indhold** — til at forbedre native platformsskabeloner og funktionalitet. Ingen personoplysninger eller identificerbart brugerindhold vil blive brugt til dette formål.
-
 ---
 
 ## 7. AI-genererede Outputs og Nøjagtighed
