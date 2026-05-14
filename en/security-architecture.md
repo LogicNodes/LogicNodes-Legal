@@ -2,7 +2,7 @@
 layout: legal
 title: Security Overview
 description: "LogicNodes Platform – Enterprise security overview, data protection, and compliance commitments."
-last_updated: 2026-04-21
+last_updated: 2026-05-14
 lang: en
 lang_equivalent: /da/sikkerhedsarkitektur/
 ---
@@ -70,6 +70,16 @@ Your data is completely isolated from other organizations through multiple secur
 
 **Result:** Zero cross-organization data leakage. Adheres to the principle of least privilege and enforces strict tenant separation.
 
+### Environment Isolation
+
+Production data is strictly isolated from development, staging, and testing environments:
+
+- Separate Supabase projects for production and non-production
+- Distinct databases, credentials, and API endpoints per environment
+- No production data is copied into non-production; development and testing use synthetic or seeded data
+- Separate secret stores per environment; production secrets are never available outside production
+- Backend access to production is restricted, MFA-protected, and audit-logged independently of non-production
+
 ### Encryption
 
 **Data at Rest:**
@@ -93,6 +103,26 @@ Your data is completely isolated from other organizations through multiple secur
 - Secure API keys for backend-to-backend communication
 - Secrets scoped by organization
 - All API access logged to audit logs
+
+### Data Loss Prevention
+
+Our data loss prevention strategy combines preventive, recoverable, and operational controls:
+
+**Preventive:**
+- Encryption at rest and in transit
+- Multi-tenant isolation via row-level security
+- Least-privilege access with MFA for staff
+- Immutable, tamper-resistant audit logs
+
+**Recoverable:**
+- Encrypted automated backups with point-in-time recovery
+- 30-day backup retention with documented restore procedures
+- Cascading deletes prevent orphaned data fragments
+
+**Operational:**
+- Daily automated cleanup enforces configured retention periods
+- No customer data copied to development environments or used for model training
+- Restricted backend access prevents production data exfiltration
 
 ## Data Retention & Privacy
 
@@ -330,8 +360,8 @@ Our full Security Architecture document is available to qualified partners under
 
 ## Document Information
 
-**Version:** 1.1 (Public Overview)  
-**Last Updated:** 2026-04-21  
+**Version:** 1.2 (Public Overview)  
+**Last Updated:** 2026-05-14  
 **Status:** This page is informational and subject to change  
 
 **© 2026 LogicNodes ApS. All rights reserved.**

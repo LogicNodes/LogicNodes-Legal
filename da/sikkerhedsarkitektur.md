@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Sikkerhedsarkitektur
-last_updated: 2026-04-21
+last_updated: 2026-05-14
 lang: da
 lang_equivalent: /en/security-architecture/
 ---
@@ -179,6 +179,36 @@ Dine data er fuldstændigt isoleret fra andre organisationer gennem flere sikker
 - API-nøgler til backend-til-backend kommunikation
 - Secrets scopet efter organisation
 - Al API-adgang logget til audit logs
+
+### 2.4 Miljøadskillelse
+
+Produktionsdata er strengt adskilt fra udviklings-, staging- og testmiljøer:
+
+- Separate Supabase-projekter til produktion og ikke-produktion
+- Adskilte databaser, legitimationsoplysninger og API-endpoints pr. miljø
+- Ingen produktionsdata kopieres til ikke-produktion; udvikling og test bruger udelukkende syntetiske eller seeded testdata
+- Separate secret stores pr. miljø; produktionssecrets er aldrig tilgængelige uden for produktion
+- Backend-adgang til produktion er begrænset, MFA-beskyttet og audit-logget uafhængigt af ikke-produktion
+
+### 2.5 Data Loss Prevention
+
+Vores strategi for forebyggelse af datatab kombinerer forebyggende, gendannelige og operationelle kontroller:
+
+**Forebyggende:**
+- Kryptering i hvile og under transport
+- Multi-tenant isolering via row-level security
+- Mindste-privilegium adgang med MFA for personale
+- Uforanderlige, manipulationssikre audit logs
+
+**Gendannelige:**
+- Krypterede automatiserede backups med point-in-time recovery
+- 30-dages backup-opbevaring med dokumenterede gendannelsesprocedurer
+- Cascading deletes forhindrer forældreløse datafragmenter
+
+**Operationelle:**
+- Daglig automatiseret oprydning håndhæver konfigurerede opbevaringsperioder
+- Ingen kundedata kopieres til udviklingsmiljøer eller bruges til modeltræning
+- Begrænset backend-adgang forhindrer eksfiltration af produktionsdata
 
 ---
 
@@ -707,6 +737,7 @@ A: Ja. Se afsnit 8.5 ovenfor. Den komplette og autoritative liste vedligeholdes 
 | 2.0 | 2025-11-03 | Omfattende omskrivning (API-nøgler, audit logs, partner admin) |
 | 2.1 | 2025-11-03 | Partner-fokuseret revision (fjernede interne implementeringsdetaljer) |
 | 2.2 | 2026-04-21 | Opdatering til ny platform-infrastruktur; ret virksomhedsnavn; opdater compliance-status |
+| 2.3 | 2026-05-14 | Tilføj miljøadskillelse (2.4) og Data Loss Prevention (2.5) sektioner |
 
 ---
 
