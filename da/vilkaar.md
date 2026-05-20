@@ -3,7 +3,7 @@ layout: legal
 title: Vilkår & Betingelser
 lang: da
 lang_equivalent: /en/terms
-last_updated: 2026-04-23
+last_updated: 2026-05-20
 ---
 
 # Vilkår & Betingelser
@@ -14,6 +14,8 @@ last_updated: 2026-04-23
 Disse Vilkår & Betingelser ("Vilkår") regulerer din adgang til og brug af LogicNodes-platformen og relaterede services leveret af **LogicNodes ApS** (CVR: DK45318362), Sletvej 2D, 8310 Tranbjerg, Danmark ("LogicNodes", "vi", "os" eller "vores").
 
 Ved at tilgå eller bruge LogicNodes accepterer du at være bundet af disse Vilkår. Hvis du ikke accepterer, må du ikke bruge platformen.
+
+LogicNodes-platformen udbydes udelukkende til erhvervsdrivende og er ikke rettet mod forbrugere. Forbrugeraftaleloven, herunder den 14-dages fortrydelsesret, finder ikke anvendelse på din brug af platformen. Ved at oprette en konto eller aktivere et betalt abonnement bekræfter du, at du indgår denne aftale som led i din erhvervsvirksomhed.
 
 ---
 
@@ -185,19 +187,35 @@ Ved opsigelse ophører din adgang til platformen. Du kan til enhver tid eksporte
 
 ---
 
-## 11. Lovvalg
+## 11. Reklamation og Tvistløsning
+
+### 11.1 Indgivelse af Reklamation
+
+Hvis du er utilfreds med platformen eller en opkrævning, kontakt os på [kontakt@logicnodes.ai](mailto:kontakt@logicnodes.ai) med en beskrivelse af problemet samt relevante oplysninger (skærmbilleder, fakturanumre, datoer).
+
+### 11.2 Behandlingstid
+
+Vi bekræfter modtagelsen inden for **5 hverdage** og bestræber os på at have en afgørelse klar inden for **30 dage**. Er sagen særligt kompleks, kan behandlingstiden forlænges; vi giver i så fald skriftlig besked.
+
+### 11.3 Tvister
+
+Tvister mellem LogicNodes ApS og dig, som ikke løses gennem den ovenstående reklamationsproces, er underlagt afsnittet om Lovvalg nedenfor.
+
+---
+
+## 12. Lovvalg
 
 Disse Vilkår er underlagt **dansk ret**. Eventuelle tvister er underlagt de danske domstoles eksklusive jurisdiktion, med forbehold for eventuelle ufravigelige rettigheder, du måtte have i henhold til lovgivningen i dit bopælsland i medfør af gældende EU-forordninger.
 
 ---
 
-## 12. Ændringer af Disse Vilkår
+## 13. Ændringer af Disse Vilkår
 
 Vi kan opdatere disse Vilkår fra tid til anden. Vi vil underrette dig om væsentlige ændringer via e-mail mindst **30 dage** inden de træder i kraft. Datoen "Senest opdateret" ovenfor afspejler den seneste revision. Fortsat brug af platformen efter varselsperioden udgør accept af de opdaterede Vilkår. Hvis du ikke accepterer ændringerne, kan du opsige din konto inden ændringerne træder i kraft.
 
 ---
 
-## 13. Kontakt
+## 14. Kontakt
 
 **LogicNodes ApS**
 Sletvej 2D, 8310 Tranbjerg, Danmark
